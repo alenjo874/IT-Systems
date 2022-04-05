@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-function EmployeePage() {
+function EmployeePage({  inventoryArray }) {
   const [employeeArray, setEmployeeArray] = useState([]);
   const [adminArray, setAdminArray] = useState([]);
-  const [inventoryArray, setInventoryArray] = useState([]);
+
   const [subject, setSubject] = useState("");
   const [serialNumber, setSerialNumber] = useState("");
   const [level, setLevel] = useState("Low");
   const [issue, setIssue] = useState("");
-
-  useEffect(() => {
-    fetch("/inventories")
-      .then((res) => res.json())
-      .then(setInventoryArray);
-  }, []);
 
   useEffect(() => {
     fetch("/admins")
@@ -66,6 +60,11 @@ function EmployeePage() {
       .then((data) => {
         console.log("Success:", data);
       });
+
+    setSubject("");
+    setSerialNumber("");
+    setLevel("Low");
+    setIssue("");
   }
 
   return (
@@ -81,7 +80,7 @@ function EmployeePage() {
           value={serialNumber}
           onChange={(e) => setSerialNumber(e.target.value)}
         ></input>
-        <label> Serial Number </label>
+        <label> Severity Level </label>
         <select value={level} onChange={(e) => setLevel(e.target.value)}>
           <option value="Low">Low</option>
           <option value="Moderate">Moderate</option>

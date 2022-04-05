@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import DashboardPage from "./components/Dashboard/DashboardPage";
 import EmployeePage from "./components/Employee/EmployeePage";
@@ -9,6 +9,12 @@ import TicketPage from "./components/Ticket/TicketPage";
 import "./style/style.css";
 
 function App() {
+  const [inventoryArray, setInventoryArray] = useState([]);
+  useEffect(() => {
+    fetch("/inventories")
+      .then((res) => res.json())
+      .then(setInventoryArray);
+  }, []);
   return (
     <div className="App">
       <NavBar />
@@ -17,13 +23,13 @@ function App() {
           <MainPage />
         </Route>
         <Route exact path="/employee">
-          <EmployeePage />
+          <EmployeePage inventoryArray={inventoryArray} />
         </Route>
         <Route exact path="/ticket">
           <TicketPage />
         </Route>
         <Route exact path="/inventory">
-          <InventoryPage />
+          <InventoryPage inventoryArray={inventoryArray} />
         </Route>
         <Route exact path="/dashboard">
           <DashboardPage />
