@@ -7,20 +7,20 @@ import TicketUpcoming from "./TicketUpcoming";
 function TicketPage() {
   const [ticketsArray, setTicketsArray] = useState([]);
   const [nextTicket, setNextTicket] = useState({});
+  const [currentTicket, setCurrentTicket] = useState({});
 
   useEffect(() => {
-    fetch("/tickets")
+    fetch("/incomplete_tickets")
       .then((res) => res.json())
       .then((data) => {
         setTicketsArray(data);
-        setNextTicket(data[0]);
+        setCurrentTicket(data[0]);
+        setNextTicket(data[1]);
       });
   }, []);
 
-  const incompleteTickets = ticketsArray.filter((ticket) => !ticket.complete);
-
-  const filterOutNextTicket = incompleteTickets.filter(
-    (ticket) => ticket.id !== nextTicket.id
+  const filterOutNextTicket = ticketsArray.filter(
+    (ticket) => ticket.id !== nextTicket.id && ticket.id !== currentTicket.id
   );
 
   const displayTickets = filterOutNextTicket.map((ticket) => {
@@ -40,7 +40,7 @@ function TicketPage() {
         </div>
         <div className="current-ticket">
           <h4> Current Ticket</h4>
-          <TicketResolve />
+          <TicketResolve {...currentTicket} />
         </div>
       </div>
     </div>

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
-function TicketUpcoming({ issue }) {
+function TicketUpcoming({ issue, level }) {
+  function handlePickTicket() {}
   return (
     <div>
-      <div>{issue} </div>
+      <div>
+        {issue} {level}
+      </div>
+      <button onClick={handlePickTicket}>Resolve Ticket</button>
     </div>
   );
 }
