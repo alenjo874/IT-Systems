@@ -24,7 +24,7 @@ function TicketPage() {
   // TURN BACK TO FALSE
 
   useEffect(() => {
-    fetch("/tickets")
+    fetch("/complete_tickets")
       .then((res) => res.json())
       .then(setCompletedTickets);
   }, []);
@@ -59,8 +59,6 @@ function TicketPage() {
   const displayTickets = filterOutNextTicket.map((ticket) => {
     return <TicketCard key={uuidv4()} {...ticket} />;
   });
-
-
 
   // ============================================================
   return (
