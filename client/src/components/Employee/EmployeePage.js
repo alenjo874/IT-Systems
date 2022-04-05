@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-function EmployeePage({  inventoryArray }) {
+function EmployeePage({ inventoryArray }) {
   const [employeeArray, setEmployeeArray] = useState([]);
   const [adminArray, setAdminArray] = useState([]);
 
@@ -87,9 +88,15 @@ function EmployeePage({  inventoryArray }) {
           <option value="Critical">Critical</option>
         </select>
         <label> Issue </label>
-        <input value={issue} onChange={(e) => setIssue(e.target.value)}></input>
+        <textarea
+          value={issue}
+          onChange={(e) => setIssue(e.target.value)}
+        ></textarea>
         <button onClick={handleSubmitTicket}>Submit Ticket</button>
       </form>
+      <Link to="/login">
+        <button>Logout</button>
+      </Link>
     </div>
   );
 }

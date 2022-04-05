@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function MainPage() {
-
-
-
   return (
-    <div>MainPage</div>
-  )
+    <div>
+      <Link to="/login">
+        <button>Logout</button>
+      </Link>
+    </div>
+  );
 }
 
-export default MainPage 
+export default MainPage;

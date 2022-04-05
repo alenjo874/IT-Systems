@@ -4,6 +4,7 @@
 @import "../components/Dashboard/dashboard";
 @import "../components/Inventory/inventory";
 @import "../components/Employee/employee";
+@import "../components/Login/login";
 
 * {
   margin: 0;
@@ -20,6 +21,15 @@ h4 {
   font-size: 1.15rem;
 }
 
+input {
+  border: 0;
+  border-bottom: 1px solid black;
+  outline: 0;
+}
+
 textarea {
+  outline: 0;
+  border: 0;
+  border: 1px solid black;
   font-family: inherit;
 }

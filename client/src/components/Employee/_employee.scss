@@ -1,7 +1,15 @@
 .employee-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+
   form {
     display: flex;
     flex-direction: column;
     width: 65%;
+
+    label {
+      margin: $element-margin 0;
+    }
   }
 }
