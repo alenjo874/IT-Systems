@@ -17,7 +17,16 @@ function TicketPage() {
   return (
     <div className="ticket-page-container">
       <div className="ticket-card-container">
+        Ticket Feed
         {displayTickets}
+      </div>
+      <div className="admin-tickets">
+      <div className="upcoming-tickets">
+      Next Ticket
+      </div>
+      <div className="current-ticket" >
+      Current Ticket
+      </div>
       </div>
     </div>
   );

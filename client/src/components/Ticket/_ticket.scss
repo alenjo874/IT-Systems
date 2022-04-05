@@ -1,0 +1,38 @@
+@import "../../style/variables";
+
+div {
+  margin: $element-margin 0;
+}
+
+.ticket-page-container {
+  display: flex;
+  min-height: 100vh;
+  border: 1px solid green;
+}
+
+.ticket-card {
+  border: 0.5px solid red;
+  width: 30%;
+  margin: $element-margin 0;
+}
+
+.admin-tickets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upcoming-tickets {
+  height: 30%;
+  border: 1px solid purple;
+}
+
+.current-ticket {
+  height: 70%;
+  border: 1px solid purple;
+}
+
+.ticket-head {
+  display: flex;
+  justify-content: space-between;
+}

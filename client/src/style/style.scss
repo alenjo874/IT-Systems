@@ -1,5 +1,10 @@
-@import "../components/Main/main_page";
-@import "../components//NavBar//navbar";
+@import "../components/Main/main";
+@import "../components/NavBar/navbar";
+@import "../components/Ticket/ticket";
+@import "../components/Dashboard/dashboard";
+@import "../components/Inventory/inventory";
+
+
 
 * {
   margin: 0;
