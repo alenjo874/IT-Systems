@@ -10,7 +10,7 @@ class TicketsController < ApplicationController
     end
 
     def create 
-        create_ticket = Ticket.create!(employee_ticket_params, admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id,complete: false, solution: "", severity_level: 1 )
+        create_ticket = Ticket.create!(employee_ticket_params)
         render json: create_ticket, status: :created
     end
 
@@ -43,7 +43,7 @@ class TicketsController < ApplicationController
     end
 
     def employee_ticket_params
-        params.permit(:subject, :level, :issue)
+        params.permit(:admin_id, :employee_id, :subject,:rental_id, :level, :severity_level, :issue, :solution, :complete)
     end
 
 end

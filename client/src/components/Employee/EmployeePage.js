@@ -1,10 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function EmployeePage() {
+  const [employeeArray, setEmployeeArray] = useState([]);
+  const [adminArray, setAdminArray] = useState([]);
+  const [inventoryArray, setInventoryArray] = useState([]);
   const [subject, setSubject] = useState("");
+  const [serialNumber, setSerialNumber] = useState("");
+  const [level, setLevel] = useState("Low");
+  const [issue, setIssue] = useState("");
 
-  function handleSubmitTicket() {
-    const newTicketObj = { subject };
+  useEffect(() => {
+    fetch("/inventories")
+      .then((res) => res.json())
+      .then(setInventoryArray);
+  }, []);
+
+  useEffect(() => {
+    fetch("/admins")
+      .then((res) => res.json())
+      .then(setAdminArray);
+  }, []);
+
+  useEffect(() => {
+    fetch("/employees")
+      .then((res) => res.json())
+      .then(setEmployeeArray);
+  }, []);
+
+  function handleSubmitTicket(e) {
+    e.preventDefault();
+    const inventoryItemObj = inventoryArray.find((item) => {
+      return item.serial_number === parseInt(serialNumber);
+    });
+
+    let severity_level = "";
+
+    if (level === "Low") {
+      severity_level = 1;
+    } else if (level === "Moderate") {
+      severity_level = 2;
+    } else {
+      severity_level = 3;
+    }
+
+    const newTicketObj = {
+      admin_id: adminArray[0].id,
+      employee_id: employeeArray[0].id,
+      subject: subject,
+      rental_id: inventoryItemObj.rentals[0].id,
+      level: level,
+      severity_level: severity_level,
+      issue: issue,
+      solution: "",
+      complete: false,
+    };
 
     fetch("/tickets", {
       method: "POST",
@@ -27,6 +76,19 @@ function EmployeePage() {
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
         ></input>
+        <label> Serial Number </label>
+        <input
+          value={serialNumber}
+          onChange={(e) => setSerialNumber(e.target.value)}
+        ></input>
+        <label> Serial Number </label>
+        <select value={level} onChange={(e) => setLevel(e.target.value)}>
+          <option value="Low">Low</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Critical">Critical</option>
+        </select>
+        <label> Issue </label>
+        <input value={issue} onChange={(e) => setIssue(e.target.value)}></input>
         <button onClick={handleSubmitTicket}>Submit Ticket</button>
       </form>
     </div>
