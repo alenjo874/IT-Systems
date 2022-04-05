@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import DashboardPage from "./components/Dashboard/DashboardPage";
 import InventoryPage from "./components/Inventory/InventoryPage";
@@ -8,17 +8,7 @@ import TicketPage from "./components/Ticket/TicketPage";
 import "./style/style.css";
 
 function App() {
-  const [ticketsArray, setTicketsArray] = useState([]);
-
-  useEffect(() => {
-    fetch("/tickets")
-      .then((res) => res.json())
-      .then(setTicketsArray);
-  }, []);
-
-  const displayTickets = ticketsArray.map((ticket) => {
-    return <p>{ticket.subject}</p>;
-  });
+  
 
   return (
     <div className="App">
@@ -26,7 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <MainPage />
-          {displayTickets}
+      
         </Route>
         <Route exact path="/ticket">
           <TicketPage />

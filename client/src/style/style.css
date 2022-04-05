@@ -1,10 +1,20 @@
-div {
-  background-color: red;
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 * {
   margin: 0;
   padding: 0;
   background-color: #fbf7f5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
