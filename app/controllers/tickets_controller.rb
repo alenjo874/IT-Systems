@@ -1,6 +1,6 @@
 class TicketsController < ApplicationController
     def index
-        tickets = Ticket.all.sort_by{|ticket| ticket.severity_level}.reverse
+        tickets = Ticket.all.filter{|ticket| ticket.complete}
         render json: tickets, status: :ok
     end
 

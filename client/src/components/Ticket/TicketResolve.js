@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TicketResolve({ id, issue, level }) {
+function TicketResolve({ id, issue, level, setTicketsArray, ticketsArray }) {
   const [resolution, setResolution] = useState("");
 
   function handleResolveTicket(e) {
@@ -10,11 +10,17 @@ function TicketResolve({ id, issue, level }) {
       method: "PATCH",
       body: JSON.stringify({
         complete: true,
+        solution: resolution,
       }),
       headers: {
         "Content-type": "application/json",
       },
     });
+
+    const incompleteTicketArr = ticketsArray.filter(
+      (ticket) => ticket.id !== id
+    );
+    setTicketsArray(incompleteTicketArr);
   }
 
   return (

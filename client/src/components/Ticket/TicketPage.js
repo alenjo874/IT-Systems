@@ -6,18 +6,51 @@ import TicketUpcoming from "./TicketUpcoming";
 
 function TicketPage() {
   const [ticketsArray, setTicketsArray] = useState([]);
-  const [nextTicket, setNextTicket] = useState({});
-  const [currentTicket, setCurrentTicket] = useState({});
+  const [completedTickets, setCompletedTickets] = useState([]);
 
   useEffect(() => {
     fetch("/incomplete_tickets")
       .then((res) => res.json())
       .then((data) => {
         setTicketsArray(data);
-        setCurrentTicket(data[0]);
-        setNextTicket(data[1]);
       });
   }, []);
+
+  const nextTicket = ticketsArray[0];
+  const currentTicket = ticketsArray[1];
+
+  // ============================================================
+
+  // TURN BACK TO FALSE
+
+  useEffect(() => {
+    fetch("/tickets")
+      .then((res) => res.json())
+      .then(setCompletedTickets);
+  }, []);
+
+  function handleFalse(tickID) {
+    fetch(`tickets/${tickID}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        complete: false,
+      }),
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+  }
+
+  const displayCompleteTickets = completedTickets.map((ticket) => {
+    return (
+      <div>
+        <p>{ticket.issue}</p>
+        <button onClick={(e) => handleFalse(ticket.id)}>False </button>
+      </div>
+    );
+  });
+
+  // ============================================================
 
   const filterOutNextTicket = ticketsArray.filter(
     (ticket) => ticket.id !== nextTicket.id && ticket.id !== currentTicket.id
@@ -27,6 +60,9 @@ function TicketPage() {
     return <TicketCard key={uuidv4()} {...ticket} />;
   });
 
+
+
+  // ============================================================
   return (
     <div className="ticket-page-container">
       <div className="ticket-card-container">
@@ -40,9 +76,15 @@ function TicketPage() {
         </div>
         <div className="current-ticket">
           <h4> Current Ticket</h4>
-          <TicketResolve {...currentTicket} />
+          <TicketResolve
+            {...currentTicket}
+            setTicketsArray={setTicketsArray}
+            ticketsArray={ticketsArray}
+          />
         </div>
       </div>
+
+      <div>{displayCompleteTickets}</div>
     </div>
   );
 }
