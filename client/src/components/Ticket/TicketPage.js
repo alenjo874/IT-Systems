@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TicketCard from "./TicketCard";
+import TicketResolve from "./TicketResolve";
 
 function TicketPage() {
   const [ticketsArray, setTicketsArray] = useState([]);
@@ -17,16 +18,17 @@ function TicketPage() {
   return (
     <div className="ticket-page-container">
       <div className="ticket-card-container">
-        Ticket Feed
+        <h4> Ticket Feed</h4>
         {displayTickets}
       </div>
       <div className="admin-tickets">
-      <div className="upcoming-tickets">
-      Next Ticket
-      </div>
-      <div className="current-ticket" >
-      Current Ticket
-      </div>
+        <div className="upcoming-tickets">
+          <h4> Next Ticket</h4>
+        </div>
+        <div className="current-ticket">
+          <h4> Current Ticket</h4>
+          <TicketResolve />
+        </div>
       </div>
     </div>
   );

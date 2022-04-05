@@ -36,3 +36,10 @@ div {
   display: flex;
   justify-content: space-between;
 }
+
+.ticket-resolve-container {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}

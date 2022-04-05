@@ -57,6 +57,16 @@ div {
           justify-content: space-between;
 }
 
+.ticket-resolve-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -66,5 +76,13 @@ div {
 a {
   text-decoration: none;
   color: black;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+textarea {
+  font-family: inherit;
 }
 /*# sourceMappingURL=style.css.map */
