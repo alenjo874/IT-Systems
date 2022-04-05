@@ -6,7 +6,7 @@ table {
     minmax(150px, 1.67fr)
     minmax(150px, 1.67fr)
     minmax(150px, 1.67fr)
-
+    minmax(150px, 1.67fr);
 }
 
 thead,
@@ -26,7 +26,7 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: #6c7ae0;
+  background: $secondar-color;
   text-align: left;
   font-weight: normal;
   font-size: 1.1rem;
@@ -44,5 +44,5 @@ td {
 }
 
 tr:nth-child(even) td {
-  background: #f8f6ff;
+  background: #ececec;
 }

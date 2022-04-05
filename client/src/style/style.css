@@ -72,8 +72,8 @@ table {
   display: grid;
   border-collapse: collapse;
   min-width: 100%;
-  -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
-      grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+  -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+      grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
 }
 
 thead,
@@ -94,7 +94,7 @@ th {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: #6c7ae0;
+  background: #3F72AF;
   text-align: left;
   font-weight: normal;
   font-size: 1.1rem;
@@ -112,7 +112,7 @@ td {
 }
 
 tr:nth-child(even) td {
-  background: #f8f6ff;
+  background: #ececec;
 }
 
 .employee-container {
@@ -172,7 +172,7 @@ tr:nth-child(even) td {
 * {
   margin: 0;
   padding: 0;
-  background-color: #fbf7f5;
+  background-color: #F9F7F7;
 }
 
 a {
