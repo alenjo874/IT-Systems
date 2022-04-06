@@ -64,16 +64,18 @@ function TicketPage() {
   return (
     <div className="ticket-page-container">
       <div className="ticket-card-container">
-        <h4> Ticket Feed</h4>
-        {displayTickets}
+        <div className="ticket-section">
+          <h4 className="ticket-label"> Ticket Feed</h4>
+          {displayTickets}
+        </div>
       </div>
       <div className="admin-tickets">
-        <div className="upcoming-tickets">
-          <h4> Next Ticket</h4>
+        <div className="upcoming-tickets ticket-section">
+          <h4 className="ticket-label"> Next Ticket</h4>
           <TicketUpcoming {...nextTicket} />
         </div>
-        <div className="current-ticket">
-          <h4> Current Ticket</h4>
+        <div className="current-ticket ticket-section">
+          <h4 className="ticket-label"> Current Ticket</h4>
           <TicketResolve
             {...currentTicket}
             setTicketsArray={setTicketsArray}

@@ -6,30 +6,55 @@ div {
 
 .ticket-page-container {
   display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
   min-height: 100vh;
   border: 1px solid green;
 }
 
-.ticket-card {
-  border: 0.5px solid red;
-  width: 30%;
-  margin: $element-margin 0;
+.ticket-card-container {
+  width: 50%;
+  max-width: 700px;
+  padding: $element-padding;
 }
 
 .admin-tickets {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 50%;
+  max-width: 700px;
+  margin: $element-margin 0;
+  padding: $element-padding;
+}
+
+.ticket-label {
+  background-color: $primary-color;
+  color: $accent-color;
+  padding: $element-padding;
+  height: 100%;
+  text-align: center;
 }
 
 .upcoming-tickets {
   height: 30%;
-  border: 1px solid purple;
 }
 
 .current-ticket {
   height: 70%;
-  border: 1px solid purple;
+}
+
+.ticket-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // border: 1px solid purple;
+}
+
+.ticket-card {
+  // border: 0.5px solid red;
+  margin: $element-margin 0;
+  padding: $element-padding;
 }
 
 .ticket-head {
