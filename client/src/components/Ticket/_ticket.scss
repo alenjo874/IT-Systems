@@ -1,15 +1,14 @@
 @import "../../style/variables";
 
-div {
-  margin: $element-margin 0;
-}
-
 .ticket-page-container {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
   min-height: 100vh;
   border: 1px solid green;
+  div {
+    margin: $element-margin 0;
+  }
 }
 
 .ticket-card-container {

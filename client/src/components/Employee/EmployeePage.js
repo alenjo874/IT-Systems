@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
 function EmployeePage({ inventoryArray }) {
   const [employeeArray, setEmployeeArray] = useState([]);
   const [adminArray, setAdminArray] = useState([]);
@@ -71,6 +70,13 @@ function EmployeePage({ inventoryArray }) {
 
   return (
     <div className="employee-container">
+      <div className="employee-header">
+        <h4>Submit Ticket Here</h4>
+        <p>Please fill out the form and an IT admin will assist shortly, thank you.</p>
+        <Link to="/login">
+          <button>Logout</button>
+        </Link>
+      </div>
       <form>
         <label> Subject </label>
         <input
@@ -95,10 +101,6 @@ function EmployeePage({ inventoryArray }) {
         ></textarea>
         <button onClick={handleSubmitTicket}>Submit Ticket</button>
       </form>
-      <Link to="/login">
-        <button>Logout</button>
-      </Link>
-   
     </div>
   );
 }

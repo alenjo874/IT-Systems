@@ -19,7 +19,7 @@ function InventoryPage({ inventoryArray, handleMoreDetails }) {
   });
 
   return (
-    <div>
+    <div className="inventory-page-container">
       <table>
         <thead>
           <tr>

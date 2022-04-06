@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function MainPage() {
   return (
-    <div>
+    <div className="main-page-container">
       <div className="blue-banner">
         <div>
           <h2>IT System management</h2>
@@ -13,7 +13,7 @@ function MainPage() {
           <button>Logout</button>
         </Link>
       </div>
-      <div class="custom-shape-divider-top-1649271825">
+      <div class="curve-one">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ function MainPage() {
           <p>Create a Ticket</p>
         </div>
       </div>
-      <div class="custom-shape-divider-bottom-1649272289">
+      <div class="curve-two">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ function MainPage() {
           <p>Create a Ticket</p>
         </div>
       </div>
-      <div class="custom-shape-divider-top-1649272371">
+      <div class="curve-three">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

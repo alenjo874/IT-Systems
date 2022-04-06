@@ -1,5 +1,6 @@
 @import "../../style/variables";
 
+
 .blue-banner {
   display: flex;
   justify-content: center;
@@ -13,7 +14,7 @@
   //   -ms-transform: skewY(2deg);
   //   -o-transform: skewY(2deg);
   //   transform: skewY(2deg);
-  margin: 0;
+ 
 
   h2 {
     background-color: transparent;
@@ -40,30 +41,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+
 }
 
-.custom-shape-divider-top-1649271825 {
+.curve-one {
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  margin: 0;
+
 }
 
-.custom-shape-divider-top-1649271825 svg {
+.curve-one svg {
   display: block;
   width: calc(142% + 1.3px);
   height: 113px;
+
 }
 
-.custom-shape-divider-top-1649271825 .shape-fill {
+.curve-one .shape-fill {
   fill: #3f72af;
+
 }
 
-.custom-shape-divider-bottom-1649272289 {
-  margin: 0;
+.curve-two {
+ 
   bottom: 0;
   left: 0;
   width: 100%;
@@ -72,18 +75,18 @@
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1649272289 svg {
+.curve-two svg {
   display: block;
   width: calc(117% + 1.3px);
   height: 154px;
 }
 
-.custom-shape-divider-bottom-1649272289 .shape-fill {
+.curve-two .shape-fill {
   fill: #3f72af;
 }
 
-.custom-shape-divider-top-1649272371 {
-  margin: 0;
+.curve-three {
+
   top: 0;
   left: 0;
   width: 100%;
@@ -91,12 +94,12 @@
   line-height: 0;
 }
 
-.custom-shape-divider-top-1649272371 svg {
+.curve-three svg {
   display: block;
   width: calc(274% + 1.3px);
   height: 131px;
 }
 
-.custom-shape-divider-top-1649272371 .shape-fill {
+.curve-three .shape-fill {
   fill: #3f72af;
 }
