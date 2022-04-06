@@ -5,8 +5,8 @@ import TicketResolve from "./TicketResolve";
 import TicketUpcoming from "./TicketUpcoming";
 
 function TicketPage({ completedTickets, setCompletedTickets, setTicketsArray, ticketsArray }) {
-  const nextTicket = ticketsArray[0];
-  const currentTicket = ticketsArray[1];
+  const nextTicket = ticketsArray[1];
+  const currentTicket = ticketsArray[0];
 
   // ============================================================
 

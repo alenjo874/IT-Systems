@@ -8,7 +8,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f8f8f8;
+  color: #ffffff;
   background-color: #f8a145;
   height: 100vh;
   max-height: 600px;
@@ -125,7 +125,7 @@
   -webkit-transition: 0.2s;
   transition: 0.2s;
   font-weight: 600;
-  color: #f8f8f8;
+  color: #ffffff;
 }
 
 .nav-container a:hover {
@@ -191,7 +191,7 @@
 
 .ticket-label {
   background-color: #f8a145;
-  color: #f8f8f8;
+  color: #ffffff;
   padding: 2.5%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -219,7 +219,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 15px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -244,12 +244,13 @@
   margin: 5px 0;
   width: 90%;
   padding: 2.5%;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .ticket-card p {
   margin: 5px 0;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 .ticket-head {
@@ -259,7 +260,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 .green {
@@ -304,12 +305,17 @@
 
 .ticket-resolve-container form button {
   border-radius: 0;
+  color: #ffffff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
 .ticket-resolve-container p {
   margin: 5px 0;
+}
+
+.resolve-details {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .upcoming-container {
@@ -331,12 +337,11 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  border: 2px solid green;
   width: 80%;
   max-width: 1000px;
   margin: 10px;
   padding: 2.5%;
-  border: 15px;
+  border-radius: 15px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -355,15 +360,13 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 1px dotted red;
 }
 
 .donut-circle {
   width: 30%;
-  border: 2px solid orange;
   margin: 10px;
   padding: 2.5%;
-  border: 15px;
+  border-radius: 15px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -371,17 +374,32 @@
 
 .pie-chart {
   width: 30%;
-  border: 2px solid blue;
+  margin: 10px;
+  padding: 2.5%;
+  border-radius: 15px;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .bar-graph {
   width: 50%;
-  border: 2px solid red;
+  margin: 10px;
+  padding: 2.5%;
+  border-radius: 15px;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .line-chart {
   width: 50%;
-  border: 2px solid green;
+  margin: 10px;
+  padding: 2.5%;
+  border-radius: 15px;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 table {
@@ -607,14 +625,14 @@ button {
   padding: 2.5%;
   margin: 5px 0;
   background-color: #f8a145;
-  color: #f8f8f8;
+  color: #ffffff;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #6cc9e7;
+  background-color: #e7c66c;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

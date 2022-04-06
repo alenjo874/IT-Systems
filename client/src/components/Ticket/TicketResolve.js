@@ -34,9 +34,8 @@ function TicketResolve({
 
   return (
     <div className="ticket-resolve-container">
-      <div>
+      <div className="resolve-details">
         <p>{issue}</p>
-
         <p
           className={
             level === "Low" ? "green" : level === "Moderate" ? "yellow" : "red"

@@ -67,6 +67,7 @@
   width: 90%;
   padding: $element-padding;
   background-color: $accent-color;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   p {
     margin: $element-margin 0;
@@ -113,6 +114,7 @@
 
     button {
       border-radius: 0;
+      color: #ffffff;
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
@@ -120,6 +122,10 @@
   p {
     margin: $element-margin 0;
   }
+}
+
+.resolve-details {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .upcoming-container {
