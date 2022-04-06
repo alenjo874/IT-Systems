@@ -7,6 +7,7 @@ function TicketResolve({
   setTicketsArray,
   ticketsArray,
   setCompletedTickets,
+  handleMoreDetail,
 }) {
   const [resolution, setResolution] = useState("");
 
@@ -34,7 +35,7 @@ function TicketResolve({
 
   return (
     <div className="ticket-resolve-container">
-      <div className="resolve-details">
+      <div className="resolve-details" onClick={(e) => handleMoreDetail(id)}>
         <p>{issue}</p>
         <p
           className={

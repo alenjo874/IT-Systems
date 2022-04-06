@@ -1,8 +1,8 @@
 import React from "react";
 
-function TicketCard({ subject, level, issue }) {
+function TicketCard({ id, subject, level, issue, handleMoreDetail }) {
   return (
-    <div className="ticket-card">
+    <div className="ticket-card" onClick={(e) => handleMoreDetail(id)}>
       <div className="ticket-head">
         <p>{subject}</p>
         <p

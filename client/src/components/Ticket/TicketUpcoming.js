@@ -1,9 +1,9 @@
 import React from "react";
 
-function TicketUpcoming({ issue, level }) {
+function TicketUpcoming({ id, issue, level,handleMoreDetail }) {
   return (
     <div className="upcoming-container">
-      <div>
+      <div onClick={(e) => handleMoreDetail(id)}>
         <p> {issue}</p>
 
         <p

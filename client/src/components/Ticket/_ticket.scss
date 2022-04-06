@@ -4,11 +4,20 @@
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
+  flex-direction: column;
   min-height: 100vh;
   border: 1px solid green;
   div {
     margin: $element-margin 0;
   }
+}
+
+.incident-incomplete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  width: 100%;
 }
 
 .ticket-card-container {
@@ -31,7 +40,7 @@
   background-color: $primary-color;
   color: $accent-color;
   padding: $element-padding;
-  border-top-left-radius: $border-radius;
+  // border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   height: 100%;
   text-align: center;
