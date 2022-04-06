@@ -66,7 +66,7 @@ function TicketPage() {
       <div className="ticket-card-container">
         <div className="ticket-section">
           <h4 className="ticket-label"> Ticket Feed</h4>
-          {displayTickets}
+          <div className="display-ticket"> {displayTickets} </div>
         </div>
       </div>
       <div className="admin-tickets">

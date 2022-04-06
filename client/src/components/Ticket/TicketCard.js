@@ -5,10 +5,16 @@ function TicketCard({ subject, level, issue }) {
     <div className="ticket-card">
       <div className="ticket-head">
         <p>{subject}</p>
-        <p>{level}</p>
+        <p
+          className={
+            level === "Low" ? "green" : level === "Moderate" ? "yellow" : "red"
+          }
+        >
+          {level}
+        </p>
       </div>
       <div>
-        {issue}
+        <p>{issue}</p>
       </div>
     </div>
   );

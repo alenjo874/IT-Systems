@@ -25,8 +25,15 @@ function TicketResolve({ id, issue, level, setTicketsArray, ticketsArray }) {
 
   return (
     <div className="ticket-resolve-container">
-      {issue}
-      {level}
+      <p>{issue}</p>
+
+      <p
+        className={
+          level === "Low" ? "green" : level === "Moderate" ? "yellow" : "red"
+        }
+      >
+        {level}
+      </p>
       <form>
         <label>Incident Resolution</label>
         <textarea

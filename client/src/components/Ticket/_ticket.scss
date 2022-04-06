@@ -32,6 +32,8 @@ div {
   background-color: $primary-color;
   color: $accent-color;
   padding: $element-padding;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
   height: 100%;
   text-align: center;
 }
@@ -49,22 +51,66 @@ div {
   flex-direction: column;
   justify-content: space-between;
   // border: 1px solid purple;
+  border-radius: $border-radius;
+  background-color: $accent-color;
+  box-shadow: $shadow;
+}
+
+.display-ticket {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .ticket-card {
-  // border: 0.5px solid red;
   margin: $element-margin 0;
+  width: 90%;
   padding: $element-padding;
+  background-color: $accent-color;
+
+  p {
+    margin: $element-margin 0;
+    background-color: $accent-color;
+  }
 }
 
 .ticket-head {
   display: flex;
   justify-content: space-between;
+  background-color: $accent-color;
+}
+
+.green {
+  color: #77dd77;
+}
+.yellow {
+  color: #ffb347;
+}
+
+.red {
+  color: #fb6962;
 }
 
 .ticket-resolve-container {
+  padding: $element-padding;
   form {
     display: flex;
     flex-direction: column;
+
+    label {
+      margin: $element-margin;
+    }
+  }
+  p {
+    margin: $element-margin;
+  }
+}
+
+.upcoming-container {
+  padding: $element-padding;
+
+  p {
+    margin: $element-margin;
   }
 }

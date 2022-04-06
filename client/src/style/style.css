@@ -50,8 +50,10 @@ div {
 
 .ticket-label {
   background-color: #3f72af;
-  color: #dbe2ef;
+  color: #f8f8f8;
   padding: 2.5%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   height: 100%;
   text-align: center;
 }
@@ -75,11 +77,38 @@ div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.display-ticket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .ticket-card {
   margin: 5px 0;
+  width: 90%;
   padding: 2.5%;
+  background-color: #f8f8f8;
+}
+
+.ticket-card p {
+  margin: 5px 0;
+  background-color: #f8f8f8;
 }
 
 .ticket-head {
@@ -89,6 +118,23 @@ div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #f8f8f8;
+}
+
+.green {
+  color: #77dd77;
+}
+
+.yellow {
+  color: #ffb347;
+}
+
+.red {
+  color: #fb6962;
+}
+
+.ticket-resolve-container {
+  padding: 2.5%;
 }
 
 .ticket-resolve-container form {
@@ -99,6 +145,22 @@ div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.ticket-resolve-container form label {
+  margin: 5px;
+}
+
+.ticket-resolve-container p {
+  margin: 5px;
+}
+
+.upcoming-container {
+  padding: 2.5%;
+}
+
+.upcoming-container p {
+  margin: 5px;
 }
 
 table {
@@ -207,6 +269,8 @@ tr:nth-child(even) td {
   margin: 0;
   padding: 0;
   background-color: #f9f7f7;
+  letter-spacing: 1.05px;
+  line-height: 1.25;
 }
 
 a {
@@ -216,6 +280,10 @@ a {
 
 h4 {
   font-size: 1.15rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 input {
