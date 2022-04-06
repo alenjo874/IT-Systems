@@ -8,6 +8,7 @@ import LoginPage from "./components/Login/LoginPage";
 import MainPage from "./components/Main/MainPage";
 import NavBar from "./components/NavBar/NavBar";
 import TicketPage from "./components/Ticket/TicketPage";
+import { CometChat } from "@cometchat-pro/chat";
 import "./style/style.css";
 
 function App() {
@@ -24,6 +25,22 @@ function App() {
     setMoreDetailItem(selectedInventoryItem);
   }
 
+  const appID = "206859ccee3ebcc3";
+  const region = "US";
+  const appSetting = new CometChat.AppSettingsBuilder()
+    .subscribePresenceForAllUsers()
+    .setRegion(region)
+    .build();
+  CometChat.init(appID, appSetting).then(
+    () => {
+      console.log("Initialization completed successfully");
+      // You can now call login function.
+    },
+    (error) => {
+      console.log("Initialization failed with error:", error);
+      // Check the reason for error and take appropriate action.
+    }
+  );
 
   return (
     <div className="App">

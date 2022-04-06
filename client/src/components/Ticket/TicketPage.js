@@ -3,6 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 import TicketCard from "./TicketCard";
 import TicketResolve from "./TicketResolve";
 import TicketUpcoming from "./TicketUpcoming";
+import { CometChat } from "@cometchat-pro/chat";
+import { CometChatUI } from "../../cometchat-pro-react-ui-kit/CometChatWorkspace/src";
 
 function TicketPage() {
   const [ticketsArray, setTicketsArray] = useState([]);
@@ -61,6 +63,19 @@ function TicketPage() {
   });
 
   // ============================================================
+
+
+  const authKey = "d82fc71a268113db7b4e85aa8a9ccccd534d4ac5";
+  const uid = "it-admin";
+  CometChat.login(uid, authKey).then(
+    (user) => {
+      console.log("Login Successful:", { user });
+    },
+    (error) => {
+      console.log("Login failed with exception:", { error });
+    }
+  );
+
   return (
     <div className="ticket-page-container">
       <div className="ticket-card-container">
@@ -85,6 +100,9 @@ function TicketPage() {
       </div>
 
       <div>{displayCompleteTickets}</div>
+      <div style={{ width: "800px", height: "800px" }}>
+        <CometChatUI />
+      </div>
     </div>
   );
 }

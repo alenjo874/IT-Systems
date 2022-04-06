@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { CometChat } from "@cometchat-pro/chat";
+import { CometChatUI } from "../../cometchat-pro-react-ui-kit/CometChatWorkspace/src";
 
 function EmployeePage({ inventoryArray }) {
   const [employeeArray, setEmployeeArray] = useState([]);
@@ -68,6 +70,34 @@ function EmployeePage({ inventoryArray }) {
     setIssue("");
   }
 
+  // ======================================================
+
+
+  const authKey = "d82fc71a268113db7b4e85aa8a9ccccd534d4ac5";
+  const uid = "alenjo";
+  var name = "Alen";
+
+  // var user = new CometChat.User(uid);
+  // user.setName(name);
+  // CometChat.createUser(user, authKey).then(
+  //   (user) => {
+  //     console.log("user created", user);
+  //   },
+  //   (error) => {
+  //     console.log("error", error);
+  //   }
+  // );
+
+  CometChat.login(uid, authKey).then(
+    (user) => {
+      console.log("Login Successful:", { user });
+    },
+    (error) => {
+      console.log("Login failed with exception:", { error });
+    }
+  );
+
+  // ======================================================
   return (
     <div className="employee-container">
       <form>
@@ -97,6 +127,9 @@ function EmployeePage({ inventoryArray }) {
       <Link to="/login">
         <button>Logout</button>
       </Link>
+      <div style={{ width: "800px", height: "800px" }}>
+        <CometChatUI />
+      </div>
     </div>
   );
 }
