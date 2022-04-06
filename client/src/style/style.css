@@ -188,6 +188,10 @@ div {
   margin: 5px;
 }
 
+.bar-graph {
+  width: 50%;
+}
+
 table {
   display: -ms-grid;
   display: grid;

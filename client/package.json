@@ -7,22 +7,23 @@
     "node": "16.x"
   },
   "dependencies": {
- 
+    "@emotion/core": "^10.0.35",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "chart.js": "^3.7.1",
+    "dateformat": "^4.0.0",
+    "emoji-mart": "^3.0.0",
+    "html-react-parser": "^1.4.5",
     "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.2",
     "react-md-spinner": "^1.0.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "twemoji": "^13.0.1",
     "uuid": "^8.3.2",
-    "web-vitals": "^1.1.2",
-		"@emotion/core": "^10.0.35",
-		"dateformat": "^4.0.0",
-		"emoji-mart": "^3.0.0",
-		"html-react-parser": "^1.4.5",
-		"twemoji": "^13.0.1"
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "PORT=4000 react-scripts start",
@@ -48,7 +49,4 @@
       "last 1 safari version"
     ]
   }
-
-
-  
 }
