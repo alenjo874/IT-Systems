@@ -5,6 +5,11 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin: 0;
+}
+
+.nav-elem {
+  color: black;
 }
 
 div {
@@ -192,6 +197,10 @@ table {
       grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
 }
 
+table a {
+  color: #808080;
+}
+
 thead,
 tbody,
 tr {
@@ -295,7 +304,7 @@ tr:nth-child(even) td {
 
 a {
   text-decoration: none;
-  color: black;
+  background-color: transparent;
 }
 
 h4 {

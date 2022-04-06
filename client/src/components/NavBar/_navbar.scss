@@ -1,4 +1,11 @@
+@import "../../style/variables";
+
 .nav-container {
   display: flex;
   justify-content: space-evenly;
+  margin: 0;
+}
+
+.nav-elem {
+  color: black;
 }
