@@ -94,21 +94,41 @@ div {
 
 .ticket-resolve-container {
   padding: $element-padding;
+
+  div {
+    padding: $element-padding;
+  }
+
   form {
     display: flex;
     flex-direction: column;
-
+    padding: $element-padding;
     label {
-      margin: $element-margin;
+      margin: $element-margin 0;
+    }
+
+    textarea {
+      margin: $element-margin 0;
+      min-height: 150px;
+    }
+
+    button {
+      border-radius: 0;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
     }
   }
   p {
-    margin: $element-margin;
+    margin: $element-margin 0;
   }
 }
 
 .upcoming-container {
   padding: $element-padding;
+
+  div {
+    padding: $element-padding;
+  }
 
   p {
     margin: $element-margin;

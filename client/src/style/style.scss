@@ -25,7 +25,6 @@ h4 {
 
 p {
   font-size: 1rem;
-
 }
 
 input {
@@ -39,4 +38,30 @@ textarea {
   border: 0;
   border: 1px solid black;
   font-family: inherit;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  border-radius: $border-radius;
+  // border-bottom-left-radius: $border-radius;
+  // border-bottom-right-radius: $border-radius;
+  // border-top-right-radius: $border-radius;
+  padding: $element-padding;
+  margin: $element-margin 0;
+  background-color: $primary-color;
+  color: $accent-color;
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(108, 201, 231);
+    transition: 0.2s;
+    box-shadow: $shadow;
+  }
+
+  &:active {
+    background-color: rgb(176, 216, 230);
+    transition: 0.2s;
+  }
 }
