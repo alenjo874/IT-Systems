@@ -4,31 +4,13 @@ import TicketCard from "./TicketCard";
 import TicketResolve from "./TicketResolve";
 import TicketUpcoming from "./TicketUpcoming";
 
-
-function TicketPage() {
-  const [ticketsArray, setTicketsArray] = useState([]);
-  const [completedTickets, setCompletedTickets] = useState([]);
-
-  useEffect(() => {
-    fetch("/incomplete_tickets")
-      .then((res) => res.json())
-      .then((data) => {
-        setTicketsArray(data);
-      });
-  }, []);
-
+function TicketPage({ completedTickets, setCompletedTickets, setTicketsArray, ticketsArray }) {
   const nextTicket = ticketsArray[0];
   const currentTicket = ticketsArray[1];
 
   // ============================================================
 
   // TURN BACK TO FALSE
-
-  useEffect(() => {
-    fetch("/complete_tickets")
-      .then((res) => res.json())
-      .then(setCompletedTickets);
-  }, []);
 
   function handleFalse(tickID) {
     fetch(`tickets/${tickID}`, {
@@ -39,12 +21,14 @@ function TicketPage() {
       headers: {
         "Content-type": "application/json",
       },
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }
 
   const displayCompleteTickets = completedTickets.map((ticket) => {
     return (
-      <div>
+      <div key={uuidv4()}>
         <p>{ticket.issue}</p>
         <button onClick={(e) => handleFalse(ticket.id)}>False </button>
       </div>
@@ -80,6 +64,7 @@ function TicketPage() {
           <h4 className="ticket-label"> Current Ticket</h4>
           <TicketResolve
             {...currentTicket}
+            setCompletedTickets={setCompletedTickets}
             setTicketsArray={setTicketsArray}
             ticketsArray={ticketsArray}
           />

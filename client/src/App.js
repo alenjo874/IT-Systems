@@ -13,6 +13,23 @@ import "./style/style.css";
 function App() {
   const [inventoryArray, setInventoryArray] = useState([]);
   const [moreDetailItem, setMoreDetailItem] = useState({});
+  const [ticketsArray, setTicketsArray] = useState([]);
+  const [completedTickets, setCompletedTickets] = useState([]);
+
+  useEffect(() => {
+    fetch("/incomplete_tickets")
+      .then((res) => res.json())
+      .then((data) => {
+        setTicketsArray(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("/complete_tickets")
+      .then((res) => res.json())
+      .then(setCompletedTickets);
+  }, []);
+
   useEffect(() => {
     fetch("/inventories")
       .then((res) => res.json())
@@ -24,7 +41,6 @@ function App() {
     setMoreDetailItem(selectedInventoryItem);
   }
 
-
   return (
     <div className="App">
       {/* <NavBar /> */}
@@ -35,7 +51,12 @@ function App() {
         </Route>
         <Route exact path="/ticket">
           <NavBar />
-          <TicketPage />
+          <TicketPage
+            ticketsArray={ticketsArray}
+            setTicketsArray={setTicketsArray}
+            completedTickets={completedTickets}
+            setCompletedTickets={setCompletedTickets}
+          />
         </Route>
         <Route exact path="/inventory">
           <NavBar />
@@ -50,7 +71,10 @@ function App() {
         </Route>
         <Route exact path="/dashboard">
           <NavBar />
-          <DashboardPage />
+          <DashboardPage
+            ticketsArray={ticketsArray}
+            completedTickets={completedTickets}
+          />
         </Route>
         <Route exact path="/login">
           <LoginPage />

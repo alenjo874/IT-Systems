@@ -1,3 +1,90 @@
+.blue-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f8f8f8;
+  background-color: #3f72af;
+  height: 100vh;
+  max-height: 600px;
+  margin: 0;
+}
+
+.blue-banner h2 {
+  background-color: transparent;
+}
+
+.white-banner {
+  background-color: #f9f7f7;
+  height: 100vh;
+  max-height: 600px;
+  margin: 0;
+}
+
+.custom-shape-divider-top-1649271825 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin: 0;
+}
+
+.custom-shape-divider-top-1649271825 svg {
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 113px;
+}
+
+.custom-shape-divider-top-1649271825 .shape-fill {
+  fill: #3f72af;
+}
+
+.custom-shape-divider-bottom-1649272289 {
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1649272289 svg {
+  display: block;
+  width: calc(117% + 1.3px);
+  height: 154px;
+}
+
+.custom-shape-divider-bottom-1649272289 .shape-fill {
+  fill: #3f72af;
+}
+
+.custom-shape-divider-top-1649272371 {
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1649272371 svg {
+  display: block;
+  width: calc(274% + 1.3px);
+  height: 131px;
+}
+
+.custom-shape-divider-top-1649272371 .shape-fill {
+  fill: #3f72af;
+}
+
 .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,8 +275,33 @@ div {
   margin: 5px;
 }
 
+.top-graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1px dotted red;
+}
+
+.donut-circle {
+  width: 30%;
+  border: 2px solid orange;
+}
+
+.pie-chart {
+  width: 30%;
+  border: 2px solid blue;
+}
+
 .bar-graph {
   width: 50%;
+  border: 2px solid red;
+}
+
+.line-chart {
+  width: 50%;
+  border: 2px solid green;
 }
 
 table {

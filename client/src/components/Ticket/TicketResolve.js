@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 
-function TicketResolve({ id, issue, level, setTicketsArray, ticketsArray }) {
+function TicketResolve({
+  id,
+  issue,
+  level,
+  setTicketsArray,
+  ticketsArray,
+  setCompletedTickets,
+}) {
   const [resolution, setResolution] = useState("");
 
   function handleResolveTicket(e) {
@@ -15,7 +22,9 @@ function TicketResolve({ id, issue, level, setTicketsArray, ticketsArray }) {
       headers: {
         "Content-type": "application/json",
       },
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => setCompletedTickets((prev) => [...prev, data]));
 
     const incompleteTicketArr = ticketsArray.filter(
       (ticket) => ticket.id !== id

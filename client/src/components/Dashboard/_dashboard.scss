@@ -1,3 +1,25 @@
+.top-graph {
+  display: flex;
+  justify-content: space-around;
+  border: 1px dotted red;
+}
+
+.donut-circle {
+  width: 30%;
+  border: 2px solid orange;
+}
+
+.pie-chart {
+  width: 30%;
+  border: 2px solid blue;
+}
+
 .bar-graph {
-    width: 50%;
+  width: 50%;
+  border: 2px solid red;
+}
+
+.line-chart {
+  width: 50%;
+  border: 2px solid green;
 }
