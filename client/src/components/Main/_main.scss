@@ -18,17 +18,28 @@
   h2 {
     background-color: transparent;
   }
+
+  div {
+    background-color: transparent;
+  }
+
+  p {
+    background-color: transparent;
+  }
+
+  button {
+    background-color: white;
+    color: black;
+  }
 }
 
 .white-banner {
   background-color: $bkgrd-color;
   height: 100vh;
   max-height: 600px;
-  //   -webkit-transform: skewY(2deg);
-  //   -moz-transform: skewY(2deg);
-  //   -ms-transform: skewY(2deg);
-  //   -o-transform: skewY(2deg);
-  //   transform: skewY(2deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
 }
 

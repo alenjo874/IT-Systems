@@ -1,15 +1,43 @@
 .employee-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 1px solid red;
+  min-height: 100vh;
 
   form {
     display: flex;
     flex-direction: column;
     width: 65%;
+    background-color: #ffffff;
+    padding: $element-padding;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    max-width: 650px;
+    height: 100%;
 
     label {
-      margin: $element-margin 0;
+      margin: $element-margin * 3 0;
+      background-color: #ffffff;
+    }
+
+    select {
+      background-color: #ffffff;
+    }
+
+    textarea {
+      background-color: #ffffff;
+      height: 40%;
+      min-height: 100px;
+    }
+
+    input {
+      background-color: #ffffff;
+    }
+    button {
+      border-radius: 0;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
     }
   }
 }

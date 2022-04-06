@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 function MainPage() {
   return (
     <div>
-      <Link to="/login">
-        <button>Logout</button>
-      </Link>
       <div className="blue-banner">
-        <h2>IT System management</h2>
+        <div>
+          <h2>IT System management</h2>
+        </div>
+
+        <Link to="/login">
+          <button>Logout</button>
+        </Link>
       </div>
       <div class="custom-shape-divider-top-1649271825">
         <svg
@@ -23,7 +26,12 @@ function MainPage() {
           ></path>
         </svg>
       </div>
-      <div className="white-banner"></div>
+      <div className="white-banner">
+        <div>
+          <h2>IT System management</h2>
+          <p>Create a Ticket</p>
+        </div>
+      </div>
       <div class="custom-shape-divider-bottom-1649272289">
         <svg
           data-name="Layer 1"
@@ -37,7 +45,12 @@ function MainPage() {
           ></path>
         </svg>
       </div>
-      <div className="blue-banner"></div>
+      <div className="blue-banner">
+        <div>
+          <h2>IT System management</h2>
+          <p>Create a Ticket</p>
+        </div>
+      </div>
       <div class="custom-shape-divider-top-1649272371">
         <svg
           data-name="Layer 1"
@@ -50,7 +63,12 @@ function MainPage() {
             class="shape-fill"
           ></path>
         </svg>
-        <div className="white-banner"></div>
+        <div className="white-banner">
+          <div>
+            <h2>IT System management</h2>
+            <p>View Dashboard</p>
+          </div>
+        </div>
       </div>
     </div>
   );
