@@ -9,7 +9,7 @@
       -ms-flex-align: center;
           align-items: center;
   color: #f8f8f8;
-  background-color: #3f72af;
+  background-color: #f8a145;
   height: 100vh;
   max-height: 600px;
 }
@@ -61,7 +61,7 @@
 }
 
 .curve-one .shape-fill {
-  fill: #3f72af;
+  fill: #f8a145;
 }
 
 .curve-two {
@@ -81,7 +81,7 @@
 }
 
 .curve-two .shape-fill {
-  fill: #3f72af;
+  fill: #f8a145;
 }
 
 .curve-three {
@@ -99,7 +99,7 @@
 }
 
 .curve-three .shape-fill {
-  fill: #3f72af;
+  fill: #f8a145;
 }
 
 .nav-container {
@@ -109,8 +109,39 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 0;
-  background-color: red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #28282b;
+  height: 80px;
+  margin-bottom: 50px;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container a {
+  font-size: 1.15rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-weight: 600;
+  color: #f8f8f8;
+}
+
+.nav-container a:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #f8a145;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.nav-container a:active {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: lightgray;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .nav-elem {
@@ -159,7 +190,7 @@
 }
 
 .ticket-label {
-  background-color: #3f72af;
+  background-color: #f8a145;
   color: #f8f8f8;
   padding: 2.5%;
   border-top-left-radius: 15px;
@@ -293,6 +324,31 @@
   margin: 5px;
 }
 
+.top-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 2px solid green;
+  width: 80%;
+  max-width: 1000px;
+  margin: 10px;
+  padding: 2.5%;
+  border: 15px;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.user-data {
+  padding: 2.5%;
+  background-color: transparent;
+  width: 20%;
+  max-width: 200px;
+}
+
 .top-graph {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,6 +361,12 @@
 .donut-circle {
   width: 30%;
   border: 2px solid orange;
+  margin: 10px;
+  padding: 2.5%;
+  border: 15px;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .pie-chart {
@@ -353,7 +415,7 @@ th {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: #3f72af;
+  background: #f8a145;
   text-align: left;
   font-weight: normal;
   font-size: 1.1rem;
@@ -503,17 +565,12 @@ tr:nth-child(even) td {
 * {
   margin: 0;
   padding: 0;
-  background-color: #f9f7f7;
   letter-spacing: 1.05px;
   line-height: 1.25;
 }
 
-#root {
-  margin: 0;
-}
-
-.App {
-  margin: 0;
+html {
+  background-color: #f9f7f7;
 }
 
 a {
@@ -527,6 +584,7 @@ h4 {
 
 p {
   font-size: 1rem;
+  background-color: transparent;
 }
 
 input {
@@ -548,7 +606,7 @@ button {
   border-radius: 15px;
   padding: 2.5%;
   margin: 5px 0;
-  background-color: #3f72af;
+  background-color: #f8a145;
   color: #f8f8f8;
   -webkit-transition: 0.2s;
   transition: 0.2s;

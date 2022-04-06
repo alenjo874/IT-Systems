@@ -11,6 +11,20 @@ function DashboardPage({ completedTickets, ticketsArray }) {
 
   return (
     <div className="dashboard-container">
+      <div className="top-data">
+        <div className="user-data">
+          <p>5</p>
+          <p>Total Tickets</p>
+        </div>
+        <div className="user-data">
+          <p>5</p>
+          <p>Open Tickets</p>
+        </div >
+        <div className="user-data" >
+          <p>5</p>
+          <p>Completed Tickets</p>
+        </div>
+      </div>
       <div className="top-graph">
         <div className="pie-chart">
           <Pie

@@ -1,4 +1,23 @@
+.top-data {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid green;
 
+  width: 80%;
+  max-width: 1000px;
+  margin: $element-margin * 2;
+  padding: $element-padding;
+  border: $border-radius;
+  background-color: #ffffff;
+  box-shadow: $shadow;
+}
+
+.user-data {
+  padding: $element-padding;
+  background-color: transparent;
+  width: 20%;
+  max-width: 200px;
+}
 
 .top-graph {
   display: flex;
@@ -9,6 +28,11 @@
 .donut-circle {
   width: 30%;
   border: 2px solid orange;
+  margin: $element-margin * 2;
+  padding: $element-padding;
+  border: $border-radius;
+  background-color: #ffffff;
+  box-shadow: $shadow;
 }
 
 .pie-chart {
