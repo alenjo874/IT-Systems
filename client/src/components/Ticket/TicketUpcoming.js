@@ -2,7 +2,7 @@ import React from "react";
 
 function TicketUpcoming({ id, issue, level }) {
   return (
-    <div className="upcoming-container">
+    <div className="upcoming-container card">
       <div>
         <div className="ticket-subsections">
           <div>

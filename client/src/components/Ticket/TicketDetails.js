@@ -9,7 +9,7 @@ function TicketDetails({
   rental_item,
 }) {
   return (
-    <div className="ticket-details">
+    <div className="ticket-details card">
       <div className="ticket-subsections">
         <div>
           <p className="detail-label">Subject</p>

@@ -174,9 +174,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -185,9 +185,13 @@
 }
 
 .ticket-card-container {
-  width: 50%;
+  width: 80%;
   max-width: 700px;
-  padding: 2.5%;
+}
+
+.ticket-case-details-container {
+  width: 40%;
+  max-width: 700px;
 }
 
 .admin-tickets {
@@ -201,10 +205,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 50%;
+  width: 40%;
   max-width: 700px;
-  margin: 5px 0;
-  padding: 2.5%;
 }
 
 .ticket-label {
@@ -238,6 +240,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid purple;
 }
 
 .display-ticket {
@@ -258,8 +261,7 @@
 
 .ticket-card {
   margin: 5px 0;
-  width: 90%;
-  padding: 2.5%;
+  width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -291,14 +293,6 @@
   color: #fb6962;
 }
 
-.ticket-resolve-container {
-  padding: 2.5%;
-}
-
-.ticket-resolve-container div {
-  padding: 2.5%;
-}
-
 .ticket-resolve-container form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,7 +301,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2.5%;
 }
 
 .ticket-resolve-container form label {
@@ -330,25 +323,18 @@
   margin: 5px 0;
 }
 
-.upcoming-container {
-  padding: 2.5%;
-}
-
-.upcoming-container div {
-  padding: 2.5%;
-}
-
-.upcoming-container p {
-  margin: 5px;
-}
-
 .ticket-subsections {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .detail-label {
   font-size: 0.8rem;
+  margin-bottom: 5px;
   color: #1a1a1a;
+}
+
+.card {
+  padding: 2.5%;
 }
 
 .top-data {

@@ -35,7 +35,7 @@ function TicketResolve({
   }
 
   return (
-    <div className="ticket-resolve-container">
+    <div className="ticket-resolve-container card">
       <div className="resolve-details">
         <div className="ticket-subsections">
           <div>

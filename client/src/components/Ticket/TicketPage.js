@@ -71,7 +71,7 @@ function TicketPage({
   return (
     <div className="ticket-page-container">
       <div className="incident-incomplete">
-        <div>
+        <div className="ticket-case-details-container">
           <div className="ticket-section incident-details">
             <h4 className="ticket-label">Ticket Details</h4>
             <TicketDetails {...currentTicket} />
@@ -106,7 +106,7 @@ function TicketPage({
       <div className="ticket-card-container">
         <div className="ticket-section">
           <h4 className="ticket-label"> Ticket Feed</h4>
-          <div className="display-ticket"> {displayTickets} </div>
+          <div className="display-ticket card"> {displayTickets} </div>
         </div>
       </div>
     </div>

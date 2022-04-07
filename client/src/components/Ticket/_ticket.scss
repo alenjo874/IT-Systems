@@ -14,26 +14,31 @@
 
 .incident-incomplete {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
   border: 2px solid red;
   width: 100%;
 }
 
 .ticket-card-container {
-  width: 50%;
+  width: 80%;
   max-width: 700px;
-  padding: $element-padding;
+  // padding: $element-padding;
+}
+
+.ticket-case-details-container {
+  width: 40%;
+  max-width: 700px;
 }
 
 .admin-tickets {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 40%;
   max-width: 700px;
-  margin: $element-margin 0;
-  padding: $element-padding;
+  // margin: $element-margin 0;
+  // padding: $element-padding;
 }
 
 .ticket-label {
@@ -57,10 +62,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // border: 1px solid purple;
   border-radius: $border-radius;
   background-color: $accent-color;
   box-shadow: $shadow;
+  border: 1px solid purple;
 }
 
 .display-ticket {
@@ -72,8 +77,8 @@
 
 .ticket-card {
   margin: $element-margin 0;
-  width: 90%;
-  padding: $element-padding;
+  width: 100%;
+  // padding: $element-padding;
   background-color: $accent-color;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
@@ -101,16 +106,16 @@
 }
 
 .ticket-resolve-container {
-  padding: $element-padding;
+  // padding: $element-padding;
 
   div {
-    padding: $element-padding;
+    // padding: $element-padding;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    padding: $element-padding;
+    // padding: $element-padding;
     label {
       margin: $element-margin 0;
     }
@@ -133,15 +138,6 @@
 }
 
 .upcoming-container {
-  padding: $element-padding;
-
-  div {
-    padding: $element-padding;
-  }
-
-  p {
-    margin: $element-margin;
-  }
 }
 
 .ticket-subsections {
@@ -150,5 +146,10 @@
 
 .detail-label {
   font-size: 0.8rem;
+  margin-bottom: $element-margin;
   color: #1a1a1a;
+}
+
+.card {
+  padding: $element-padding;
 }
