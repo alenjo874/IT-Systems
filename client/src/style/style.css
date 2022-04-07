@@ -155,9 +155,9 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -177,9 +177,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border: 2px solid red;
   width: 100%;
 }
@@ -209,11 +209,10 @@
 
 .ticket-label {
   background-color: #f8a145;
-  color: #ffffff;
   padding: 2.5%;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   height: 100%;
-  text-align: center;
 }
 
 .upcoming-tickets {
@@ -235,7 +234,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -323,16 +322,12 @@
 .ticket-resolve-container form button {
   border-radius: 0;
   color: #ffffff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .ticket-resolve-container p {
   margin: 5px 0;
-}
-
-.resolve-details {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .upcoming-container {
@@ -347,6 +342,15 @@
   margin: 5px;
 }
 
+.ticket-subsections {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #1a1a1a;
+}
+
 .top-data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,7 +362,7 @@
   max-width: 1000px;
   margin: 10px;
   padding: 2.5%;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -383,7 +387,7 @@
   width: 30%;
   margin: 10px;
   padding: 2.5%;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -393,7 +397,7 @@
   width: 30%;
   margin: 10px;
   padding: 2.5%;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -403,7 +407,7 @@
   width: 50%;
   margin: 10px;
   padding: 2.5%;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -413,7 +417,7 @@
   width: 50%;
   margin: 10px;
   padding: 2.5%;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -500,7 +504,7 @@ tr:nth-child(even) td {
   width: 65%;
   background-color: #ffffff;
   padding: 2.5%;
-  border-radius: 15px;
+  border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   max-width: 650px;
@@ -528,8 +532,8 @@ tr:nth-child(even) td {
 
 .employee-container form button {
   border-radius: 0;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .employee-header {
@@ -584,7 +588,7 @@ tr:nth-child(even) td {
   max-width: 500px;
   height: 150px;
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 2.5%;
@@ -638,7 +642,7 @@ textarea {
 button {
   outline: 0;
   border: 0;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 2.5%;
   margin: 5px 0;
   background-color: #f8a145;

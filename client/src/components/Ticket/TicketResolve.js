@@ -8,6 +8,7 @@ function TicketResolve({
   ticketsArray,
   setCompletedTickets,
   handleMoreDetail,
+  subject,
 }) {
   const [resolution, setResolution] = useState("");
 
@@ -35,15 +36,19 @@ function TicketResolve({
 
   return (
     <div className="ticket-resolve-container">
-      <div className="resolve-details" onClick={(e) => handleMoreDetail(id)}>
-        <p>{issue}</p>
-        <p
-          className={
-            level === "Low" ? "green" : level === "Moderate" ? "yellow" : "red"
-          }
-        >
-          {level}
-        </p>
+      <div className="resolve-details">
+        <div className="ticket-subsections">
+          <div>
+            <p className="detail-label">Subject</p>
+            <p> {subject} </p>
+          </div>
+        </div>
+        <div className="ticket-subsections">
+          <div>
+            <p className="detail-label">Case Issue</p>
+            <p>{issue}</p>
+          </div>
+        </div>
       </div>
       <form>
         <label>Incident Resolution</label>

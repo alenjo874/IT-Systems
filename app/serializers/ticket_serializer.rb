@@ -1,5 +1,5 @@
 class TicketSerializer < ActiveModel::Serializer
-  attributes :id, :subject, :level, :issue, :complete, :solution, :create_date, :severity_level
+  attributes :id, :subject, :level, :issue, :complete, :solution, :create_date, :severity_level, :rental_item
   has_one :admin
   has_one :rental
   has_one :employee
@@ -8,6 +8,8 @@ class TicketSerializer < ActiveModel::Serializer
     self.object.created_at.to_date.strftime("%b %d, %Y")
   end
 
-
+  def rental_item 
+    self.object.rental.inventory
+  end
 
 end

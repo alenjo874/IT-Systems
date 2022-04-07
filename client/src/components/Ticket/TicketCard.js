@@ -13,9 +13,9 @@ function TicketCard({ id, subject, level, issue, handleMoreDetail }) {
           {level}
         </p>
       </div>
-      <div>
+      {/* <div>
         <p>{issue}</p>
-      </div>
+      </div> */}
     </div>
   );
 }
