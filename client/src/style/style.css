@@ -1,3 +1,7 @@
+.main-page-container {
+  margin-left: 80px;
+}
+
 .blue-banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,18 +16,6 @@
   background-color: #f8a145;
   height: 100vh;
   max-height: 600px;
-}
-
-.blue-banner h2 {
-  background-color: transparent;
-}
-
-.blue-banner div {
-  background-color: transparent;
-}
-
-.blue-banner p {
-  background-color: transparent;
 }
 
 .blue-banner button {
@@ -119,7 +111,7 @@
   min-height: 100vh;
   border: 1px solid green;
   width: 100%;
-  margin-left: 5rem;
+  margin-left: 80px;
 }
 
 .incident-incomplete {
@@ -292,6 +284,18 @@
 
 .dashboard-container {
   width: 100%;
+  margin-left: 80px;
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .top-data {
@@ -325,6 +329,7 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 100%;
 }
 
 .donut-circle {
@@ -386,6 +391,8 @@
 
 .inventory-page-container {
   width: 100%;
+  margin-left: 80px;
+  border: 2px solid red;
 }
 
 table {
@@ -578,12 +585,11 @@ tr:nth-child(even) td {
 .navbar {
   position: fixed;
   height: 100vh;
-  width: 5rem;
+  width: 80px;
   background-color: #28282b;
   z-index: 1;
   -webkit-transition: width 200ms ease;
   transition: width 200ms ease;
-  padding: 1rem;
 }
 
 .navbar-nav {

@@ -1,6 +1,8 @@
 @import "../../style/variables";
 
-
+.main-page-container {
+  margin-left: $navbar-width;
+}
 .blue-banner {
   display: flex;
   justify-content: center;
@@ -14,19 +16,6 @@
   //   -ms-transform: skewY(2deg);
   //   -o-transform: skewY(2deg);
   //   transform: skewY(2deg);
- 
-
-  h2 {
-    background-color: transparent;
-  }
-
-  div {
-    background-color: transparent;
-  }
-
-  p {
-    background-color: transparent;
-  }
 
   button {
     background-color: white;
@@ -41,7 +30,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .curve-one {
@@ -50,23 +38,19 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
-
 }
 
 .curve-one svg {
   display: block;
   width: calc(142% + 1.3px);
   height: 113px;
-
 }
 
 .curve-one .shape-fill {
   fill: $primary-color;
-
 }
 
 .curve-two {
- 
   bottom: 0;
   left: 0;
   width: 100%;
@@ -86,7 +70,6 @@
 }
 
 .curve-three {
-
   top: 0;
   left: 0;
   width: 100%;

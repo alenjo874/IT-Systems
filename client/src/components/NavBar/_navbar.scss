@@ -45,11 +45,11 @@
 .navbar {
   position: fixed;
   height: 100vh;
-  width: $navbar-width;
+  width: 80px;
   background-color: #28282b;
   z-index: 1;
   transition: width 200ms ease;
-  padding: 1rem;
+  // padding: 15px;
 }
 
 .navbar-nav {
