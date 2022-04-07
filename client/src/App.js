@@ -46,35 +46,45 @@ function App() {
       {/* <NavBar /> */}
       <Switch>
         <Route exact path="/">
-          <NavBar />
-          <MainPage />
+          <div className="sidebar-container">
+            <NavBar />
+            <MainPage />
+          </div>
         </Route>
         <Route exact path="/ticket">
-          <NavBar />
-          <TicketPage
-            ticketsArray={ticketsArray}
-            setTicketsArray={setTicketsArray}
-            completedTickets={completedTickets}
-            setCompletedTickets={setCompletedTickets}
-          />
+          <div className="sidebar-container">
+            <NavBar />
+            <TicketPage
+              ticketsArray={ticketsArray}
+              setTicketsArray={setTicketsArray}
+              completedTickets={completedTickets}
+              setCompletedTickets={setCompletedTickets}
+            />
+          </div>
         </Route>
         <Route exact path="/inventory">
-          <NavBar />
-          <InventoryPage
-            inventoryArray={inventoryArray}
-            handleMoreDetails={handleMoreDetails}
-          />
+          <div className="sidebar-container">
+            <NavBar />
+            <InventoryPage
+              inventoryArray={inventoryArray}
+              handleMoreDetails={handleMoreDetails}
+            />
+          </div>
         </Route>
         <Route exact path="/inventory_item">
-          <NavBar />
-          <ItemDetail {...moreDetailItem} />
+          <div className="sidebar-container">
+            <NavBar />
+            <ItemDetail {...moreDetailItem} />
+          </div>
         </Route>
         <Route exact path="/dashboard">
-          <NavBar />
-          <DashboardPage
-            ticketsArray={ticketsArray}
-            completedTickets={completedTickets}
-          />
+          <div className="sidebar-container">
+            <NavBar />
+            <DashboardPage
+              ticketsArray={ticketsArray}
+              completedTickets={completedTickets}
+            />
+          </div>
         </Route>
         <Route exact path="/login">
           <LoginPage />
