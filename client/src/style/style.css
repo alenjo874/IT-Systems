@@ -1,5 +1,5 @@
 .main-page-container {
-  margin-left: 80px;
+  margin-left: 60px;
 }
 
 .blue-banner {
@@ -111,7 +111,7 @@
   min-height: 100vh;
   border: 1px solid green;
   width: 100%;
-  margin-left: 80px;
+  margin-left: 60px;
 }
 
 .incident-incomplete {
@@ -284,7 +284,7 @@
 
 .dashboard-container {
   width: 100%;
-  margin-left: 80px;
+  margin-left: 60px;
   border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,7 +391,7 @@
 
 .inventory-page-container {
   width: 100%;
-  margin-left: 80px;
+  margin-left: 60px;
   border: 2px solid red;
 }
 
@@ -585,7 +585,7 @@ tr:nth-child(even) td {
 .navbar {
   position: fixed;
   height: 100vh;
-  width: 80px;
+  width: 60px;
   background-color: #28282b;
   z-index: 1;
   -webkit-transition: width 200ms ease;
@@ -622,6 +622,19 @@ tr:nth-child(even) td {
   transition: 0.2s;
 }
 
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
 .navbar:hover {
   width: 16rem;
   -webkit-transition: 0.2s;
@@ -632,6 +645,7 @@ tr:nth-child(even) td {
   display: block;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  width: 100%;
 }
 
 .nav-link {
@@ -642,25 +656,25 @@ tr:nth-child(even) td {
       -ms-flex-align: center;
           align-items: center;
   height: 5rem;
-  -webkit-filter: grayscale(100%) opacity(0.7);
-          filter: grayscale(100%) opacity(0.7);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  width: 100%;
 }
 
 .nav-link svg {
   min-width: 2rem;
-  margin: 0 1.5rem;
+  margin: 15px;
+  fill: #f8a145;
 }
 
 .nav-link:hover {
   -webkit-filter: grayscale(0%) opacity(1);
           filter: grayscale(0%) opacity(1);
-  background-color: lightblue;
+  background-color: #fb6962;
 }
 
 .nav-link:hover svg {
-  fill: red;
+  fill: #ffff;
 }
 
 html {
