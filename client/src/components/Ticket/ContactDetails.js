@@ -1,6 +1,6 @@
 import React from "react";
 
-function CaseDetails({ employee }) {
+function ContactDetails({ employee }) {
   return (
     <div className="case-details card">
       <div className="shared-subsection">
@@ -22,13 +22,13 @@ function CaseDetails({ employee }) {
         <div className="ticket-subsections two-col">
           <div>
             <p className="detail-label">Department</p>
-            <p> {employee ? employee.name : null} </p>
+            <p> {employee ? employee.department : null} </p>
           </div>
         </div>
         <div className="ticket-subsections two-col">
           <div>
             <p className="detail-label">Position</p>
-            <p> {employee ? employee.name : null} </p>
+            <p> {employee ? employee.position : null} </p>
           </div>
         </div>
       </div>
@@ -36,17 +36,17 @@ function CaseDetails({ employee }) {
       <div className="ticket-subsections">
         <div>
           <p className="detail-label">Email</p>
-          <p> {employee ? employee.name : null} </p>
+          <p> {employee ? employee.email : null} </p>
         </div>
       </div>
       <div className="ticket-subsections">
         <div>
-          <p className="detail-label">Mobile</p>
-          <p> {employee ? employee.name : null} </p>
+          <p className="detail-label">Extension</p>
+          <p> {employee ? employee.extension : null} </p>
         </div>
       </div>
     </div>
   );
 }
 
-export default CaseDetails;
+export default ContactDetails;

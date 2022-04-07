@@ -7,7 +7,6 @@
   flex-direction: column;
   min-height: 100vh;
   border: 1px solid green;
-
 }
 
 .incident-incomplete {
@@ -16,33 +15,29 @@
   align-items: flex-start;
   border: 2px solid red;
   width: 100%;
-  // min-height: 100vh;
 }
 
 .ticket-card-container {
   width: 80%;
   max-width: 700px;
-  // padding: $element-padding;
 }
 
 .ticket-case-details-container {
-  width: 40%;
-  max-width: 700px;
+  width: 45%;
+  max-width: 900px;
 }
 
 .admin-tickets {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 40%;
-  max-width: 700px;
-  // margin: $element-margin 0;
-  // padding: $element-padding;
+  width: 45%;
+  max-width: 900px;
 }
 
 .ticket-label {
-  background-color: $primary-color;
-  // color: $accent-color;
+  background-color: #ececec;
+  box-shadow: $shadow-head;
   padding: $element-padding;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
@@ -67,13 +62,10 @@
 .ticket-card {
   margin: $element-margin 0;
   width: 100%;
-  // padding: $element-padding;
   background-color: $accent-color;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   p {
     margin: $element-margin 0;
-    background-color: $accent-color;
   }
 }
 
@@ -96,8 +88,6 @@
 
 .ticket-resolve-container {
   // padding: $element-padding;
-
-
 
   form {
     display: flex;

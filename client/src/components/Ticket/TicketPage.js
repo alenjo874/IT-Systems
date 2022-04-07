@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import CaseDetails from "./CaseDetails";
+import ContactDetails from "./ContactDetails";
 import TicketCard from "./TicketCard";
 import TicketDetails from "./TicketDetails";
 import TicketResolve from "./TicketResolve";
@@ -79,7 +79,7 @@ function TicketPage({
           </div>
           <div className="ticket-section incident-details">
             <h4 className="ticket-label">Contact Details</h4>
-            <CaseDetails {...currentTicket} />
+            <ContactDetails {...currentTicket} />
            
           </div>
         </div>
