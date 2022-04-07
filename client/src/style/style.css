@@ -589,7 +589,10 @@ tr:nth-child(even) td {
 
 .navbar {
   position: fixed;
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
   width: 60px;
   background-color: #28282b;
   z-index: 1;
@@ -613,6 +616,7 @@ tr:nth-child(even) td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .navbar-nav a {
@@ -682,6 +686,14 @@ tr:nth-child(even) td {
 
 .nav-link:hover svg {
   fill: #ffff;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
 }
 
 html {

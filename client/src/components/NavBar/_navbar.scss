@@ -44,12 +44,12 @@
 
 .navbar {
   position: fixed;
-  height: 100vh;
+  display: flex;
+  min-height: 100vh;
   width: $navbar-width;
   background-color: #28282b;
   z-index: 1;
   transition: width 200ms ease;
-  // padding: 15px;
   border-top-right-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 }
@@ -61,6 +61,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
   a {
     font-size: 1.15rem;
@@ -115,4 +116,12 @@
 
 .nav-link:hover svg {
   fill: #ffff;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
 }
