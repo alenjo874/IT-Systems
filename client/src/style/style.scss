@@ -1,10 +1,10 @@
 @import "../components/Main/main";
-@import "../components/NavBar/navbar";
 @import "../components/Ticket/ticket";
 @import "../components/Dashboard/dashboard";
 @import "../components/Inventory/inventory";
 @import "../components/Employee/employee";
 @import "../components/Login/login";
+@import "../components/NavBar/navbar";
 
 html {
   background-color: $bkgrd-color;
