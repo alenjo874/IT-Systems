@@ -7,9 +7,7 @@
   flex-direction: column;
   min-height: 100vh;
   border: 1px solid green;
-  div {
-    margin: $element-margin 0;
-  }
+
 }
 
 .incident-incomplete {
@@ -18,6 +16,7 @@
   align-items: flex-start;
   border: 2px solid red;
   width: 100%;
+  // min-height: 100vh;
 }
 
 .ticket-card-container {
@@ -47,7 +46,7 @@
   padding: $element-padding;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
-  height: 100%;
+  margin: 0;
 }
 
 .upcoming-tickets {
@@ -56,16 +55,6 @@
 
 .current-ticket {
   height: 70%;
-}
-
-.ticket-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: $border-radius;
-  background-color: $accent-color;
-  box-shadow: $shadow;
-  border: 1px solid purple;
 }
 
 .display-ticket {
@@ -108,9 +97,7 @@
 .ticket-resolve-container {
   // padding: $element-padding;
 
-  div {
-    // padding: $element-padding;
-  }
+
 
   form {
     display: flex;
@@ -152,4 +139,15 @@
 
 .card {
   padding: $element-padding;
+}
+
+.ticket-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: $border-radius;
+  background-color: $accent-color;
+  box-shadow: $shadow;
+  margin: $element-margin * 5 0;
+  border: $card-border;
 }

@@ -166,10 +166,6 @@
   border: 1px solid green;
 }
 
-.ticket-page-container div {
-  margin: 5px 0;
-}
-
 .incident-incomplete {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,7 +210,7 @@
   padding: 2.5%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  height: 100%;
+  margin: 0;
 }
 
 .upcoming-tickets {
@@ -223,24 +219,6 @@
 
 .current-ticket {
   height: 70%;
-}
-
-.ticket-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-radius: 5px;
-  background-color: #ffffff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border: 1px solid purple;
 }
 
 .display-ticket {
@@ -337,6 +315,25 @@
   padding: 2.5%;
 }
 
+.ticket-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 25px 0;
+  border: rgba(0, 0, 0, 0.2);
+}
+
 .top-data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,6 +349,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .user-data {
@@ -377,6 +375,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .pie-chart {
@@ -387,6 +386,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .bar-graph {
@@ -397,6 +397,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .line-chart {
@@ -407,6 +408,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: rgba(0, 0, 0, 0.2);
 }
 
 table {
@@ -587,15 +589,10 @@ tr:nth-child(even) td {
   border-radius: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 1.05px;
-  line-height: 1.25;
-}
-
 html {
   background-color: #f9f7f7;
+  letter-spacing: 1.05px;
+  line-height: 1.25;
 }
 
 a {

@@ -6,15 +6,10 @@
 @import "../components/Employee/employee";
 @import "../components/Login/login";
 
-* {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 1.05px;
-  line-height: 1.25;
-}
-
 html {
   background-color: $bkgrd-color;
+  letter-spacing: 1.05px;
+  line-height: 1.25;
 }
 
 a {

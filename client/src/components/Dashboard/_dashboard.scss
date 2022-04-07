@@ -10,6 +10,7 @@
   border-radius: $border-radius;
   background-color: #ffffff;
   box-shadow: $shadow;
+  border: $card-border;
 }
 
 .user-data {
@@ -33,6 +34,7 @@
   border-radius: $border-radius;
   background-color: #ffffff;
   box-shadow: $shadow;
+  border: $card-border;
 }
 
 .pie-chart {
@@ -43,6 +45,7 @@
   border-radius: $border-radius;
   background-color: #ffffff;
   box-shadow: $shadow;
+  border: $card-border;
 }
 
 .bar-graph {
@@ -53,6 +56,7 @@
   border-radius: $border-radius;
   background-color: #ffffff;
   box-shadow: $shadow;
+  border: $card-border);
 }
 
 .line-chart {
@@ -63,4 +67,5 @@
   border-radius: $border-radius;
   background-color: #ffffff;
   box-shadow: $shadow;
+  border: $card-border;
 }
