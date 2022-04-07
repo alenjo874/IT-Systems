@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
 
 function NavBar() {
-  const [showMoreNav, setShowMoreNav] = useState(false);
-
-  function handleShowNav() {
-    setShowMoreNav((prev) => !prev);
-  }
 
   return (
     <div className="nav-container">

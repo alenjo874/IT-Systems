@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Chart from "chart.js/auto";
+import Chart from "chart.js/auto"; //keep
 import { Bar } from "react-chartjs-2";
 import { Doughnut } from "react-chartjs-2";
 import { Pie } from "react-chartjs-2";
@@ -13,15 +13,15 @@ function DashboardPage({ completedTickets, ticketsArray }) {
     <div className="dashboard-container">
       <div className="top-data">
         <div className="user-data">
-          <p>5</p>
+          <p className="p-num">5</p>
           <p>Total Tickets</p>
         </div>
         <div className="user-data">
-          <p>5</p>
+          <p className="p-num">5</p>
           <p>Open Tickets</p>
         </div >
         <div className="user-data" >
-          <p>5</p>
+          <p className="p-num">5</p>
           <p>Completed Tickets</p>
         </div>
       </div>

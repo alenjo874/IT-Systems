@@ -78,11 +78,7 @@
   border: $card-border;
 }
 
-.shared-subsection {
-  display: flex;
-  justify-content: space-between;
-
-  .two-col {
-    width: 45%;
-  }
+.p-num {
+  font-size: 2rem;
+  margin: 0;
 }

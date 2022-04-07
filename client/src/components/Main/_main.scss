@@ -2,6 +2,7 @@
 
 .main-page-container {
   margin-left: $navbar-width;
+  width: 100%;
 }
 .blue-banner {
   display: flex;
@@ -11,6 +12,7 @@
   background-color: $primary-color;
   height: 100vh;
   max-height: 600px;
+  width: 100%;
   //   -webkit-transform: skewY(2deg);
   //   -moz-transform: skewY(2deg);
   //   -ms-transform: skewY(2deg);
@@ -28,6 +30,7 @@
   height: 100vh;
   max-height: 600px;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }

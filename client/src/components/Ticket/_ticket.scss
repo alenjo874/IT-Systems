@@ -46,6 +46,15 @@
   margin: 0;
 }
 
+.shared-subsection {
+  display: flex;
+  justify-content: space-between;
+
+  .two-col {
+    width: 45%;
+  }
+}
+
 .upcoming-tickets {
   height: 30%;
 }
