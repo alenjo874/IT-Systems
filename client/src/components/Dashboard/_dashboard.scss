@@ -56,7 +56,7 @@
   border-radius: $border-radius;
   background-color: #ffffff;
   box-shadow: $shadow;
-  border: $card-border);
+  border: $card-border;
 }
 
 .line-chart {
@@ -68,4 +68,13 @@
   background-color: #ffffff;
   box-shadow: $shadow;
   border: $card-border;
+}
+
+.shared-subsection {
+  display: flex;
+  justify-content: space-between;
+
+  .two-col {
+    width: 45%;
+  }
 }

@@ -349,7 +349,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: rgba(0, 0, 0, 0.2);
 }
 
 .user-data {
@@ -375,7 +375,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: rgba(0, 0, 0, 0.2);
 }
 
 .pie-chart {
@@ -386,7 +386,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: rgba(0, 0, 0, 0.2);
 }
 
 .bar-graph {
@@ -397,7 +397,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: rgba(0, 0, 0, 0.2);
 }
 
 .line-chart {
@@ -409,6 +409,19 @@
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: rgba(0, 0, 0, 0.2);
+}
+
+.shared-subsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shared-subsection .two-col {
+  width: 45%;
 }
 
 table {
