@@ -17,12 +17,21 @@ function App() {
   const [moreDetailItem, setMoreDetailItem] = useState({});
   const [ticketsArray, setTicketsArray] = useState([]);
   const [completedTickets, setCompletedTickets] = useState([]);
+  const [allTicketsArray, setAllTicketsArray] = useState([]);
 
   useEffect(() => {
     fetch("/incomplete_tickets")
       .then((res) => res.json())
       .then((data) => {
         setTicketsArray(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("/tickets")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllTicketsArray(data);
       });
   }, []);
 
@@ -83,6 +92,7 @@ function App() {
           <div className="sidebar-container">
             <NavBar />
             <DashboardPage
+              allTicketsArray={allTicketsArray}
               ticketsArray={ticketsArray}
               completedTickets={completedTickets}
             />

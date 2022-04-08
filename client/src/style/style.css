@@ -112,7 +112,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  border: 1px solid green;
   width: 100%;
   margin-left: 60px;
 }
@@ -127,7 +126,6 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border: 2px solid red;
   width: 100%;
 }
 
@@ -243,6 +241,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 2.5%;
 }
 
 .ticket-resolve-container form label {
@@ -259,10 +258,6 @@
   color: #ffffff;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-.ticket-resolve-container p {
-  margin: 5px 0;
 }
 
 .ticket-subsections {

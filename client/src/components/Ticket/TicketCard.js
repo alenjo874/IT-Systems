@@ -8,11 +8,12 @@ function TicketCard({
   handleMoreDetail,
   create_date,
   complete,
+  case_number,
 }) {
   return (
     <div className="ticket-card" onClick={(e) => handleMoreDetail(id)}>
       <div className="ticket-head">
-        <p>case number</p>
+        <p>{case_number}</p>
       </div>
       <div className="shared-subsection">
         <div className="ticket-subsections two-col">

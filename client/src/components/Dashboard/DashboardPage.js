@@ -5,9 +5,21 @@ import { Doughnut } from "react-chartjs-2";
 import { Pie } from "react-chartjs-2";
 import { Line } from "react-chartjs-2";
 
-function DashboardPage({ completedTickets, ticketsArray }) {
+function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
   const complete = completedTickets.length;
   const incomplete = ticketsArray.length;
+
+  const ratio = { Low: 0, Moderate: 0, Critical: 0 };
+
+  for (let i = 0; i < allTicketsArray.length; i++) {
+    if (allTicketsArray[i].level === "Low") {
+      ratio["Low"] += 1;
+    } else if (allTicketsArray[i].level === "Moderate") {
+      ratio["Moderate"] += 1;
+    } else {
+      ratio["Critical"] += 1;
+    }
+  }
 
   return (
     <div className="dashboard-container">
@@ -19,8 +31,8 @@ function DashboardPage({ completedTickets, ticketsArray }) {
         <div className="user-data">
           <p className="p-num">5</p>
           <p>Open Tickets</p>
-        </div >
-        <div className="user-data" >
+        </div>
+        <div className="user-data">
           <p className="p-num">5</p>
           <p>Completed Tickets</p>
         </div>
@@ -33,11 +45,26 @@ function DashboardPage({ completedTickets, ticketsArray }) {
               datasets: [
                 {
                   label: "My First Dataset",
-                  data: [incomplete, complete],
-                  backgroundColor: ["rgb(251, 105, 98)", "rgb(119, 221, 119)"],
+                  data: [complete, incomplete],
+                  backgroundColor: ["rgb(119, 221, 119)", "rgb(251, 105, 98)"],
                   hoverOffset: 4,
                 },
               ],
+            }}
+            options={{
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Complete vs Incomplete Tickets",
+                  padding: {
+                    top: 10,
+                    bottom: 30,
+                  },
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
             }}
           />
         </div>
@@ -45,19 +72,34 @@ function DashboardPage({ completedTickets, ticketsArray }) {
         <div className="donut-circle">
           <Doughnut
             data={{
-              labels: ["Red", "Blue", "Yellow"],
+              labels: ["Low", "Moderate", "Critical"],
               datasets: [
                 {
-                  label: "My First Dataset",
-                  data: [300, 50, 100],
+                  label: "Ticket Severity Ratio",
+                  data: [ratio["Low"], ratio["Moderate"], ratio["Critical"]],
                   backgroundColor: [
-                    "rgb(255, 99, 132)",
-                    "rgb(54, 162, 235)",
+                    "rgb(119, 221, 119)",
                     "rgb(255, 205, 86)",
+                    "rgb(255, 99, 132)",
                   ],
                   hoverOffset: 4,
                 },
               ],
+            }}
+            options={{
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Ticket Level Ratio",
+                  padding: {
+                    top: 10,
+                    bottom: 30,
+                  },
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
             }}
           />
         </div>

@@ -12,4 +12,6 @@ class TicketSerializer < ActiveModel::Serializer
     self.object.rental.inventory
   end
 
+
+
 end
