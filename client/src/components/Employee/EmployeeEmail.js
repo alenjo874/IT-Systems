@@ -11,7 +11,6 @@ function EmployeeEmail() {
   return (
     <div className="emp-email-container">
       {user ? <Chat /> : <ChatSignIn />}
-      <Chat />
       <ChatSignOut />
     </div>
   );

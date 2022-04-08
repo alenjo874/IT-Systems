@@ -26,7 +26,6 @@ function Chat() {
 
   return (
     <div>
-      Hello
       {displayTexts}
     </div>
   );
