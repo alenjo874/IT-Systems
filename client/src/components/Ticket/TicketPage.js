@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Chat from "../Chat/Chat";
 import ContactDetails from "./ContactDetails";
 import TicketCard from "./TicketCard";
 import TicketDetails from "./TicketDetails";
@@ -12,6 +13,7 @@ function TicketPage({
   setTicketsArray,
   ticketsArray,
 }) {
+  // ============================================================
   const [moreDetailTicket, setMoreDetailTicket] = useState([]);
   const nextTicket = ticketsArray[1];
   const currentTicket = ticketsArray[0];
@@ -80,7 +82,6 @@ function TicketPage({
           <div className="ticket-section incident-details">
             <h4 className="ticket-label">Contact Details</h4>
             <ContactDetails {...currentTicket} />
-           
           </div>
         </div>
         <div className="admin-tickets">

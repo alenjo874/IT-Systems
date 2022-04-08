@@ -21,6 +21,12 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
     }
   }
 
+  const createGraph = (
+    <form>
+      <input></input>
+    </form>
+  );
+
   return (
     <div className="dashboard-container">
       <div className="top-data">
@@ -37,6 +43,7 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
           <p>Completed Tickets</p>
         </div>
       </div>
+
       <div className="top-graph">
         <div className="pie-chart">
           <Pie

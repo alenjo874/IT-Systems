@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Chat from "../Chat/Chat";
+import ChatSignIn from "../Chat/ChatSignIn";
 
 function EmployeeEmail() {
   return (
-    <div className='emp-email-container'>EmployeeEmail</div>
-  )
+    <div className="emp-email-container">
+      <ChatSignIn />
+      <Chat />
+    </div>
+  );
 }
 
-export default EmployeeEmail
+export default EmployeeEmail;
