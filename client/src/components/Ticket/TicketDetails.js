@@ -7,7 +7,8 @@ function TicketDetails({
   level,
   employee,
   rental_item,
-  complete
+  complete,
+  case_number,
 }) {
   return (
     <div className="ticket-details card">
@@ -15,7 +16,7 @@ function TicketDetails({
         <div className="ticket-subsections two-col">
           <div>
             <p className="detail-label">Case Number</p>
-            <p> {employee ? employee.name : null} </p>
+            <p> {case_number} </p>
           </div>
         </div>
         <div className="ticket-subsections two-col">

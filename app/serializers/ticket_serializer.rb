@@ -1,5 +1,5 @@
 class TicketSerializer < ActiveModel::Serializer
-  attributes :id, :subject, :level, :issue, :complete, :solution, :create_date, :severity_level, :rental_item
+  attributes :id, :subject, :level, :issue, :complete, :solution, :create_date, :severity_level, :rental_item, :case_number
   has_one :admin
   has_one :rental
   has_one :employee

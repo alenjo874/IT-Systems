@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import DashboardPage from "./components/Dashboard/DashboardPage";
+import EmployeeEmail from "./components/Employee/EmployeeEmail";
 import EmployeeNavBar from "./components/Employee/EmployeeNavBar";
 import EmployeePage from "./components/Employee/EmployeePage";
 import InventoryPage from "./components/Inventory/InventoryPage";
@@ -94,6 +95,12 @@ function App() {
           <div className="sidebar-container">
             <EmployeeNavBar />
             <EmployeePage inventoryArray={inventoryArray} />
+          </div>
+        </Route>
+        <Route exact path="/employee_email">
+          <div className="sidebar-container">
+            <EmployeeNavBar />
+            <EmployeeEmail />
           </div>
         </Route>
       </Switch>

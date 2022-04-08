@@ -1,16 +1,16 @@
 import React from "react";
 
-function TicketUpcoming({ id, issue, level }) {
+function TicketUpcoming({ case_number, subject, level, employee }) {
   return (
-    <div className="upcoming-container card">
-      <div>
-        <div className="ticket-subsections">
+    <div className="upcoming-container">
+      <div className="shared-subsection">
+        <div className="ticket-subsections two-col">
           <div>
-            <p className="detail-label">Case Issue</p>
-            <p> {issue} </p>
+            <p className="detail-label">Case Number</p>
+            <p> {case_number} </p>
           </div>
         </div>
-        <div className="ticket-subsections">
+        <div className="ticket-subsections two-col">
           <div>
             <p className="detail-label">Case Priority</p>
             <p
@@ -25,6 +25,12 @@ function TicketUpcoming({ id, issue, level }) {
               {level}
             </p>
           </div>
+        </div>
+      </div>
+      <div className="ticket-subsections">
+        <div>
+          <p className="detail-label">Subject</p>
+          <p> {subject} </p>
         </div>
       </div>
     </div>

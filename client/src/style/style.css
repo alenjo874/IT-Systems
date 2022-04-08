@@ -298,6 +298,10 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.upcoming-container {
+  padding: 2.5%;
+}
+
 .dashboard-container {
   width: 100%;
   margin-left: 60px;
@@ -400,7 +404,11 @@
 .inventory-page-container {
   width: 100%;
   margin-left: 60px;
-  border: 2px solid red;
+}
+
+.item-detail-container {
+  width: 100%;
+  margin-left: 60px;
 }
 
 table {
@@ -468,6 +476,10 @@ tr:nth-child(even) td {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -475,6 +487,7 @@ tr:nth-child(even) td {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -543,6 +556,10 @@ tr:nth-child(even) td {
 
 .employee-header p {
   margin: 5px 0;
+}
+
+.emp-email-container {
+  margin-left: 60px;
 }
 
 .login-page-container {

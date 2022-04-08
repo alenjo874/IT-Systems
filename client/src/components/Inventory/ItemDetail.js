@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function ItemDetail({ name, serial_number, rent, cpu, memory, graphic_card }) {
   return (
-    <div>
+    <div className="item-detail-container">
       <div className="item-details">
         <p>Item Details</p>
         <table>

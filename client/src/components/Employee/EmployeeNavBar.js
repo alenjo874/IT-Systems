@@ -29,14 +29,14 @@ function EmployeeNavBar() {
           </li>
 
           <li className="nav-item">
-            <Link to="/inventory" className="nav-link">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                <path d="M128 96h384v256h64v-272c0-26.38-21.62-48-48-48h-416c-26.38 0-48 21.62-48 48V352h64V96zM624 383.1h-608c-8.75 0-16 7.25-16 16v16c0 35.25 28.75 64 64 64h512c35.25 0 64-28.75 64-64v-16C640 391.2 632.8 383.1 624 383.1z" />
+            <Link to="/employee_email" className="nav-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
               </svg>
               <p className="link-text">Contact</p>
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link to="/login" className="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

@@ -73,9 +73,6 @@ function EmployeePage({ inventoryArray }) {
       <div className="employee-header">
         <h4>Submit Ticket Here</h4>
         <p>Please fill out the form and an IT admin will assist shortly, thank you.</p>
-        <Link to="/login">
-          <button>Logout</button>
-        </Link>
       </div>
       <form>
         <label> Subject </label>
