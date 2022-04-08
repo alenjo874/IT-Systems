@@ -406,7 +406,7 @@
   margin-left: 60px;
 }
 
-table {
+.inventory-table {
   display: -ms-grid;
   display: grid;
   border-collapse: collapse;
@@ -415,25 +415,25 @@ table {
       grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
 }
 
-table a {
+.inventory-table a {
   color: #808080;
 }
 
-thead,
-tbody,
-tr {
+.inventory-table thead,
+.inventory-table tbody,
+.inventory-table tr {
   display: contents;
 }
 
-th,
-td {
+.inventory-table th,
+.inventory-table td {
   padding: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-th {
+.inventory-table th {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -446,24 +446,145 @@ th {
           box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
 }
 
-th:last-child {
+.inventory-table th:last-child {
   border: 0;
 }
 
-td {
+.inventory-table td {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-tr:nth-child(even) td {
+.inventory-table tr:nth-child(even) td {
   background: #ececec;
 }
 
-.contact-table tr:nth-child(even) td {
+.contact-table,
+.item-detail-table {
+  display: -ms-grid;
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+      grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+}
+
+.contact-table a,
+.item-detail-table a {
+  color: #808080;
+}
+
+.contact-table thead,
+.contact-table tbody,
+.contact-table tr,
+.item-detail-table thead,
+.item-detail-table tbody,
+.item-detail-table tr {
+  display: contents;
+}
+
+.contact-table th,
+.contact-table td,
+.item-detail-table th,
+.item-detail-table td {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-table th,
+.item-detail-table th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #f8a145;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+}
+
+.contact-table th:last-child,
+.item-detail-table th:last-child {
+  border: 0;
+}
+
+.contact-table td,
+.item-detail-table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contact-table tr:nth-child(even) td,
+.item-detail-table tr:nth-child(even) td {
   background: transparent;
 }
 
-.contact-table tr:nth-child(odd) td {
+.contact-table tr:nth-child(odd) td,
+.item-detail-table tr:nth-child(odd) td {
+  background: #ececec;
+}
+
+.item-detail-head {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #f8a145;
+  margin: 0;
+}
+
+.incident-table {
+  display: -ms-grid;
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+      grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+}
+
+.incident-table a {
+  color: #808080;
+}
+
+.incident-table thead,
+.incident-table tbody,
+.incident-table tr {
+  display: contents;
+}
+
+.incident-table th,
+.incident-table td {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.incident-table th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #f8a145;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+}
+
+.incident-table th:last-child {
+  border: 0;
+}
+
+.incident-table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.incident-table tr:nth-child(even) td {
   background: #ececec;
 }
 

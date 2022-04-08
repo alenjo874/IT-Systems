@@ -49,6 +49,7 @@ function App() {
 
   function handleMoreDetails(id) {
     const selectedInventoryItem = inventoryArray.find((item) => item.id === id);
+
     setMoreDetailItem(selectedInventoryItem);
   }
 

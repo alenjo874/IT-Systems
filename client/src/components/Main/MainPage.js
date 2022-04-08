@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function MainPage() {
   return (
@@ -8,10 +7,6 @@ function MainPage() {
         <div>
           <h2>IT System management</h2>
         </div>
-
-        <Link to="/login">
-          <button>Logout</button>
-        </Link>
       </div>
       <div class="curve-one">
         <svg

@@ -20,7 +20,7 @@ function InventoryPage({ inventoryArray, handleMoreDetails }) {
 
   return (
     <div className="inventory-page-container">
-      <table>
+      <table className="inventory-table">
         <thead>
           <tr>
             <th>Serial Number</th>
