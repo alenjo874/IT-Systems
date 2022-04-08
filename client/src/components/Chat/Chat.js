@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { db } from "./firebase";
+import React, { useState, useEffect, useRef } from "react";
+import { auth, db } from "./firebase";
+import SendMessage from "./SendMessage";
 
 function Chat() {
+  const scroll = useRef();
   const [messages, setMessages] = useState([]);
   useEffect(() => {
     db.collection("messages")
@@ -17,9 +19,11 @@ function Chat() {
 
   const displayTexts = messages.map((message) => {
     return (
-      <div key={message.id}>
-        <img src={message.photoURL} alt="profile"></img>
-        <p> {message.text} </p>
+      <div>
+        <div key={message.id} className={`msg ${message.uid === auth.currentUser.uid ? 'sent' : 'received'}`}>
+          <img src={message.photoURL} alt="profile"></img>
+          <p> {message.text} </p>
+        </div>
       </div>
     );
   });
@@ -27,6 +31,8 @@ function Chat() {
   return (
     <div>
       {displayTexts}
+      <SendMessage scroll={scroll} />
+      <div ref={scroll}></div>
     </div>
   );
 }
