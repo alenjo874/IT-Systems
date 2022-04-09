@@ -23,8 +23,12 @@ function MainPage() {
       </div>
       <div className="white-banner">
         <div>
-          <h2>IT System management</h2>
-          <p>Create a Ticket</p>
+          <h2>Ticket Management</h2>
+          <p>
+            An effective systems management plan facilitates the delivery of IT
+            as a service and allows an organization's employees to respond
+            quickly to changing business requirements and system activity.
+          </p>
         </div>
       </div>
       <div class="curve-two">
@@ -42,8 +46,11 @@ function MainPage() {
       </div>
       <div className="blue-banner">
         <div>
-          <h2>IT System management</h2>
-          <p>Create a Ticket</p>
+          <h2>Inventory Management</h2>
+          <p>
+            Good systems management simplifies IT service delivery, allowing
+            employees and workgroups to do their jobs efficiently
+          </p>
         </div>
       </div>
       <div class="curve-three">
@@ -60,7 +67,7 @@ function MainPage() {
         </svg>
         <div className="white-banner">
           <div>
-            <h2>IT System management</h2>
+            <h2>Dashboard Analytics</h2>
             <p>View Dashboard</p>
           </div>
         </div>

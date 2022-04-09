@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 function InventoryPage({ inventoryArray, handleMoreDetails, setInventoryArray }) {
 
-
   const displayInventory = inventoryArray.map((item) => {
     return (
       <tr key={uuidv4()}>
