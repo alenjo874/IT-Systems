@@ -17,12 +17,16 @@ class InventoriesController < ApplicationController
     def update 
         update_inventory = Inventory.find_by!(id: params[:id])
         update_inventory.update(inventory_params)
-        render json: update_inventory, status: :accpeted
+        render json: update_inventory, status: :accepted
     end
 
     def destroy
         destroy_inventory = Inventory.find_by!(id: params[:id])
         destroy_inventory.destroy
         render json: {}, status: :accepted
+    end
+
+    def inventory_params
+        params.permit(:name, :cpu, :rent, :serial_number, :memory, :graphic_card)
     end
 end

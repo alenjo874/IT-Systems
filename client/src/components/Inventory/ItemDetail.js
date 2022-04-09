@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 function ItemDetail({
+  id,
   name,
   serial_number,
   rent,
@@ -13,6 +14,10 @@ function ItemDetail({
   tickets = [],
 }) {
   const [editItem, setEditItem] = useState(false);
+  const [itemName, setItemName] = useState(name);
+  const [itemCpu, setItemCpu] = useState(cpu);
+  const [itemMemory, setItemMemory] = useState(memory);
+  const [itemGraphicCard, setItemGraphicCard] = useState(graphic_card);
 
   const displyInventoryTickets = tickets.map((ticket) => {
     return (
@@ -26,8 +31,76 @@ function ItemDetail({
   });
 
   function handleEditItem() {
-    setEditItem(prev => !prev);
+    setEditItem((prev) => !prev);
   }
+
+  function handleSubmitChange(e) {
+    e.preventDefault();
+    const newItemObj = {
+      name: itemName,
+      cpu: itemCpu,
+      memory: itemMemory,
+      graphic_card: itemGraphicCard,
+    };
+
+    fetch(`inventories/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ ...newItemObj }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+
+  }
+
+  const editInventoryItem = (
+    <div className="update-pro-popup">
+      <motion.div
+        className="submit-confirm"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.25,
+            type: "show",
+            ease: "easeIn",
+          },
+        }}
+        exit={{
+          y: "10%",
+          opacity: 0,
+          transition: { duration: 0.25, ease: "easeOut" },
+        }}
+      >
+        <form className="edit-item-form" onSubmit={handleSubmitChange}>
+          <label>Name</label>
+          <input
+            onChange={(e) => setItemName(e.target.value)}
+            value={itemName}
+          ></input>
+          <label>CPU</label>
+          <input
+            onChange={(e) => setItemCpu(e.target.value)}
+            value={itemCpu}
+          ></input>
+          <label>Memory</label>
+          <input
+            onChange={(e) => setItemMemory(e.target.value)}
+            value={itemMemory}
+          ></input>
+          <label>Grpahic Card</label>
+          <input
+            onChange={(e) => setItemGraphicCard(e.target.value)}
+            value={itemGraphicCard}
+          ></input>
+          <button type="submit">Submit Changes</button>
+        </form>
+        <div>
+          <button onClick={handleEditItem}>X</button>
+        </div>
+      </motion.div>
+    </div>
+  );
 
   return (
     <div className="item-detail-container">
@@ -41,57 +114,61 @@ function ItemDetail({
           </div>
         </div>
         <table className="item-detail-table">
-          <tr>
-            <td>Name</td>
-            <td>{name}</td>
-          </tr>
-          <tr>
-            <td>Serial Number</td>
-            <td>{serial_number}</td>
-          </tr>
-          <tr>
-            <td>Rent</td>
-            <td> {rent ? "Not Available" : "Available"}</td>
-          </tr>
-          <tr>
-            <td>CPU</td>
-            <td>{cpu}</td>
-          </tr>
-          <tr>
-            <td>Memory</td>
-            <td>{memory}</td>
-          </tr>
-          <tr>
-            <td>Graphic Card</td>
-            <td>{graphic_card}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>{name}</td>
+            </tr>
+            <tr>
+              <td>Serial Number</td>
+              <td>{serial_number}</td>
+            </tr>
+            <tr>
+              <td>Rent</td>
+              <td> {rent ? "Not Available" : "Available"}</td>
+            </tr>
+            <tr>
+              <td>CPU</td>
+              <td>{cpu}</td>
+            </tr>
+            <tr>
+              <td>Memory</td>
+              <td>{memory}</td>
+            </tr>
+            <tr>
+              <td>Graphic Card</td>
+              <td>{graphic_card}</td>
+            </tr>
+          </tbody>
         </table>
         <p className="item-detail-head">Owner Details</p>
         <table className="contact-table">
-          <tr>
-            <td>Name</td>
-            <td>{name}</td>
-          </tr>
-          <tr>
-            <td>Serial Number</td>
-            <td>{serial_number}</td>
-          </tr>
-          <tr>
-            <td>Rent</td>
-            <td> {rent ? "Not Available" : "Available"}</td>
-          </tr>
-          <tr>
-            <td>CPU</td>
-            <td>{cpu}</td>
-          </tr>
-          <tr>
-            <td>Memory</td>
-            <td>{memory}</td>
-          </tr>
-          <tr>
-            <td>Graphic Card</td>
-            <td>{graphic_card}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>{name}</td>
+            </tr>
+            <tr>
+              <td>Serial Number</td>
+              <td>{serial_number}</td>
+            </tr>
+            <tr>
+              <td>Rent</td>
+              <td> {rent ? "Not Available" : "Available"}</td>
+            </tr>
+            <tr>
+              <td>CPU</td>
+              <td>{cpu}</td>
+            </tr>
+            <tr>
+              <td>Memory</td>
+              <td>{memory}</td>
+            </tr>
+            <tr>
+              <td>Graphic Card</td>
+              <td>{graphic_card}</td>
+            </tr>
+          </tbody>
         </table>
         <p className="item-detail-head">Incident History</p>
         <table className="incident-table">
@@ -110,35 +187,7 @@ function ItemDetail({
       <Link to="/inventory">
         <button>Back</button>
       </Link>
-      <AnimatePresence>
-        {editItem ? (
-          <div className="update-pro-popup">
-            <motion.div
-              className="submit-confirm confirm-delete"
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  duration: 0.25,
-                  type: "show",
-                  ease: "easeIn",
-                },
-              }}
-              exit={{
-                y: "10%",
-                opacity: 0,
-                transition: { duration: 0.25, ease: "easeOut" },
-              }}
-            >
-              <p>Are you sure?</p>
-              <div>
-                <button>Yes</button>
-                <button onClick={handleEditItem} >X</button>
-              </div>
-            </motion.div>
-          </div>
-        ) : null}
-      </AnimatePresence>
+      <AnimatePresence>{editItem ? editInventoryItem : null}</AnimatePresence>
     </div>
   );
 }
