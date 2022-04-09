@@ -2,7 +2,7 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 
-function InventoryPage({ inventoryArray, handleMoreDetails }) {
+function InventoryPage({ inventoryArray, handleMoreDetails, setInventoryArray }) {
 
 
   const displayInventory = inventoryArray.map((item) => {

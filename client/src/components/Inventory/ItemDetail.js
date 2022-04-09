@@ -12,6 +12,9 @@ function ItemDetail({
   memory,
   graphic_card,
   tickets = [],
+  setInventoryArray,
+  inventoryArray,
+  setMoreDetailItem
 }) {
   const [editItem, setEditItem] = useState(false);
   const [itemName, setItemName] = useState(name);
@@ -49,8 +52,19 @@ function ItemDetail({
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
+    })
+      .then(res => res.json())
+      .then(setMoreDetailItem)
+
+    const updatedItemArray = inventoryArray.map((item) => {
+      if (item.id === id) {
+        return { ...item, ...newItemObj };
+      } else {
+        return item;
+      }
     });
 
+    setInventoryArray(updatedItemArray);
   }
 
   const editInventoryItem = (

@@ -49,7 +49,6 @@ function App() {
 
   function handleMoreDetails(id) {
     const selectedInventoryItem = inventoryArray.find((item) => item.id === id);
-
     setMoreDetailItem(selectedInventoryItem);
   }
 
@@ -86,7 +85,12 @@ function App() {
         <Route exact path="/inventory_item">
           <div className="sidebar-container">
             <NavBar />
-            <ItemDetail {...moreDetailItem} />
+            <ItemDetail
+              {...moreDetailItem}
+              inventoryArray={inventoryArray}
+              setInventoryArray={setInventoryArray}
+              setMoreDetailItem={setMoreDetailItem}
+            />
           </div>
         </Route>
         <Route exact path="/dashboard">
