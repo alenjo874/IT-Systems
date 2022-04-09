@@ -1,49 +1,60 @@
 .chat-container {
-    background-color: #ececec;
-    border: 1px dotted red;
-    padding: $element-padding;
+  display: flex;
+  flex-direction: column;
+  background-color: #ececec;
+  border: 1px dotted red;
+  padding: $element-padding;
+  width: 80%;
+}
 
-    width: 80%;
+.sent-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.received-container {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .sent {
-    // border: 2px solid blue;
-    flex-direction: row-reverse;
-    background-color: #5fc9f8;
-    background-color: rgba(95,201,248, 0.4);
+  // border: 2px solid blue;
+  flex-direction: row-reverse;
+  background-color: #5fc9f8;
+  background-color: rgba(95, 201, 248, 0.4);
 }
 
 .received {
-    // border: 2px solid red;
-    background-color: #8e8e93;
-    background-color: rgba(219, 219, 219, 0.4);
+  // border: 2px solid red;
+  background-color: #8e8e93;
+  background-color: rgba(219, 219, 219, 0.4);
 }
 
 .message-bubble {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // border: 2px solid green;
-    border-radius: 15px;
-    box-shadow: $shadow;
-    margin: $element-margin*2 0;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 2px solid green;
+  border-radius: 15px;
+  box-shadow: $shadow;
+  margin: $element-margin * 2 0;
+  width: 80%;
 }
 
 .text-message {
-    margin: $element-margin;
+  margin: $element-margin;
 }
 
 .chat-propic {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    width: 20%;
-    margin: $element-margin;
-    // border: 2px solid purple;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 20%;
+  margin: $element-margin;
+  // border: 2px solid purple;
 
-    img {
-        width: 100%;
-        border-radius: 50%;
-    }
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
 }
