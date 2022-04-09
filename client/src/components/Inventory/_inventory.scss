@@ -120,13 +120,6 @@
   }
 }
 
-.item-detail-head {
-  padding: 10px;
-  color: #ffffff;
-  background-color: $primary-color;
-  margin: 0;
-}
-
 .incident-table {
   display: grid;
   border-collapse: collapse;
@@ -176,5 +169,22 @@
 
   tr:nth-child(even) td {
     background: #ececec;
+  }
+}
+
+.item-detail-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  color: #ffffff;
+  background-color: $primary-color;
+  margin: 0;
+}
+.edit-svg {
+  width: 2%;
+
+  svg {
+    fill: #ffffff;
   }
 }

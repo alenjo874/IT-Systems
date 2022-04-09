@@ -528,13 +528,6 @@
   background: #ececec;
 }
 
-.item-detail-head {
-  padding: 10px;
-  color: #ffffff;
-  background-color: #f8a145;
-  margin: 0;
-}
-
 .incident-table {
   display: -ms-grid;
   display: grid;
@@ -586,6 +579,30 @@
 
 .incident-table tr:nth-child(even) td {
   background: #ececec;
+}
+
+.item-detail-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px;
+  color: #ffffff;
+  background-color: #f8a145;
+  margin: 0;
+}
+
+.edit-svg {
+  width: 2%;
+}
+
+.edit-svg svg {
+  fill: #ffffff;
 }
 
 .employee-container {
@@ -991,5 +1008,31 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+}
+
+.update-pro-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.submit-confirm {
+  position: relative;
+  width: 25%;
+  max-width: 300px;
+  min-width: 150px;
+  padding: 10px 20px;
+  background-color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
