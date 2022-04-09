@@ -829,6 +829,44 @@
   margin-top: auto;
 }
 
+.chat-container {
+  background-color: #ececec;
+  border: 1px dotted red;
+  padding: 2.5%;
+}
+
+.sent {
+  border: 2px solid blue;
+}
+
+.received {
+  border: 2px solid red;
+}
+
+.message-bubble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid green;
+  background-color: lightblue;
+  border-radius: 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px 0;
+}
+
+.chat-propic {
+  width: 25%;
+  border: 2px solid purple;
+}
+
+.chat-propic img {
+  width: 100%;
+}
+
 html {
   background-color: #f9f7f7;
   letter-spacing: 1.05px;

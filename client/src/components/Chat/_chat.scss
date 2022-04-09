@@ -1,0 +1,33 @@
+.chat-container {
+    background-color: #ececec;
+    border: 1px dotted red;
+    padding: $element-padding;
+}
+
+.sent {
+    border: 2px solid blue;
+}
+
+.received {
+    border: 2px solid red;
+}
+
+.message-bubble {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid green;
+    background-color: lightblue;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    margin: $element-margin*2 0;
+
+}
+
+.chat-propic {
+    width: 25%;
+    border: 2px solid purple;
+
+    img {
+        width: 100%;
+    }
+}

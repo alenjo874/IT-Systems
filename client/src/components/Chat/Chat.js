@@ -19,19 +19,26 @@ function Chat() {
 
   const displayTexts = messages.map((message) => {
     return (
-      <div>
-        <div key={message.id} className={`msg ${message.uid === auth.currentUser.uid ? 'sent' : 'received'}`}>
+      <div
+        key={message.id}
+        className={`msg ${
+          message.uid === auth.currentUser.uid ? "sent" : "received"
+        } message-bubble`}
+      >
+        <div className="chat-propic">
           <img src={message.photoURL} alt="profile"></img>
-          <p> {message.text} </p>
         </div>
+        <p> {message.text} </p>
       </div>
     );
   });
 
   return (
     <div>
-      {displayTexts}
-      <SendMessage scroll={scroll} />
+      <div className="chat-container">
+        {displayTexts} <SendMessage scroll={scroll} />
+      </div>
+
       <div ref={scroll}></div>
     </div>
   );
