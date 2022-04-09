@@ -61,5 +61,10 @@
 }
 
 .emp-email-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-left: $navbar-width;
+  border: 2px solid red;
+  width: 100%;
 }

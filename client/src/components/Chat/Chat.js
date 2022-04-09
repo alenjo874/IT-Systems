@@ -28,7 +28,7 @@ function Chat() {
         <div className="chat-propic">
           <img src={message.photoURL} alt="profile"></img>
         </div>
-        <p> {message.text} </p>
+        <p className="text-message"> {message.text} </p>
       </div>
     );
   });

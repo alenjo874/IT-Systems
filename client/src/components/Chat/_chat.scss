@@ -2,32 +2,48 @@
     background-color: #ececec;
     border: 1px dotted red;
     padding: $element-padding;
+
+    width: 80%;
 }
 
 .sent {
-    border: 2px solid blue;
+    // border: 2px solid blue;
+    flex-direction: row-reverse;
+    background-color: #5fc9f8;
+    background-color: rgba(95,201,248, 0.4);
 }
 
 .received {
-    border: 2px solid red;
+    // border: 2px solid red;
+    background-color: #8e8e93;
+    background-color: rgba(219, 219, 219, 0.4);
 }
 
 .message-bubble {
     display: flex;
     justify-content: space-between;
-    border: 2px solid green;
-    background-color: lightblue;
+    align-items: center;
+    // border: 2px solid green;
     border-radius: 15px;
     box-shadow: $shadow;
     margin: $element-margin*2 0;
 
 }
 
+.text-message {
+    margin: $element-margin;
+}
+
 .chat-propic {
-    width: 25%;
-    border: 2px solid purple;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 20%;
+    margin: $element-margin;
+    // border: 2px solid purple;
 
     img {
         width: 100%;
+        border-radius: 50%;
     }
 }

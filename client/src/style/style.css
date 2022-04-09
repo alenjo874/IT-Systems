@@ -675,7 +675,19 @@
 }
 
 .emp-email-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 60px;
+  border: 2px solid red;
+  width: 100%;
 }
 
 .login-page-container {
@@ -833,14 +845,21 @@
   background-color: #ececec;
   border: 1px dotted red;
   padding: 2.5%;
+  width: 80%;
 }
 
 .sent {
-  border: 2px solid blue;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: #5fc9f8;
+  background-color: rgba(95, 201, 248, 0.4);
 }
 
 .received {
-  border: 2px solid red;
+  background-color: #8e8e93;
+  background-color: rgba(219, 219, 219, 0.4);
 }
 
 .message-bubble {
@@ -850,21 +869,35 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 2px solid green;
-  background-color: lightblue;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 10px 0;
 }
 
+.text-message {
+  margin: 5px;
+}
+
 .chat-propic {
-  width: 25%;
-  border: 2px solid purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+  margin: 5px;
 }
 
 .chat-propic img {
   width: 100%;
+  border-radius: 50%;
 }
 
 html {
