@@ -15,6 +15,7 @@ function ItemDetail({
   setInventoryArray,
   inventoryArray,
   setMoreDetailItem,
+  setShowDetails
 }) {
   const [editItem, setEditItem] = useState(false);
   const [itemName, setItemName] = useState(name);
@@ -197,10 +198,11 @@ function ItemDetail({
           <tbody>{displyInventoryTickets}</tbody>
         </table>
       </div>
+      <button onClick={() => setShowDetails(false)} ></button>
 
-      <Link to="/inventory">
+      {/* <Link to="/inventory">
         <button>Back</button>
-      </Link>
+      </Link> */}
       <AnimatePresence>{editItem ? editInventoryItem : null}</AnimatePresence>
     </div>
   );

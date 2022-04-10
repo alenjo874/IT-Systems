@@ -14,7 +14,6 @@ import "./style/style.css";
 
 function App() {
   const [inventoryArray, setInventoryArray] = useState([]);
-  const [moreDetailItem, setMoreDetailItem] = useState({});
   const [ticketsArray, setTicketsArray] = useState([]);
   const [completedTickets, setCompletedTickets] = useState([]);
   const [allTicketsArray, setAllTicketsArray] = useState([]);
@@ -47,11 +46,6 @@ function App() {
       .then(setInventoryArray);
   }, []);
 
-  function handleMoreDetails(id) {
-    const selectedInventoryItem = inventoryArray.find((item) => item.id === id);
-    setMoreDetailItem(selectedInventoryItem);
-  }
-
   return (
     <div className="App">
       {/* <NavBar /> */}
@@ -78,18 +72,7 @@ function App() {
             <NavBar />
             <InventoryPage
               inventoryArray={inventoryArray}
-              handleMoreDetails={handleMoreDetails}
-            />
-          </div>
-        </Route>
-        <Route exact path="/inventory_item">
-          <div className="sidebar-container">
-            <NavBar />
-            <ItemDetail
-              {...moreDetailItem}
-              inventoryArray={inventoryArray}
-              setInventoryArray={setInventoryArray}
-              setMoreDetailItem={setMoreDetailItem}
+              // handleMoreDetails={handleMoreDetails}
             />
           </div>
         </Route>
