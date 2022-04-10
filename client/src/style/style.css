@@ -625,10 +625,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  fill: #ffffff;
 }
 
 .icon-action-container p {
   margin: 0 5px;
+}
+
+.icon-action-container:hover {
+  cursor: pointer;
+  color: #28282b;
+  fill: #28282b;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .back-svg {
@@ -642,8 +651,16 @@
   margin-right: 5px;
 }
 
-.back-svg svg {
-  fill: #ffffff;
+.more-detail {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.more-detail:hover {
+  cursor: pointer;
+  color: #f8a145;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .employee-container {

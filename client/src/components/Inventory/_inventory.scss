@@ -196,9 +196,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  fill: #ffffff;
 
   p {
     margin: 0 $element-margin;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $matte-black;
+    fill: $matte-black;
+    transition: 0.2s;
   }
 }
 
@@ -207,8 +215,13 @@
   align-items: center;
   width: $svg-width;
   margin-right: $element-margin;
+}
 
-  svg {
-    fill: #ffffff;
+.more-detail {
+  transition: 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: $primary-color;
+    transition: 0.2s;
   }
 }

@@ -23,7 +23,7 @@ function InventoryPage({
         <td>{item.serial_number}</td>
         <td>{item.name}</td>
         <td> {item.rent ? "Not Available" : "Available"}</td>
-        <td onClick={() => handleMoreDetails(item.id)}>
+        <td onClick={() => handleMoreDetails(item.id)} className="more-detail">
           {/* <Link to="/inventory_item">More Detail</Link> */}
           More Detail
         </td>
