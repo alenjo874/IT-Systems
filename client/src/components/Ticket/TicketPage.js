@@ -82,7 +82,6 @@ function TicketPage({
           <div className="ticket-section incident-details">
             <h4 className="ticket-label">Ticket Details</h4>
             <TicketDetails {...currentTicket} />
-            <div>{displayCompleteTickets}</div>
           </div>
           <div className="ticket-section incident-details">
             <h4 className="ticket-label">Contact Details</h4>
@@ -109,31 +108,31 @@ function TicketPage({
           </div>
         </div>
       </div>
-      <div className="ticket-card-container">
+      {/* <div className="ticket-card-container">
         <div className="ticket-section">
           <h4 className="ticket-label"> Ticket Feed</h4>
           <div className="display-ticket card"> {displayTickets} </div>
         </div>
-      </div>
-      <div className="container">
+      </div> */}
+      <div className="ticket-tab-container">
         <div className="bloc-tabs">
           <button
             className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
             onClick={() => toggleTab(1)}
           >
-            Tab 1
+            Ticket Feed
           </button>
           <button
             className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
             onClick={() => toggleTab(2)}
           >
-            Tab 2
+            Resolved
           </button>
           <button
             className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
             onClick={() => toggleTab(3)}
           >
-            Tab 3
+            Chat
           </button>
         </div>
 
@@ -143,13 +142,7 @@ function TicketPage({
               toggleState === 1 ? "content  active-content" : "content"
             }
           >
-            <h2>Content 1</h2>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              praesentium incidunt quia aspernatur quasi quidem facilis quo
-              nihil vel voluptatum?
-            </p>
+            <div className="display-ticket card"> {displayTickets} </div>
           </div>
 
           <div
@@ -157,12 +150,8 @@ function TicketPage({
               toggleState === 2 ? "content  active-content" : "content"
             }
           >
-            <h2>Content 2</h2>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              voluptatum qui adipisci.
-            </p>
+           
+            <div>{displayCompleteTickets}</div>
           </div>
 
           <div
@@ -170,8 +159,7 @@ function TicketPage({
               toggleState === 3 ? "content  active-content" : "content"
             }
           >
-            <h2>Content 3</h2>
-            <hr />
+          
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
               nostrum rerum laudantium totam unde adipisci incidunt modi alias!
