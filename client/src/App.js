@@ -72,6 +72,7 @@ function App() {
             <NavBar />
             <InventoryPage
               inventoryArray={inventoryArray}
+              setInventoryArray={setInventoryArray}
               // handleMoreDetails={handleMoreDetails}
             />
           </div>

@@ -34,7 +34,8 @@ function ItemDetail({
     );
   });
 
-  function handleEditItem() {
+  function handleEditItem(e) {
+    e.preventDefault();
     setEditItem((prev) => !prev);
   }
 
@@ -66,6 +67,7 @@ function ItemDetail({
     });
 
     setInventoryArray(updatedItemArray);
+    setEditItem(false);
   }
 
   const editInventoryItem = (
@@ -87,7 +89,7 @@ function ItemDetail({
           transition: { duration: 0.25, ease: "easeOut" },
         }}
       >
-        <form className="edit-item-form" onSubmit={handleSubmitChange}>
+        <form className="edit-item-form">
           <label>Name</label>
           <input
             onChange={(e) => setItemName(e.target.value)}
@@ -108,11 +110,10 @@ function ItemDetail({
             onChange={(e) => setItemGraphicCard(e.target.value)}
             value={itemGraphicCard}
           ></input>
-          <button type="submit">Submit Changes</button>
+
+          <button onClick={handleSubmitChange}>Submit Changes</button>
+          <button onClick={handleEditItem}>Cancel</button>
         </form>
-        <div>
-          <button onClick={handleEditItem}>X</button>
-        </div>
       </motion.div>
     </div>
   );
@@ -223,7 +224,6 @@ function ItemDetail({
           <tbody>{displyInventoryTickets}</tbody>
         </table>
       </div>
-      <button onClick={() => setShowDetails(false)}></button>
       <AnimatePresence>{editItem ? editInventoryItem : null}</AnimatePresence>
     </div>
   );

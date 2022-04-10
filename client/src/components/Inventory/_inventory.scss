@@ -42,7 +42,7 @@
     text-align: left;
     font-weight: normal;
     font-size: 1.1rem;
-    color: white;
+    color: $accent-color;
     box-shadow: $shadow-head;
   }
 
@@ -182,14 +182,20 @@
 .edit-svg {
   width: $svg-width;
   margin-left: $element-margin;
-  svg {
-    fill: #ffffff;
-  }
 }
 
 .edit-item-form {
   display: flex;
   flex-direction: column;
+  padding: $element-padding;
+
+  label {
+    margin: $element-margin 0;
+  }
+
+  input {
+    margin: $element-margin 0;
+  }
 }
 
 .icon-action-container {

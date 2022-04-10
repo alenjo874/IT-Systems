@@ -48,6 +48,7 @@ function EmployeePage({ inventoryArray }) {
       issue: issue,
       solution: "",
       complete: false,
+      case_number: Math.floor(Math.random() * 1000000000),
     };
 
     fetch("/tickets", {
@@ -72,7 +73,10 @@ function EmployeePage({ inventoryArray }) {
     <div className="employee-container">
       <div className="employee-header">
         <h4>Submit Ticket Here</h4>
-        <p>Please fill out the form and an IT admin will assist shortly, thank you.</p>
+        <p>
+          Please fill out the form and an IT admin will assist shortly, thank
+          you.
+        </p>
       </div>
       <form>
         <label> Subject </label>
