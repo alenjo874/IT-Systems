@@ -15,7 +15,7 @@ function ItemDetail({
   setInventoryArray,
   inventoryArray,
   setMoreDetailItem,
-  setShowDetails
+  setShowDetails,
 }) {
   const [editItem, setEditItem] = useState(false);
   const [itemName, setItemName] = useState(name);
@@ -117,11 +117,25 @@ function ItemDetail({
     </div>
   );
 
+  const backArrowIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 512"
+      onClick={() => setShowDetails(false)}
+    >
+      <path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z" />
+    </svg>
+  );
+
   return (
     <div className="item-detail-container">
       <div className="item-details">
         <div className="item-detail-head">
-          <p>Item Details</p>
+          <div className="back-container">
+            <div className="back-svg">{backArrowIcon}</div>
+            <p>Item Details</p>
+          </div>
+
           <div className="edit-svg" onClick={handleEditItem}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M421.7 220.3L188.5 453.4L154.6 419.5L158.1 416H112C103.2 416 96 408.8 96 400V353.9L92.51 357.4C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3zM492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75z" />
@@ -198,11 +212,7 @@ function ItemDetail({
           <tbody>{displyInventoryTickets}</tbody>
         </table>
       </div>
-      <button onClick={() => setShowDetails(false)} ></button>
-
-      {/* <Link to="/inventory">
-        <button>Back</button>
-      </Link> */}
+      <button onClick={() => setShowDetails(false)}></button>
       <AnimatePresence>{editItem ? editInventoryItem : null}</AnimatePresence>
     </div>
   );

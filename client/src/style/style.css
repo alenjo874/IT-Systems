@@ -597,7 +597,7 @@
 }
 
 .edit-svg {
-  width: 2%;
+  width: 20px;
 }
 
 .edit-svg svg {
@@ -612,6 +612,34 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.back-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.back-svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.back-svg svg {
+  fill: #ffffff;
 }
 
 .employee-container {

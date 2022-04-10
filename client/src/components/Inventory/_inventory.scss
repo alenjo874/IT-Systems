@@ -180,7 +180,7 @@
   margin: 0;
 }
 .edit-svg {
-  width: 2%;
+  width: $svg-width;
 
   svg {
     fill: #ffffff;
@@ -190,4 +190,21 @@
 .edit-item-form {
   display: flex;
   flex-direction: column;
+}
+
+.back-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+}
+
+.back-svg {
+  display: flex;
+  align-items: center;
+  width: $svg-width;
+  margin-right: $element-margin;
+  svg {
+    fill: #ffffff;
+  }
 }
