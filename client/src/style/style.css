@@ -598,6 +598,7 @@
 
 .edit-svg {
   width: 20px;
+  margin-left: 5px;
 }
 
 .edit-svg svg {
@@ -614,7 +615,7 @@
           flex-direction: column;
 }
 
-.back-container {
+.icon-action-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,7 +625,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
+}
+
+.icon-action-container p {
+  margin: 0 5px;
 }
 
 .back-svg {

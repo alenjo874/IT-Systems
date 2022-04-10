@@ -181,7 +181,7 @@
 }
 .edit-svg {
   width: $svg-width;
-
+  margin-left: $element-margin;
   svg {
     fill: #ffffff;
   }
@@ -192,11 +192,14 @@
   flex-direction: column;
 }
 
-.back-container {
+.icon-action-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 30%;
+
+  p {
+    margin: 0 $element-margin;
+  }
 }
 
 .back-svg {
@@ -204,6 +207,7 @@
   align-items: center;
   width: $svg-width;
   margin-right: $element-margin;
+
   svg {
     fill: #ffffff;
   }
