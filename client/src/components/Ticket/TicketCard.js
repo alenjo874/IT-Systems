@@ -13,7 +13,7 @@ function TicketCard({
   return (
     <div className="ticket-card" onClick={(e) => handleMoreDetail(id)}>
       <div className="ticket-head">
-        <p>{case_number}</p>
+        <p>Case: {case_number}</p>
       </div>
       <div className="shared-subsection">
         <div className="ticket-subsections two-col">

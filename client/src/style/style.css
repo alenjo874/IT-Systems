@@ -154,14 +154,46 @@
   max-width: 900px;
 }
 
+.ticket-label-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ececec;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ticket-label-container svg {
+  margin-right: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.ticket-label-container svg:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  fill: #f8a145;
+}
+
+.ticket-label-container .ticket-label {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .ticket-label {
+  margin: 0;
   background-color: #ececec;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
           box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
   padding: 2.5%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  margin: 0;
 }
 
 .shared-subsection {
@@ -205,6 +237,9 @@
   margin: 5px 0;
   width: 100%;
   background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 2.5%;
 }
 
 .ticket-card p {
