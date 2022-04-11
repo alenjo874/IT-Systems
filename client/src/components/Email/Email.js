@@ -32,11 +32,8 @@ function Email() {
   };
   return (
     <div className="pages-container" id="contact">
-      <div className="pages-header-container">
-        <h2 className="pages-name">Contact Me</h2>
-        <div className="header-backdrop"></div>
-      </div>
-      <div className="call-to-action">
+      <div className="email-tab-head">
+        <h2 className="pages-name">Contact</h2>
         <p>
           Please send what your issue is, and an IT admin will assist shortly.
         </p>
