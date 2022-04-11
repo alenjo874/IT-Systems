@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 function TicketDetails({
+  id,
   subject,
   issue,
   create_date,
@@ -11,9 +12,15 @@ function TicketDetails({
   case_number,
   editTicketPopUp,
   handleTicketDetailEdit,
+  submitNewTicketDetails,
+  handleTicketDelete
 }) {
-  const [newSubject, setNewSubject] = useState(subject);
-  const [newIssue, setNewIssue] = useState(issue);
+  const [newSubject, setNewSubject] = useState("");
+  const [newIssue, setNewIssue] = useState("");
+  const newTicketObj = {
+    subject: newSubject ? newSubject : subject,
+    issue: newIssue ? newIssue : issue,
+  };
 
   const editTicketDetail = (
     <div className="update-pro-popup">
@@ -46,12 +53,16 @@ function TicketDetails({
             value={newIssue}
           ></input>
 
-          <button>Submit Changes</button>
+          <button onClick={(e) => submitNewTicketDetails(e, newTicketObj, id)}>
+            Submit Changes
+          </button>
           <button onClick={handleTicketDetailEdit}>Cancel</button>
+          <button onClick={(e) => handleTicketDelete(e, id)}>Delete</button>
         </form>
       </motion.div>
     </div>
   );
+
   return (
     <div className="ticket-details card">
       <div className="shared-subsection">

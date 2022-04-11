@@ -18,7 +18,7 @@ function TicketPage({
   ticketsArray,
 }) {
   // ============================================================
-  const [moreDetailTicket, setMoreDetailTicket] = useState([]);
+  // const [moreDetailTicket, setMoreDetailTicket] = useState([]);
   const [toggleState, setToggleState] = useState(1);
   const [editTicketPopUp, setEditTickPopUp] = useState(false);
 
@@ -26,12 +26,12 @@ function TicketPage({
   const currentTicket = ticketsArray[0];
   const [user] = useAuthState(auth);
 
-  function handleMoreDetail(ticketId) {
-    const detailTicketObj = ticketsArray.find(
-      (ticket) => ticket.id === ticketId
-    );
-    setMoreDetailTicket(detailTicketObj);
-  }
+  // function handleMoreDetail(ticketId) {
+  //   const detailTicketObj = ticketsArray.find(
+  //     (ticket) => ticket.id === ticketId
+  //   );
+  //   setMoreDetailTicket(detailTicketObj);
+  // }
   function handleTicketDetailEdit(e) {
     e.preventDefault();
     setEditTickPopUp((prev) => !prev);
@@ -75,7 +75,7 @@ function TicketPage({
       <TicketCard
         key={uuidv4()}
         {...ticket}
-        handleMoreDetail={handleMoreDetail}
+        // handleMoreDetail={handleMoreDetail}
       />
     );
   });
@@ -85,6 +85,41 @@ function TicketPage({
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  function submitNewTicketDetails(e, ticketObj, ticketID) {
+    e.preventDefault();
+    fetch(`/tickets/${ticketID}`, {
+      method: "PATCH",
+      body: JSON.stringify({ ...ticketObj }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+
+    const updatedTicketsArray = ticketsArray.map((ticket) => {
+      if (ticket.id === ticketID) {
+        return { ...ticket, ...ticketObj };
+      } else {
+        return ticket;
+      }
+    });
+
+    setTicketsArray(updatedTicketsArray);
+    setEditTickPopUp(false);
+  }
+
+  function handleTicketDelete(e, ticketId) {
+    e.preventDefault();
+    fetch(`tickets/${ticketId}`, {
+      method: "DELETE",
+    });
+
+    const newDeleteTicketArray = ticketsArray.filter(
+      (ticket) => ticket.id !== ticketId
+    );
+    setTicketsArray(newDeleteTicketArray);
+    setEditTickPopUp(false);
+  }
 
   return (
     <div className="ticket-page-container">
@@ -106,6 +141,8 @@ function TicketPage({
               {...currentTicket}
               editTicketPopUp={editTicketPopUp}
               handleTicketDetailEdit={handleTicketDetailEdit}
+              submitNewTicketDetails={submitNewTicketDetails}
+              handleTicketDelete={handleTicketDelete}
             />
           </div>
           <div className="ticket-section incident-details">
@@ -118,13 +155,13 @@ function TicketPage({
             <h4 className="ticket-label">Next Ticket</h4>
             <TicketUpcoming
               {...nextTicket}
-              handleMoreDetail={handleMoreDetail}
+              // handleMoreDetail={handleMoreDetail}
             />
           </div>
           <div className="current-ticket ticket-section">
             <h4 className="ticket-label">Current Ticket</h4>
             <TicketResolve
-              handleMoreDetail={handleMoreDetail}
+              // handleMoreDetail={handleMoreDetail}
               {...currentTicket}
               setCompletedTickets={setCompletedTickets}
               setTicketsArray={setTicketsArray}
