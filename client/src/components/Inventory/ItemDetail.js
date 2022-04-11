@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
-import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 function ItemDetail({

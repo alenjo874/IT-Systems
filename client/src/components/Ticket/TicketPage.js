@@ -10,7 +10,6 @@ import TicketCard from "./TicketCard";
 import TicketDetails from "./TicketDetails";
 import TicketResolve from "./TicketResolve";
 import TicketUpcoming from "./TicketUpcoming";
-import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 function TicketPage({
   completedTickets,

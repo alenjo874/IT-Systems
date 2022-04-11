@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Chart from "chart.js/auto"; //keep
 import { Bar } from "react-chartjs-2";
 import { Doughnut } from "react-chartjs-2";
@@ -21,11 +21,6 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
     }
   }
 
-  const createGraph = (
-    <form>
-      <input></input>
-    </form>
-  );
 
   return (
     <div className="dashboard-container">

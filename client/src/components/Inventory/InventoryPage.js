@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { Link } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 
-function InventoryPage({
-  inventoryArray,
-  handleMoreDetails,
-  setInventoryArray,
-}) {
+function InventoryPage({ inventoryArray, setInventoryArray }) {
   const [moreDetailItem, setMoreDetailItem] = useState({});
   const [showDetails, setShowDetails] = useState(false);
 

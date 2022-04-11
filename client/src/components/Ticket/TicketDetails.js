@@ -15,9 +15,6 @@ function TicketDetails({
   const [newSubject, setNewSubject] = useState(subject);
   const [newIssue, setNewIssue] = useState(issue);
 
-  console.log(subject, issue);
-  console.log(newSubject, newIssue);
-
   const editTicketDetail = (
     <div className="update-pro-popup">
       <motion.div

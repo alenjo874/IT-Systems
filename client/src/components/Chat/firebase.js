@@ -1,11 +1,6 @@
-import React from "react";
 // ============================================================
-import { initializeApp } from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { getAnalytics } from "firebase/analytics";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";

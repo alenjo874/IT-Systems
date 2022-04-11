@@ -5,7 +5,6 @@ import EmployeeEmail from "./components/Employee/EmployeeEmail";
 import EmployeeNavBar from "./components/Employee/EmployeeNavBar";
 import EmployeePage from "./components/Employee/EmployeePage";
 import InventoryPage from "./components/Inventory/InventoryPage";
-import ItemDetail from "./components/Inventory/ItemDetail";
 import LoginPage from "./components/Login/LoginPage";
 import MainPage from "./components/Main/MainPage";
 import NavBar from "./components/NavBar/NavBar";
@@ -73,7 +72,6 @@ function App() {
             <InventoryPage
               inventoryArray={inventoryArray}
               setInventoryArray={setInventoryArray}
-              // handleMoreDetails={handleMoreDetails}
             />
           </div>
         </Route>
