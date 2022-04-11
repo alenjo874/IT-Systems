@@ -242,10 +242,6 @@
   padding: 2.5%;
 }
 
-.ticket-card p {
-  margin: 5px 0;
-}
-
 .ticket-head {
   display: -webkit-box;
   display: -ms-flexbox;

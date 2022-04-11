@@ -57,9 +57,50 @@ function TicketPage({
 
   const displayCompleteTickets = completedTickets.map((ticket) => {
     return (
-      <div key={uuidv4()}>
-        <p>{ticket.issue}</p>
-        <button onClick={(e) => handleFalse(ticket.id)}>False </button>
+      <div className="ticket-card" key={uuidv4()}>
+        <div className="ticket-head">
+          <p>Case: {ticket.case_number}</p>
+        </div>
+        <div className="shared-subsection">
+          <div className="ticket-subsections two-col">
+            <div>
+              <p className="detail-label">Subject</p>
+              <p> {ticket.subject} </p>
+            </div>
+          </div>
+          <div className="ticket-subsections two-col">
+            <div>
+              <p className="detail-label">Case Priority</p>
+              <p
+                className={
+                  ticket.level === "Low"
+                    ? "green"
+                    : ticket.level === "Moderate"
+                    ? "yellow"
+                    : "red"
+                }
+              >
+                {ticket.level}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="ticket-subsections">
+          <div>
+            <p className="detail-label">Case Issue</p>
+            <p> {ticket.issue} </p>
+          </div>
+        </div>
+        <div className="ticket-subsections">
+          <div>
+            <p className="detail-label">Case Solution</p>
+            <p> {ticket.solution} </p>
+          </div>
+        </div>
+        <div>
+          <p className="detail-label">Reopen Ticket</p>
+          <button onClick={() => handleFalse(ticket.id)}>Submit</button>
+        </div>
       </div>
     );
   });
@@ -71,13 +112,7 @@ function TicketPage({
   );
 
   const displayTickets = filterOutNextTicket.map((ticket) => {
-    return (
-      <TicketCard
-        key={uuidv4()}
-        {...ticket}
-        // handleMoreDetail={handleMoreDetail}
-      />
-    );
+    return <TicketCard key={uuidv4()} {...ticket} />;
   });
 
   // ============================================================
@@ -212,7 +247,7 @@ function TicketPage({
               toggleState === 2 ? "content  active-content" : "content"
             }
           >
-            <div>{displayCompleteTickets}</div>
+            <div className="display-ticket card">{displayCompleteTickets}</div>
           </div>
 
           <div
