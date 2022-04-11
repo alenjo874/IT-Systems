@@ -89,3 +89,41 @@
 .curve-three .shape-fill {
   fill: $primary-color;
 }
+
+.main-text-cards {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  // border: 2px solid green;
+}
+
+.main-titles {
+  width: 60%;
+  // border: 2px solid red;
+  h2 {
+    font-size: 5rem;
+  }
+
+  span {
+    p {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.main-illustrations {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  // border: 2px solid red;
+
+  img {
+    width: 100%;
+  }
+}
+
+.main-blurb {
+  width: 50%;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}

@@ -1,11 +1,29 @@
 import React from "react";
+import computer from "../../style/images/computer.svg";
+import ticket from "../../style/images/ticket.svg";
+import inventory from "../../style/images/inventory.svg";
+import dashboard from "../../style/images/dashboard.svg";
 
 function MainPage() {
   return (
     <div className="main-page-container">
       <div className="blue-banner">
-        <div>
-          <h2>IT System management</h2>
+        <div className="main-text-cards">
+          <div className="main-titles">
+            <span>
+              <h2>IT System management</h2>
+              <p>Time to Get Organized</p>
+            </span>
+
+            <p className="main-blurb">
+              An effective systems management plan facilitates the delivery of
+              IT as a service and allows an organization's employees to respond
+              quickly to changing business requirements and system activity.
+            </p>
+          </div>
+          <div className="main-illustrations">
+            <img src={computer} />
+          </div>
         </div>
       </div>
       <div className="curve-one">
@@ -22,13 +40,22 @@ function MainPage() {
         </svg>
       </div>
       <div className="white-banner">
-        <div>
-          <h2>Ticket Management</h2>
-          <p>
-            An effective systems management plan facilitates the delivery of IT
-            as a service and allows an organization's employees to respond
-            quickly to changing business requirements and system activity.
-          </p>
+        <div className="main-text-cards">
+          <div className="main-illustrations">
+            <img src={ticket} />
+          </div>
+          <div className="main-titles">
+            <span>
+              <h2>Ticket</h2>
+              <p>Time to Get Organized</p>
+            </span>
+
+            <p className="main-blurb">
+              An effective systems management plan facilitates the delivery of
+              IT as a service and allows an organization's employees to respond
+              quickly to changing business requirements and system activity.
+            </p>
+          </div>
         </div>
       </div>
       <div className="curve-two">
@@ -45,12 +72,22 @@ function MainPage() {
         </svg>
       </div>
       <div className="blue-banner">
-        <div>
-          <h2>Inventory Management</h2>
-          <p>
-            Good systems management simplifies IT service delivery, allowing
-            employees and workgroups to do their jobs efficiently
-          </p>
+        <div className="main-text-cards">
+          <div className="main-titles">
+            <span>
+              <h2>Inventory</h2>
+              <p>Time to Get Organized</p>
+            </span>
+
+            <p className="main-blurb">
+              An effective systems management plan facilitates the delivery of
+              IT as a service and allows an organization's employees to respond
+              quickly to changing business requirements and system activity.
+            </p>
+          </div>
+          <div className="main-illustrations">
+            <img src={dashboard} />
+          </div>
         </div>
       </div>
       <div className="curve-three">
@@ -66,9 +103,23 @@ function MainPage() {
           ></path>
         </svg>
         <div className="white-banner">
-          <div>
-            <h2>Dashboard Analytics</h2>
-            <p>View Dashboard</p>
+          <div className="main-text-cards">
+            <div className="main-illustrations">
+              <img src={inventory} />
+            </div>
+            <div className="main-titles">
+              <span>
+                <h2>Dashboard</h2>
+                <p>Time to Get Organized</p>
+              </span>
+
+              <p className="main-blurb">
+                An effective systems management plan facilitates the delivery of
+                IT as a service and allows an organization's employees to
+                respond quickly to changing business requirements and system
+                activity.
+              </p>
+            </div>
           </div>
         </div>
       </div>
