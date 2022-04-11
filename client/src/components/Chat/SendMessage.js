@@ -19,7 +19,7 @@ function SendMessage() {
   }
   return (
     <div>
-      <form onSubmit={sendMessage}>
+      <form onSubmit={sendMessage} className="chat-form">
         <input
           placeholder="message"
           value={newMessage}
@@ -27,7 +27,7 @@ function SendMessage() {
             setNewMessage(e.target.value);
           }}
         ></input>
-        <button type="submit">Send Message</button>
+        <button type="submit">Send</button>
       </form>
     </div>
   );

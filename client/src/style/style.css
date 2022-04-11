@@ -1136,6 +1136,24 @@
   border-radius: 50%;
 }
 
+.chat-form {
+  margin: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chat-form input {
+  width: 80%;
+}
+
+.chat-form button {
+  font-size: 0.8rem;
+}
+
 .user-chat-container {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -61,6 +61,19 @@
   }
 }
 
+.chat-form {
+  margin: $element-margin 0;
+  display: flex;
+  justify-content: center;
+  input {
+    width: 80%;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}
+
 .user-chat-container {
   display: flex;
   flex-direction: column;
