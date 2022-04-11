@@ -33,14 +33,16 @@ function Chat() {
           <div className="chat-propic">
             <img src={message.photoURL} alt="profile"></img>
           </div>
-          <p className="text-message"> {message.text} </p>
+          <p className={`${
+            message.uid === auth.currentUser.uid ? "it-message" : "employee-message"
+          } text-message`}> {message.text} </p>
         </div>
       </div>
     );
   });
 
   return (
-    <div>
+    <div className="user-chat-container">
       <div className="chat-container">
         {displayTexts} <SendMessage scroll={scroll} />
       </div>

@@ -13,7 +13,7 @@ function TicketDetails({
   editTicketPopUp,
   handleTicketDetailEdit,
   submitNewTicketDetails,
-  handleTicketDelete
+  handleTicketDelete,
 }) {
   const [newSubject, setNewSubject] = useState("");
   const [newIssue, setNewIssue] = useState("");
@@ -56,8 +56,8 @@ function TicketDetails({
           <button onClick={(e) => submitNewTicketDetails(e, newTicketObj, id)}>
             Submit Changes
           </button>
-          <button onClick={handleTicketDetailEdit}>Cancel</button>
           <button onClick={(e) => handleTicketDelete(e, id)}>Delete</button>
+          <button onClick={handleTicketDetailEdit}>Cancel</button>
         </form>
       </motion.div>
     </div>

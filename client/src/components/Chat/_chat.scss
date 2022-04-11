@@ -1,8 +1,8 @@
 .chat-container {
   display: flex;
   flex-direction: column;
-  background-color: #ececec;
-  border: 1px dotted red;
+  // background-color: #ececec;
+  // border: 1px dotted red;
   padding: $element-padding;
   width: 80%;
 }
@@ -42,7 +42,9 @@
 }
 
 .text-message {
-  margin: $element-margin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chat-propic {
@@ -57,4 +59,12 @@
     width: 100%;
     border-radius: 50%;
   }
+}
+
+.user-chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
