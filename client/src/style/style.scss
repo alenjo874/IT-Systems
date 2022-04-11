@@ -96,3 +96,21 @@ button {
   border: $card-border;
   box-shadow: $shadow;
 }
+
+.cancel-container {
+  display: flex;
+  justify-content: flex-end;
+  svg {
+    width: 4%;
+    transition: 0.2s;
+    &:hover {
+      cursor: pointer;
+      fill: $primary-color;
+      transition: 0.2s;
+    }
+    &:active {
+      fill: $active-color;
+      transition: 0.2s;
+    }
+  }
+}

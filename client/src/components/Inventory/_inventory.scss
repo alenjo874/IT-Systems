@@ -214,6 +214,12 @@
     fill: $matte-black;
     transition: 0.2s;
   }
+
+  &:active {
+    color: $active-color;
+    fill: $active-color;
+    transition: 0.2s;
+  }
 }
 
 .back-svg {
