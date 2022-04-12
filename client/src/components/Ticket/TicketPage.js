@@ -239,7 +239,7 @@ function TicketPage({
               toggleState === 1 ? "content  active-content" : "content"
             }
           >
-            <div className="display-ticket card"> {displayTickets} </div>
+            <div className="display-ticket card ticket-overflow"> {displayTickets} </div>
           </div>
 
           <div
@@ -247,7 +247,7 @@ function TicketPage({
               toggleState === 2 ? "content  active-content" : "content"
             }
           >
-            <div className="display-ticket card">{displayCompleteTickets}</div>
+            <div className="display-ticket card ticket-overflow">{displayCompleteTickets}</div>
           </div>
 
           <div

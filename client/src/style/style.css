@@ -169,8 +169,8 @@
 }
 
 .black-gradient {
-  background-image: -webkit-gradient(linear, left top, right top, from(#434343), to(black));
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#868f96), to(#596164));
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
 }
 
 .ticket-page-container {
@@ -495,6 +495,12 @@
 
 .active-content {
   display: block;
+}
+
+.ticket-overflow {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 600px;
 }
 
 .dashboard-container {
