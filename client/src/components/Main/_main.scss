@@ -4,14 +4,14 @@
   margin-left: $navbar-width;
   width: 100%;
 }
-.blue-banner {
+.orange-banner {
   display: flex;
   justify-content: center;
   align-items: center;
   color: $accent-color;
   background-color: $primary-color;
   height: 100vh;
-  max-height: 600px;
+  // max-height: 600px;
   width: 100%;
   //   -webkit-transform: skewY(2deg);
   //   -moz-transform: skewY(2deg);
@@ -95,13 +95,18 @@
   justify-content: center;
   // align-items: center;
   // border: 2px solid green;
+  justify-content: center;
 }
 
 .main-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
   width: 60%;
-  // border: 2px solid red;
   h2 {
     font-size: 5rem;
+    color: $matte-black;
   }
 
   span {
@@ -115,6 +120,7 @@
   display: flex;
   align-items: center;
   width: 25%;
+  max-width: 400px;
   // border: 2px solid red;
 
   img {

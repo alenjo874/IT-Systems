@@ -7,7 +7,7 @@ import dashboard from "../../style/images/dashboard.svg";
 function MainPage() {
   return (
     <div className="main-page-container">
-      <div className="blue-banner">
+      <div className="orange-banner">
         <div className="main-text-cards">
           <div className="main-titles">
             <span>
@@ -49,7 +49,6 @@ function MainPage() {
               <h2>Ticket</h2>
               <p>Time to Get Organized</p>
             </span>
-
             <p className="main-blurb">
               An effective systems management plan facilitates the delivery of
               IT as a service and allows an organization's employees to respond
@@ -71,7 +70,7 @@ function MainPage() {
           ></path>
         </svg>
       </div>
-      <div className="blue-banner">
+      <div className="orange-banner">
         <div className="main-text-cards">
           <div className="main-titles">
             <span>
