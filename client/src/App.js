@@ -91,7 +91,7 @@ function App() {
         <Route exact path="/employee">
           <div className="sidebar-container">
             <EmployeeNavBar />
-            <EmployeePage inventoryArray={inventoryArray} />
+            <EmployeePage inventoryArray={inventoryArray} setTicketsArray={setTicketsArray} />
           </div>
         </Route>
         <Route exact path="/employee_email">

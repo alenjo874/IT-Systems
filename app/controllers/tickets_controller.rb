@@ -43,7 +43,7 @@ class TicketsController < ApplicationController
     end
 
     def employee_ticket_params
-        params.permit(:admin_id, :employee_id, :subject,:rental_id, :level, :severity_level, :issue, :solution, :complete, :case_category)
+        params.permit(:admin_id, :employee_id, :subject,:rental_id, :level, :severity_level, :issue, :solution, :complete,:case_number, :case_category)
     end
 
 end

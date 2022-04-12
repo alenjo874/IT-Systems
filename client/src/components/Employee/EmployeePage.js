@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-function EmployeePage({ inventoryArray }) {
+function EmployeePage({ inventoryArray, setTicketsArray }) {
   const [employeeArray, setEmployeeArray] = useState([]);
   const [adminArray, setAdminArray] = useState([]);
   const [subject, setSubject] = useState("");
@@ -69,7 +69,7 @@ function EmployeePage({ inventoryArray }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
+        setTicketsArray((prev) => [...prev, data]);
       });
 
     setSubject("");
