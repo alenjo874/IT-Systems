@@ -31,7 +31,7 @@ function Email() {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
   return (
-    <div className="pages-container" id="contact">
+    <div className="emails-container" >
       <div className="email-tab-head">
         <h2 className="pages-name">Contact</h2>
         <p>
@@ -39,21 +39,29 @@ function Email() {
         </p>
       </div>
       <form className="email-form" onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="from_name"
-          placeholder="Your Name"
-          value={toSend.from_name}
-          onChange={handleChange}
-        />
+        <div className="form">
+          <input
+            className="form__input"
+            type="text"
+            name="from_name"
+            value={toSend.from_name}
+            onChange={handleChange}
+            placeholder=" "
+          />
+          <label className="form__label edit-placeholder">Your Name</label>
+        </div>
 
-        <input
-          type="text"
-          name="reply_to"
-          placeholder="Your Email"
-          value={toSend.reply_to}
-          onChange={handleChange}
-        />
+        <div className="form">
+          <input
+            className="form__input"
+            type="text"
+            name="reply_to"
+            placeholder=" "
+            value={toSend.reply_to}
+            onChange={handleChange}
+          />
+          <label className="form__label edit-placeholder">Your Email</label>
+        </div>
         <textarea
           type="text"
           name="message"

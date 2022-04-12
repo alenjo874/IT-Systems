@@ -1,3 +1,9 @@
+.emails-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .email-form {
   display: flex;
   flex-direction: column;
@@ -8,6 +14,7 @@
   padding: 5%;
   border: $card-border;
   //   box-shadow: $shadow
+  width: 80%;
 }
 
 .email-form > input {
@@ -17,20 +24,9 @@
 }
 
 .email-form > textarea {
-  color: #fff;
   background-color: transparent;
-  margin: 15px 0;
-  padding: 5px;
   min-height: 150px;
   font-style: inherit;
-}
-
-.email-form > input:focus {
-  border-bottom: 0.5px solid rgba(255, 179, 71, 0.6);
-}
-
-.email-form > textarea:focus {
-  border-bottom: 0.5px solid rgba(255, 179, 71, 0.6);
 }
 
 .email-confirm-container {
@@ -87,5 +83,3 @@ select:-webkit-autofill:focus {
   align-items: center;
   text-align: center;
 }
-
-
