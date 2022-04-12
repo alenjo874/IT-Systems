@@ -11,7 +11,7 @@ function MainPage() {
         <div className="main-text-cards">
           <div className="main-titles">
             <span>
-              <h2>IT System management</h2>
+              <h2>IT System Management</h2>
               <p>Time to Get Organized</p>
             </span>
             <div className="gradient-block black-gradient"></div>
@@ -46,14 +46,14 @@ function MainPage() {
           </div>
           <div className="main-titles">
             <span>
-              <h2>Ticket</h2>
-              <p>Time to Get Organized</p>
+              <h2>Ticket System</h2>
+              <p>Manage Case Inflow</p>
             </span>
             <div className="gradient-block orange-gradient"></div>
             <p className="main-blurb">
-              An effective systems management plan facilitates the delivery of
-              IT as a service and allows an organization's employees to respond
-              quickly to changing business requirements and system activity.
+              A ticketing system is a software program that a customer support
+              team uses to create, manage, and maintain a list (or lists) of
+              customer problems.
             </p>
           </div>
         </div>
@@ -76,13 +76,12 @@ function MainPage() {
           <div className="main-titles">
             <span>
               <h2>Inventory</h2>
-              <p>Time to Get Organized</p>
+              <p>Data Management</p>
             </span>
             <div className="gradient-block black-gradient"></div>
             <p className="main-blurb">
-              An effective systems management plan facilitates the delivery of
-              IT as a service and allows an organization's employees to respond
-              quickly to changing business requirements and system activity.
+              Inventory management helps identify which . It tracks tickets
+              related to products to ensure excellent and consistent service.
             </p>
           </div>
           <div className="main-illustrations">
@@ -111,13 +110,12 @@ function MainPage() {
           <div className="main-titles">
             <span>
               <h2>Dashboard</h2>
-              <p>Time to Get Organized</p>
+              <p>View metrics and data</p>
             </span>
             <div className="gradient-block orange-gradient"></div>
             <p className="main-blurb">
-              An effective systems management plan facilitates the delivery of
-              IT as a service and allows an organization's employees to respond
-              quickly to changing business requirements and system activity.
+              A dashboard is a data visualization tool that tracks, analyzes,
+              and, displays key metrics and critical data points.
             </p>
           </div>
         </div>
