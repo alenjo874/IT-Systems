@@ -61,9 +61,11 @@ function Email() {
           value={toSend.message}
           onChange={handleChange}
         />
-        <button type="submit" className="view-work-btn">
-          Submit
-        </button>
+        <div className="edit-btns">
+          <button type="submit" className="view-work-btn">
+            Submit
+          </button>
+        </div>
       </form>
       <AnimatePresence>
         {confirmEmailSent ? (

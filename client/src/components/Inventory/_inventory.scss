@@ -182,20 +182,6 @@
   margin-left: $element-margin;
 }
 
-.edit-item-form {
-  display: flex;
-  flex-direction: column;
-  padding: $element-padding;
-
-  label {
-    margin: $element-margin 0;
-  }
-
-  input {
-    margin: $element-margin 0;
-  }
-}
-
 .icon-action-container {
   display: flex;
   justify-content: flex-start;

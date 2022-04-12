@@ -3,12 +3,11 @@ import React, { useState } from "react";
 function TicketResolve({
   id,
   issue,
-  level,
   setTicketsArray,
   ticketsArray,
   setCompletedTickets,
-  handleMoreDetail,
   subject,
+
 }) {
   const [resolution, setResolution] = useState("");
 
@@ -31,7 +30,10 @@ function TicketResolve({
     const incompleteTicketArr = ticketsArray.filter(
       (ticket) => ticket.id !== id
     );
+
     setTicketsArray(incompleteTicketArr);
+
+    setResolution("");
   }
 
   return (

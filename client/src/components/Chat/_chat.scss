@@ -81,3 +81,12 @@
   align-items: center;
   width: 100%;
 }
+
+.log-action-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  button {
+    width: 35%;
+  }
+}

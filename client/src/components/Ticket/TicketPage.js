@@ -17,30 +17,18 @@ function TicketPage({
   setTicketsArray,
   ticketsArray,
 }) {
-  // ============================================================
-  // const [moreDetailTicket, setMoreDetailTicket] = useState([]);
   const [toggleState, setToggleState] = useState(1);
   const [editTicketPopUp, setEditTickPopUp] = useState(false);
   const nextTicket = ticketsArray[1];
   const currentTicket = ticketsArray[0];
   const [user] = useAuthState(auth);
 
-  // function handleMoreDetail(ticketId) {
-  //   const detailTicketObj = ticketsArray.find(
-  //     (ticket) => ticket.id === ticketId
-  //   );
-  //   setMoreDetailTicket(detailTicketObj);
-  // }
   function handleTicketDetailEdit(e) {
     e.preventDefault();
     setEditTickPopUp((prev) => !prev);
   }
 
-  // ============================================================
-
-  // TURN BACK TO FALSE
-
-  function handleFalse(tickID) {
+  function handleReactivate(tickID) {
     fetch(`tickets/${tickID}`, {
       method: "PATCH",
       body: JSON.stringify({
@@ -49,9 +37,13 @@ function TicketPage({
       headers: {
         "Content-type": "application/json",
       },
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    });
+
+    const completeTicketArr = completedTickets.filter(
+      (ticket) => ticket.id !== tickID
+    );
+
+    setCompletedTickets(completeTicketArr);
   }
 
   const displayCompleteTickets = completedTickets.map((ticket) => {
@@ -98,23 +90,38 @@ function TicketPage({
         </div>
         <div>
           <p className="detail-label">Reopen Ticket</p>
-          <button onClick={() => handleFalse(ticket.id)}>Submit</button>
+          <button onClick={() => handleReactivate(ticket.id)}>Submit</button>
         </div>
       </div>
     );
   });
 
-  // ============================================================
-
   const filterOutNextTicket = ticketsArray.filter(
     (ticket) => ticket.id !== nextTicket.id && ticket.id !== currentTicket.id
   );
 
-  const displayTickets = filterOutNextTicket.map((ticket) => {
-    return <TicketCard key={uuidv4()} {...ticket} />;
-  });
+  function handleTicketDelete(e, ticketId) {
+    e.preventDefault();
+    fetch(`tickets/${ticketId}`, {
+      method: "DELETE",
+    });
 
-  // ============================================================
+    const newDeleteTicketArray = ticketsArray.filter(
+      (ticket) => ticket.id !== ticketId
+    );
+    setTicketsArray(newDeleteTicketArray);
+    setEditTickPopUp(false);
+  }
+
+  const displayTickets = filterOutNextTicket.map((ticket) => {
+    return (
+      <TicketCard
+        key={uuidv4()}
+        {...ticket}
+        handleTicketDelete={handleTicketDelete}
+      />
+    );
+  });
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -139,19 +146,6 @@ function TicketPage({
     });
 
     setTicketsArray(updatedTicketsArray);
-    setEditTickPopUp(false);
-  }
-
-  function handleTicketDelete(e, ticketId) {
-    e.preventDefault();
-    fetch(`tickets/${ticketId}`, {
-      method: "DELETE",
-    });
-
-    const newDeleteTicketArray = ticketsArray.filter(
-      (ticket) => ticket.id !== ticketId
-    );
-    setTicketsArray(newDeleteTicketArray);
     setEditTickPopUp(false);
   }
 
@@ -187,15 +181,11 @@ function TicketPage({
         <div className="admin-tickets">
           <div className="upcoming-tickets ticket-section">
             <h4 className="ticket-label">Next Ticket</h4>
-            <TicketUpcoming
-              {...nextTicket}
-              // handleMoreDetail={handleMoreDetail}
-            />
+            <TicketUpcoming {...nextTicket} />
           </div>
           <div className="current-ticket ticket-section">
             <h4 className="ticket-label">Current Ticket</h4>
             <TicketResolve
-              // handleMoreDetail={handleMoreDetail}
               {...currentTicket}
               setCompletedTickets={setCompletedTickets}
               setTicketsArray={setTicketsArray}
@@ -204,12 +194,7 @@ function TicketPage({
           </div>
         </div>
       </div>
-      {/* <div className="ticket-card-container">
-        <div className="ticket-section">
-          <h4 className="ticket-label"> Ticket Feed</h4>
-          <div className="display-ticket card"> {displayTickets} </div>
-        </div>
-      </div> */}
+
       <div className="ticket-tab-container">
         <div className="bloc-tabs">
           <button
@@ -238,7 +223,10 @@ function TicketPage({
               toggleState === 1 ? "content  active-content" : "content"
             }
           >
-            <div className="display-ticket card ticket-overflow"> {displayTickets} </div>
+            <div className="display-ticket card ticket-overflow">
+              {" "}
+              {displayTickets}{" "}
+            </div>
           </div>
 
           <div
@@ -246,7 +234,9 @@ function TicketPage({
               toggleState === 2 ? "content  active-content" : "content"
             }
           >
-            <div className="display-ticket card ticket-overflow">{displayCompleteTickets}</div>
+            <div className="display-ticket card ticket-overflow">
+              {displayCompleteTickets}
+            </div>
           </div>
 
           <div
@@ -255,7 +245,6 @@ function TicketPage({
             }
           >
             {user ? <Chat /> : <ChatSignIn />}
-            <ChatSignOut />
           </div>
         </div>
       </div>

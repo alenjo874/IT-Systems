@@ -30,14 +30,14 @@ p {
 
 input {
   border: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
   outline: 0;
 }
 
 textarea {
   outline: 0;
   border: 0;
-  border: 1px solid black;
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
   font-family: inherit;
 }
 
@@ -78,7 +78,6 @@ button {
   align-items: center;
   position: absolute;
   // background-color: rgba(211, 211, 211, 0.4);
-
   top: 0;
   left: 0;
   width: 100%;
@@ -90,7 +89,7 @@ button {
   width: 50%;
   max-width: 450px;
   min-width: 150px;
-  padding: 10px 20px;
+  padding: 30px 50px;
   background-color: #ffffff;
   border-radius: $border-radius;
   border: $card-border;
@@ -112,5 +111,26 @@ button {
       fill: $active-color;
       transition: 0.2s;
     }
+  }
+}
+
+.edit-item-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  label {
+    margin: $element-margin * 2 0;
+  }
+
+  input {
+    margin: $element-margin * 2 0;
+  }
+}
+.edit-btns {
+  display: flex;
+  justify-content: space-evenly;
+
+  button {
+    width: 35%;
   }
 }

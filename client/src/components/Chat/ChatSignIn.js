@@ -5,12 +5,12 @@ import { auth } from "./firebase.js";
 function ChatSignIn() {
   function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider)
+    auth.signInWithPopup(provider);
   }
 
   return (
-    <div>
-      <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <div className="log-action-container">
+      <button onClick={signInWithGoogle}>Sign In</button>
     </div>
   );
 }

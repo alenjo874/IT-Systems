@@ -503,6 +503,25 @@
   max-height: 600px;
 }
 
+.trash-svg {
+  fill: #28282b;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.trash-svg :hover {
+  cursor: pointer;
+  fill: #f8a145;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.trash-svg :active {
+  fill: #cecece;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 .dashboard-container {
   width: 100%;
   margin-left: 60px;
@@ -801,25 +820,6 @@
 .edit-svg {
   width: 20px;
   margin-left: 5px;
-}
-
-.edit-item-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2.5%;
-}
-
-.edit-item-form label {
-  margin: 5px 0;
-}
-
-.edit-item-form input {
-  margin: 5px 0;
 }
 
 .icon-action-container {
@@ -1255,6 +1255,20 @@
   width: 100%;
 }
 
+.log-action-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.log-action-container button {
+  width: 35%;
+}
+
 .email-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1275,7 +1289,6 @@
 
 .email-form > input {
   color: #fff;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
   margin: 15px 0;
   font-style: inherit;
 }
@@ -1283,9 +1296,6 @@
 .email-form > textarea {
   color: #fff;
   background-color: transparent;
-  border: 0;
-  outline: 0;
-  border: 0.5px solid rgba(0, 0, 0, 0.4);
   margin: 15px 0;
   padding: 5px;
   min-height: 150px;
@@ -1398,14 +1408,14 @@ p {
 
 input {
   border: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
   outline: 0;
 }
 
 textarea {
   outline: 0;
   border: 0;
-  border: 1px solid black;
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
   font-family: inherit;
 }
 
@@ -1465,7 +1475,7 @@ button:active {
   width: 50%;
   max-width: 450px;
   min-width: 150px;
-  padding: 10px 20px;
+  padding: 30px 50px;
   background-color: #ffffff;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1499,5 +1509,39 @@ button:active {
   fill: #cecece;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.edit-item-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit-item-form label {
+  margin: 10px 0;
+}
+
+.edit-item-form input {
+  margin: 10px 0;
+}
+
+.edit-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.edit-btns button {
+  width: 35%;
 }
 /*# sourceMappingURL=style.css.map */

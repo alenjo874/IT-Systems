@@ -63,12 +63,13 @@ function TicketDetails({
             onChange={(e) => setNewIssue(e.target.value)}
             value={newIssue}
           ></input>
-
+        </form>
+        <div className="edit-btns">
           <button onClick={(e) => submitNewTicketDetails(e, newTicketObj, id)}>
             Submit Changes
           </button>
           <button onClick={(e) => handleTicketDelete(e, id)}>Delete</button>
-        </form>
+        </div>
       </motion.div>
     </div>
   );

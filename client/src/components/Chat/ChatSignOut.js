@@ -6,7 +6,7 @@ function ChatSignOut() {
      auth.signOut();
   }
   return (
-    <div>
+    <div className="log-action-container">
       <button onClick={singOutWithGoogle}>Sign Out</button>
     </div>
   );

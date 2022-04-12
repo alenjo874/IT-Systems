@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { auth, db } from "./firebase";
 import SendMessage from "./SendMessage";
 import { v4 as uuidv4 } from "uuid";
+import ChatSignOut from "./ChatSignOut";
 
 function Chat() {
   const scroll = useRef();
@@ -33,9 +34,16 @@ function Chat() {
           <div className="chat-propic">
             <img src={message.photoURL} alt="profile"></img>
           </div>
-          <p className={`${
-            message.uid === auth.currentUser.uid ? "it-message" : "employee-message"
-          } text-message`}> {message.text} </p>
+          <p
+            className={`${
+              message.uid === auth.currentUser.uid
+                ? "it-message"
+                : "employee-message"
+            } text-message`}
+          >
+            {" "}
+            {message.text}{" "}
+          </p>
         </div>
       </div>
     );
@@ -47,7 +55,7 @@ function Chat() {
         {displayTexts} <SendMessage scroll={scroll} />
       </div>
 
-      <div ref={scroll}></div>
+      <ChatSignOut />
     </div>
   );
 }

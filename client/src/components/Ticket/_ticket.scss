@@ -257,3 +257,19 @@
   overflow-x: hidden;
   max-height: 600px;
 }
+
+.trash-svg {
+  fill: $matte-black;
+  transition: 0.2s;
+
+  :hover {
+    cursor: pointer;
+    fill: $primary-color;
+    transition: 0.2s;
+  }
+
+  :active {
+    fill: $active-color;
+    transition: 0.2s;
+  }
+}

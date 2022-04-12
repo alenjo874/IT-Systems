@@ -120,9 +120,10 @@ function ItemDetail({
             onChange={(e) => setItemGraphicCard(e.target.value)}
             value={itemGraphicCard}
           ></input>
-
-          <button onClick={handleSubmitChange}>Submit Changes</button>
         </form>
+        <div className="edit-btns">
+          <button onClick={handleSubmitChange}>Submit Changes</button>
+        </div>
       </motion.div>
     </div>
   );
