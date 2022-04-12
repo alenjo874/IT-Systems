@@ -39,7 +39,7 @@ class TicketsController < ApplicationController
     private
 
     def ticket_params
-        params.permit(:solution, :complete, :subject, :issue. :case_category)
+        params.permit(:solution, :complete, :subject, :issue, :case_category)
     end
 
     def employee_ticket_params

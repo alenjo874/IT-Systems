@@ -21,7 +21,6 @@ function TicketPage({
   // const [moreDetailTicket, setMoreDetailTicket] = useState([]);
   const [toggleState, setToggleState] = useState(1);
   const [editTicketPopUp, setEditTickPopUp] = useState(false);
-
   const nextTicket = ticketsArray[1];
   const currentTicket = ticketsArray[0];
   const [user] = useAuthState(auth);

@@ -9,18 +9,28 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
   const complete = completedTickets.length;
   const incomplete = ticketsArray.length;
 
-  const ratio = { Low: 0, Moderate: 0, Critical: 0 };
+  const ticketRatio = { Low: 0, Moderate: 0, Critical: 0 };
+  const categoryRatio = { hardware: 0, software: 0, account: 0 };
 
   for (let i = 0; i < allTicketsArray.length; i++) {
     if (allTicketsArray[i].level === "Low") {
-      ratio["Low"] += 1;
+      ticketRatio["Low"] += 1;
     } else if (allTicketsArray[i].level === "Moderate") {
-      ratio["Moderate"] += 1;
+      ticketRatio["Moderate"] += 1;
     } else {
-      ratio["Critical"] += 1;
+      ticketRatio["Critical"] += 1;
     }
   }
 
+  for (let i = 0; i < allTicketsArray.length; i++) {
+    if (allTicketsArray[i].case_category === "Hardware") {
+      categoryRatio["hardware"] += 1;
+    } else if (allTicketsArray[i].case_category === "Software") {
+      categoryRatio["software"] += 1;
+    } else if (allTicketsArray[i].case_category === "Account") {
+      categoryRatio["account"] += 1;
+    }
+  }
 
   return (
     <div className="dashboard-container">
@@ -78,7 +88,11 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
               datasets: [
                 {
                   label: "Ticket Severity Ratio",
-                  data: [ratio["Low"], ratio["Moderate"], ratio["Critical"]],
+                  data: [
+                    ticketRatio["Low"],
+                    ticketRatio["Moderate"],
+                    ticketRatio["Critical"],
+                  ],
                   backgroundColor: [
                     "rgb(119, 221, 119)",
                     "rgb(255, 205, 86)",
@@ -125,11 +139,25 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
       <div className="bar-graph">
         <Bar
           data={{
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: [
+              "Hardware",
+              "Software",
+              "Account",
+              "Green",
+              "Purple",
+              "Orange",
+            ],
             datasets: [
               {
-                label: "# of Votes",
-                data: [12, 19, 3, 5, 2, 3],
+                label: "Case Category",
+                data: [
+                  categoryRatio["hardware"],
+                  categoryRatio["software"],
+                  categoryRatio["account"],
+                  5,
+                  2,
+                  3,
+                ],
                 backgroundColor: [
                   "rgba(255, 99, 132, 0.2)",
                   "rgba(54, 162, 235, 0.2)",
