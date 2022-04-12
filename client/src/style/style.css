@@ -1617,16 +1617,17 @@ select:focus {
 
 .form__input:focus ~ .form__label,
 .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
-  top: -1.5rem;
-  font-size: 1rem;
+  top: -25px;
+  font-size: 0.8rem;
   left: 0.8rem;
   color: black;
 }
 
 .form__input:focus ~ .edit-placeholder,
-.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .edit-placeholderl {
-  top: -0.6rem;
-  font-size: 1rem;
+.form__input:not(:placeholder-shown).form__input:not(:focus)
+~ .edit-placeholder {
+  top: -10px;
+  font-size: 0.8rem;
   left: 0.8rem;
   color: black;
 }
