@@ -18,5 +18,9 @@ require 'faker'
 # Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id, subject: "Locked out of email", level: "Moderate", issue:"My email password and recovery is not working", complete: false, solution: "", severity_level: 2)
 # Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id, subject: "HDMI cable ripped", level: "Low", issue:"I accidentally cut my HDMI cable now I can't use my second monitor",complete: false, solution: "", severity_level: 1)
 # Ticket.first.update(case_number: Faker::Number.number(digits: 10))
-
 # Employee.update(department: "Engineering", position: "Lead Software Developer", email: "bob@email.com", extension: 711)
+
+20.times do 
+Rental.create(employee_id: Employee.all.sample.id, inventory_id: Inventory.all.sample.id)
+
+end

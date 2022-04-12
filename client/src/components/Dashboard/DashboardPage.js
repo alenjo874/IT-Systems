@@ -10,7 +10,7 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
   const incomplete = ticketsArray.length;
 
   const ticketRatio = { Low: 0, Moderate: 0, Critical: 0 };
-  const categoryRatio = { hardware: 0, software: 0, account: 0 };
+  const categoryRatio = { hardware: 0, software: 0, account: 0, other: 0 };
 
   for (let i = 0; i < allTicketsArray.length; i++) {
     if (allTicketsArray[i].level === "Low") {
@@ -29,6 +29,8 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
       categoryRatio["software"] += 1;
     } else if (allTicketsArray[i].case_category === "Account") {
       categoryRatio["account"] += 1;
+    } else if (allTicketsArray[i].case_category === "Other") {
+      categoryRatio["other"] += 1;
     }
   }
 
@@ -143,7 +145,7 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
               "Hardware",
               "Software",
               "Account",
-              "Green",
+              "Other",
               "Purple",
               "Orange",
             ],
@@ -154,7 +156,7 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
                   categoryRatio["hardware"],
                   categoryRatio["software"],
                   categoryRatio["account"],
-                  5,
+                  categoryRatio["other"],
                   2,
                   3,
                 ],

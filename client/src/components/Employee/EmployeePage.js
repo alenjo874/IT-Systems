@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function EmployeePage({ inventoryArray }) {
   const [employeeArray, setEmployeeArray] = useState([]);
   const [adminArray, setAdminArray] = useState([]);
-
   const [subject, setSubject] = useState("");
   const [serialNumber, setSerialNumber] = useState("");
   const [level, setLevel] = useState("Low");
   const [issue, setIssue] = useState("");
+  const [caseCategory, setCaseCategory] = useState("Hardware");
 
   useEffect(() => {
     fetch("/admins")
@@ -20,6 +21,14 @@ function EmployeePage({ inventoryArray }) {
       .then((res) => res.json())
       .then(setEmployeeArray);
   }, []);
+
+  const displaySerialOptions = inventoryArray.map((item) => {
+    return (
+      <option key={uuidv4()} value={item.serial_number}>
+        {item.serial_number}
+      </option>
+    );
+  });
 
   function handleSubmitTicket(e) {
     e.preventDefault();
@@ -48,6 +57,7 @@ function EmployeePage({ inventoryArray }) {
       solution: "",
       complete: false,
       case_number: Math.floor(Math.random() * 1000000000),
+      case_category: caseCategory,
     };
 
     fetch("/tickets", {
@@ -84,15 +94,27 @@ function EmployeePage({ inventoryArray }) {
           onChange={(e) => setSubject(e.target.value)}
         ></input>
         <label> Serial Number </label>
-        <input
+        <select
           value={serialNumber}
           onChange={(e) => setSerialNumber(e.target.value)}
-        ></input>
+        >
+          {displaySerialOptions}
+        </select>
         <label> Severity Level </label>
         <select value={level} onChange={(e) => setLevel(e.target.value)}>
           <option value="Low">Low</option>
           <option value="Moderate">Moderate</option>
           <option value="Critical">Critical</option>
+        </select>
+        <label> Category </label>
+        <select
+          value={caseCategory}
+          onChange={(e) => setCaseCategory(e.target.value)}
+        >
+          <option value="Hardware">Hardware</option>
+          <option value="Software">Software</option>
+          <option value="Account">Account</option>
+          <option value="Other">Other</option>
         </select>
         <label> Issue </label>
         <textarea
