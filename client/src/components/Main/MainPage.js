@@ -14,7 +14,7 @@ function MainPage() {
               <h2>IT System management</h2>
               <p>Time to Get Organized</p>
             </span>
-
+            <div className="gradient-block black-gradient"></div>
             <p className="main-blurb">
               An effective systems management plan facilitates the delivery of
               IT as a service and allows an organization's employees to respond
@@ -49,6 +49,7 @@ function MainPage() {
               <h2>Ticket</h2>
               <p>Time to Get Organized</p>
             </span>
+            <div className="gradient-block orange-gradient"></div>
             <p className="main-blurb">
               An effective systems management plan facilitates the delivery of
               IT as a service and allows an organization's employees to respond
@@ -77,7 +78,7 @@ function MainPage() {
               <h2>Inventory</h2>
               <p>Time to Get Organized</p>
             </span>
-
+            <div className="gradient-block black-gradient"></div>
             <p className="main-blurb">
               An effective systems management plan facilitates the delivery of
               IT as a service and allows an organization's employees to respond
@@ -101,24 +102,23 @@ function MainPage() {
             className="shape-fill"
           ></path>
         </svg>
-        <div className="white-banner">
-          <div className="main-text-cards">
-            <div className="main-illustrations">
-              <img src={inventory} />
-            </div>
-            <div className="main-titles">
-              <span>
-                <h2>Dashboard</h2>
-                <p>Time to Get Organized</p>
-              </span>
-
-              <p className="main-blurb">
-                An effective systems management plan facilitates the delivery of
-                IT as a service and allows an organization's employees to
-                respond quickly to changing business requirements and system
-                activity.
-              </p>
-            </div>
+      </div>
+      <div className="white-banner">
+        <div className="main-text-cards">
+          <div className="main-illustrations">
+            <img src={inventory} />
+          </div>
+          <div className="main-titles">
+            <span>
+              <h2>Dashboard</h2>
+              <p>Time to Get Organized</p>
+            </span>
+            <div className="gradient-block orange-gradient"></div>
+            <p className="main-blurb">
+              An effective systems management plan facilitates the delivery of
+              IT as a service and allows an organization's employees to respond
+              quickly to changing business requirements and system activity.
+            </p>
           </div>
         </div>
       </div>
