@@ -42,7 +42,7 @@
     text-align: left;
     font-weight: normal;
     font-size: 1.1rem;
-    color: $accent-color;
+    // color: $accent-color;
     box-shadow: $shadow-head;
   }
 
@@ -95,7 +95,6 @@
     text-align: left;
     font-weight: normal;
     font-size: 1.1rem;
-    color: white;
     box-shadow: $shadow-head;
   }
 
@@ -147,11 +146,11 @@
   th {
     position: sticky;
     top: 0;
-    background: $primary-color;
+    background: #ececec;
     text-align: left;
     font-weight: normal;
     font-size: 1.1rem;
-    color: white;
+    color: $matte-black;
     box-shadow: $shadow-head;
   }
 
@@ -175,7 +174,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px 15px;
-  color: #ffffff;
   background-color: $primary-color;
   margin: 0;
 }
@@ -202,7 +200,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  fill: #ffffff;
+  fill: $matte-black;
 
   p {
     margin: 0 $element-margin;
@@ -210,8 +208,8 @@
 
   &:hover {
     cursor: pointer;
-    color: $matte-black;
-    fill: $matte-black;
+    color: $accent-color;
+    fill: $accent-color;
     transition: 0.2s;
   }
 
