@@ -162,7 +162,7 @@ select {
 
 .form {
   position: relative;
-  margin: 15px 0;
+  margin-bottom: 15px;
   width: 100%;
   &__input {
     // position: absolute;
@@ -174,7 +174,7 @@ select {
     font-family: inherit;
     font-size: inherit;
     color: rgb(0, 0, 0);
-    padding: $element-padding 0;
+    padding: 15px 0;
     text-indent: 15px;
 
     &:hover {
@@ -188,12 +188,16 @@ select {
 
   &__label {
     position: absolute;
-    left: 1rem;
-    top: 0.2rem;
-    padding: 0 0.5rem;
+    left: 15px;
+    padding: 2px;
+    top: 0;
+    color: $clr-gray;
     cursor: text;
     transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
     background-color: #ffffff;
+  }
+  .edit-placeholder {
+    top: 15px;
   }
 }
 
@@ -202,4 +206,12 @@ select {
   top: -1.5rem;
   font-size: 1rem;
   left: 0.8rem;
+  color: black;
+}
+.form__input:focus ~ .edit-placeholder,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .edit-placeholderl {
+  top: -0.6rem;
+  font-size: 1rem;
+  left: 0.8rem;
+  color: black;
 }

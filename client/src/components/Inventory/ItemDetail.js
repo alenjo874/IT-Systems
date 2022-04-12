@@ -100,26 +100,49 @@ function ItemDetail({
           </svg>
         </div>
         <form className="edit-item-form">
-          <label>Name</label>
-          <input
-            onChange={(e) => setItemName(e.target.value)}
-            value={itemName}
-          ></input>
-          <label>CPU</label>
-          <input
-            onChange={(e) => setItemCpu(e.target.value)}
-            value={itemCpu}
-          ></input>
-          <label>Memory</label>
-          <input
-            onChange={(e) => setItemMemory(e.target.value)}
-            value={itemMemory}
-          ></input>
-          <label>Grpahic Card</label>
-          <input
-            onChange={(e) => setItemGraphicCard(e.target.value)}
-            value={itemGraphicCard}
-          ></input>
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setItemName(e.target.value)}
+              value={itemName}
+            />
+            <label className="form__label edit-placeholder">Name</label>
+          </div>
+
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setItemCpu(e.target.value)}
+              value={itemCpu}
+            />
+            <label className="form__label edit-placeholder">CPU</label>
+          </div>
+
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setItemMemory(e.target.value)}
+              value={itemMemory}
+            />
+            <label className="form__label edit-placeholder">Memory</label>
+          </div>
+
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setItemGraphicCard(e.target.value)}
+              value={itemGraphicCard}
+            />
+            <label className="form__label edit-placeholder">Graphic Card</label>
+          </div>
         </form>
         <div className="edit-btns">
           <button onClick={handleSubmitChange}>Submit Changes</button>

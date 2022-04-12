@@ -126,7 +126,7 @@ function EmployeePage({ inventoryArray, setTicketsArray }) {
           value={issue}
           onChange={(e) => setIssue(e.target.value)}
         ></textarea>
-        <div>
+        <div className="edit-btns">
           <button onClick={handleSubmitTicket}>Submit Ticket</button>
         </div>
       </form>

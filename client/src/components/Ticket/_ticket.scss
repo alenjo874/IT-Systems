@@ -120,12 +120,11 @@
 }
 
 .ticket-resolve-container {
-  // padding: $element-padding;
 
   form {
     display: flex;
     flex-direction: column;
-    padding: $element-padding;
+    padding: $element-padding 0;
     label {
       margin: $element-margin 0;
     }
@@ -273,3 +272,4 @@
     transition: 0.2s;
   }
 }
+

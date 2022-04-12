@@ -53,16 +53,26 @@ function TicketDetails({
           </svg>
         </div>
         <form className="edit-item-form">
-          <label>Subject</label>
-          <input
-            onChange={(e) => setNewSubject(e.target.value)}
-            value={newSubject}
-          ></input>
-          <label>Case Issue</label>
-          <input
-            onChange={(e) => setNewIssue(e.target.value)}
-            value={newIssue}
-          ></input>
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setNewSubject(e.target.value)}
+              value={newSubject}
+            />
+            <label className="form__label edit-placeholder">Subject</label>
+          </div>
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setNewIssue(e.target.value)}
+              value={newIssue}
+            />
+            <label className="form__label edit-placeholder">Case Issue</label>
+          </div>
         </form>
         <div className="edit-btns">
           <button onClick={(e) => submitNewTicketDetails(e, newTicketObj, id)}>
