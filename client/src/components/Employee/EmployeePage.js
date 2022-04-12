@@ -88,11 +88,16 @@ function EmployeePage({ inventoryArray, setTicketsArray }) {
         </p>
       </div>
       <form>
-        <label> Subject </label>
-        <input
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-        ></input>
+        <div className="form">
+          <input
+            type="text"
+            className="form__input"
+            placeholder=" "
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+          <label className="form__label">Subject</label>
+        </div>
         <label> Serial Number </label>
         <select
           value={serialNumber}
@@ -121,7 +126,9 @@ function EmployeePage({ inventoryArray, setTicketsArray }) {
           value={issue}
           onChange={(e) => setIssue(e.target.value)}
         ></textarea>
-        <button onClick={handleSubmitTicket}>Submit Ticket</button>
+        <div>
+          <button onClick={handleSubmitTicket}>Submit Ticket</button>
+        </div>
       </form>
     </div>
   );

@@ -1392,6 +1392,10 @@ html {
   line-height: 1.25;
 }
 
+form {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   background-color: transparent;
@@ -1404,19 +1408,6 @@ h4 {
 p {
   font-size: 1rem;
   background-color: transparent;
-}
-
-input {
-  border: 0;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
-  outline: 0;
-}
-
-textarea {
-  outline: 0;
-  border: 0;
-  border: 0.5px solid rgba(0, 0, 0, 0.4);
-  font-family: inherit;
 }
 
 button {
@@ -1543,5 +1534,86 @@ button:active {
 
 .edit-btns button {
   width: 35%;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+textarea {
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border: 2px solid #e1e5ee;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+textarea:hover {
+  border-color: #ffdab2;
+}
+
+textarea:focus {
+  border-color: #f8a145;
+}
+
+select {
+  border: 2px solid #e1e5ee;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+select:hover {
+  border-color: #ffdab2;
+}
+
+select:focus {
+  border-color: #f8a145;
+}
+
+.form {
+  position: relative;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.form__input {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #e1e5ee;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  color: black;
+  padding: 2.5% 0;
+  text-indent: 15px;
+}
+
+.form__input:hover {
+  border-color: #ffdab2;
+}
+
+.form__input:focus {
+  border-color: #f8a145;
+}
+
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.2rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  -webkit-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: #ffffff;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -1.5rem;
+  font-size: 1rem;
+  left: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */

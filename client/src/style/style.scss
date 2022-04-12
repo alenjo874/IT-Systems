@@ -14,6 +14,10 @@ html {
   line-height: 1.25;
 }
 
+form {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   background-color: transparent;
@@ -26,19 +30,6 @@ h4 {
 p {
   font-size: 1rem;
   background-color: transparent;
-}
-
-input {
-  border: 0;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
-  outline: 0;
-}
-
-textarea {
-  outline: 0;
-  border: 0;
-  border: 0.5px solid rgba(0, 0, 0, 0.4);
-  font-family: inherit;
 }
 
 button {
@@ -133,4 +124,82 @@ button {
   button {
     width: 35%;
   }
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+textarea {
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border: 2px solid $clr-gray;
+  font-family: inherit;
+  border-radius: $border-radius;
+  &:hover {
+    border-color: $primary-light;
+  }
+
+  &:focus {
+    border-color: $primary-color;
+  }
+}
+
+select {
+  border: 2px solid $clr-gray;
+  border-radius: $border-radius;
+  padding: 8px;
+  &:hover {
+    border-color: $primary-light;
+  }
+
+  &:focus {
+    border-color: $primary-color;
+  }
+}
+
+.form {
+  position: relative;
+  margin: 15px 0;
+  width: 100%;
+  &__input {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid $clr-gray;
+    border-radius: $border-radius;
+    font-family: inherit;
+    font-size: inherit;
+    color: rgb(0, 0, 0);
+    padding: $element-padding 0;
+    text-indent: 15px;
+
+    &:hover {
+      border-color: $primary-light;
+    }
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 1rem;
+    top: 0.2rem;
+    padding: 0 0.5rem;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: #ffffff;
+  }
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -1.5rem;
+  font-size: 1rem;
+  left: 0.8rem;
 }
