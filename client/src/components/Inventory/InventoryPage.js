@@ -20,10 +20,10 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
   const downCaretSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 320 512"
+      viewBox="0 0 384 512"
       className="edit-svg down-caret"
     >
-      <path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z" />
+      <path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z" />
     </svg>
   );
 
@@ -45,11 +45,7 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
     <table className="inventory-table">
       <thead>
         <tr>
-          <th className="table-head">
-            Serial Number
-            {downCaretSvg}
-          </th>
-
+          <th className="table-head">Serial Number</th>
           <th className="table-head">Product</th>
           <th className="table-head">Rent</th>
           <th className="table-head">Details</th>
@@ -61,6 +57,14 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
 
   return (
     <div className="inventory-page-container">
+      <div className="inventory-filter-container">
+        <h4>All Items</h4>
+        <span className="filter-caret">
+          <p>Show Filters </p>
+          {downCaretSvg}
+        </span>
+      </div>
+
       {showDetails ? (
         <ItemDetail
           {...moreDetailItem}
