@@ -16,12 +16,19 @@ function ItemDetail({
   setMoreDetailItem,
   setShowDetails,
   itemOwner,
+  setItemOwner,
 }) {
   const [editItem, setEditItem] = useState(false);
   const [itemName, setItemName] = useState(name);
   const [itemCpu, setItemCpu] = useState(cpu);
   const [itemMemory, setItemMemory] = useState(memory);
   const [itemGraphicCard, setItemGraphicCard] = useState(graphic_card);
+  const [showEditOwner, setShowEditOwner] = useState(false);
+  const [ownerName, setOwnerName] = useState(itemOwner.name);
+  const [ownerDept, setOwnerDept] = useState(itemOwner.department);
+  const [ownerPos, setOwnerPos] = useState(itemOwner.position);
+  const [ownerEmail, setOwnerEmail] = useState(itemOwner.email);
+  const [ownerExt, setOwnerExt] = useState(itemOwner.extension);
 
   const displyInventoryTickets = tickets.map((ticket) => {
     return (
@@ -37,6 +44,33 @@ function ItemDetail({
   function handleEditItem(e) {
     e.preventDefault();
     setEditItem((prev) => !prev);
+  }
+
+  function handleEditOwner(e) {
+    e.preventDefault();
+    setShowEditOwner((prev) => !prev);
+  }
+
+  function handleEditOwnerSubmit(e) {
+    e.preventDefault();
+    const editOwnerObj = {
+      name: ownerName,
+      department: ownerDept,
+      position: ownerPos,
+      email: ownerEmail,
+      extension: ownerExt,
+    };
+    fetch(`employees/${itemOwner.id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ ...editOwnerObj }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((res) => res.json())
+      .then(setItemOwner);
+
+    setShowEditOwner(false);
   }
 
   function handleSubmitChange(e) {
@@ -69,6 +103,98 @@ function ItemDetail({
     setInventoryArray(updatedItemArray);
     setEditItem(false);
   }
+
+  const editItemOwner = (
+    <div className="update-pro-popup">
+      <motion.div
+        className="submit-confirm"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.25,
+            type: "show",
+            ease: "easeIn",
+          },
+        }}
+        exit={{
+          y: "10%",
+          opacity: 0,
+          transition: { duration: 0.25, ease: "easeOut" },
+        }}
+      >
+        <div className="cancel-container">
+          {/* <button onClick={handleTicketDetailEdit}>Cancel</button> */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            onClick={handleEditOwner}
+            className="x-svg"
+          >
+            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+          </svg>
+        </div>
+        <form className="edit-item-form">
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setOwnerName(e.target.value)}
+              value={ownerName}
+            />
+            <label className="form__label edit-placeholder">Owner Name</label>
+          </div>
+
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setOwnerDept(e.target.value)}
+              value={ownerDept}
+            />
+            <label className="form__label edit-placeholder">Department</label>
+          </div>
+
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setOwnerPos(e.target.value)}
+              value={ownerPos}
+            />
+            <label className="form__label edit-placeholder">Position</label>
+          </div>
+
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setOwnerEmail(e.target.value)}
+              value={ownerEmail}
+            />
+            <label className="form__label edit-placeholder">Email</label>
+          </div>
+          <div className="form">
+            <input
+              type="text"
+              className="form__input"
+              placeholder=" "
+              onChange={(e) => setOwnerExt(e.target.value)}
+              value={ownerExt}
+            />
+            <label className="form__label edit-placeholder">Extension</label>
+          </div>
+        </form>
+        <div className="edit-btns">
+          <button onClick={handleEditOwnerSubmit}>Submit Changes</button>
+        </div>
+      </motion.div>
+    </div>
+  );
 
   const editInventoryItem = (
     <div className="update-pro-popup">
@@ -217,7 +343,15 @@ function ItemDetail({
             </tr>
           </tbody>
         </table>
-        <p className="item-detail-head">Owner Details</p>
+        <div className="item-detail-head">
+          <div className="icon-action-container">
+            <p>Current Owner</p>
+          </div>
+          <div className="icon-action-container" onClick={handleEditOwner}>
+            <p>Edit</p>
+            {editPencilIcon}
+          </div>
+        </div>
         <table className="contact-table">
           <tbody>
             <tr>
@@ -256,6 +390,7 @@ function ItemDetail({
         </table>
       </div>
       <AnimatePresence>{editItem ? editInventoryItem : null}</AnimatePresence>
+      <AnimatePresence>{showEditOwner ? editItemOwner : null}</AnimatePresence>
     </div>
   );
 }

@@ -68,6 +68,7 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
           inventoryArray={inventoryArray}
           setInventoryArray={setInventoryArray}
           setMoreDetailItem={setMoreDetailItem}
+          setItemOwner={setItemOwner}
           setShowDetails={setShowDetails}
         />
       ) : (
