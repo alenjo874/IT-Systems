@@ -141,8 +141,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 35%;
-  max-width: 400px;
+  width: 45%;
 }
 
 .main-illustrations svg {
