@@ -15,6 +15,7 @@ function ItemDetail({
   inventoryArray,
   setMoreDetailItem,
   setShowDetails,
+  itemOwner,
 }) {
   const [editItem, setEditItem] = useState(false);
   const [itemName, setItemName] = useState(name);
@@ -68,8 +69,6 @@ function ItemDetail({
     setInventoryArray(updatedItemArray);
     setEditItem(false);
   }
-
-
 
   const editInventoryItem = (
     <div className="update-pro-popup">
@@ -223,27 +222,23 @@ function ItemDetail({
           <tbody>
             <tr>
               <td>Name</td>
-              <td>{name}</td>
+              <td>{itemOwner.name}</td>
             </tr>
             <tr>
-              <td>Serial Number</td>
-              <td>{serial_number}</td>
+              <td>Department</td>
+              <td>{itemOwner.department}</td>
             </tr>
             <tr>
-              <td>Rent</td>
-              <td> {rent ? "Not Available" : "Available"}</td>
+              <td>Position</td>
+              <td> {itemOwner.position}</td>
             </tr>
             <tr>
-              <td>CPU</td>
-              <td>{cpu}</td>
+              <td>Email</td>
+              <td>{itemOwner.email}</td>
             </tr>
             <tr>
-              <td>Memory</td>
-              <td>{memory}</td>
-            </tr>
-            <tr>
-              <td>Graphic Card</td>
-              <td>{graphic_card}</td>
+              <td>Extension</td>
+              <td>{itemOwner.extension}</td>
             </tr>
           </tbody>
         </table>

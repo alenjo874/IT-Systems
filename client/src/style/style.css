@@ -818,7 +818,7 @@
 }
 
 .edit-svg {
-  width: 20px;
+  width: 15px;
   margin-left: 5px;
 }
 
@@ -861,7 +861,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20px;
+  width: 15px;
   margin-right: 5px;
 }
 
@@ -887,6 +887,24 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.table-head .down-caret {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.table-head .down-caret:hover {
+  cursor: pointer;
+  fill: #ffffff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.table-head .down-caret:active {
+  fill: #cecece;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .employee-container {

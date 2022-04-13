@@ -226,4 +226,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .down-caret {
+
+    transition: 0.2s;
+    &:hover {
+      cursor: pointer;
+      fill: $accent-color;
+      transition: 0.2s;
+    }
+
+    &:active {
+      fill: $active-color;
+      transition: 0.2s;
+    }
+  }
 }

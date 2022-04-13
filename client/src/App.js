@@ -16,6 +16,7 @@ function App() {
   const [ticketsArray, setTicketsArray] = useState([]);
   const [completedTickets, setCompletedTickets] = useState([]);
   const [allTicketsArray, setAllTicketsArray] = useState([]);
+  const [employeeArray, setEmployeeArray] = useState([]);
 
   useEffect(() => {
     fetch("/incomplete_tickets")
@@ -45,6 +46,12 @@ function App() {
       .then(setInventoryArray);
   }, []);
 
+  useEffect(() => {
+    fetch("/employees")
+      .then((res) => res.json())
+      .then(setEmployeeArray);
+  }, []);
+
   return (
     <div className="App">
       {/* <NavBar /> */}
@@ -72,6 +79,7 @@ function App() {
             <InventoryPage
               inventoryArray={inventoryArray}
               setInventoryArray={setInventoryArray}
+              employeeArray={employeeArray}
             />
           </div>
         </Route>
@@ -91,7 +99,12 @@ function App() {
         <Route exact path="/employee">
           <div className="sidebar-container">
             <EmployeeNavBar />
-            <EmployeePage inventoryArray={inventoryArray} setTicketsArray={setTicketsArray} />
+            <EmployeePage
+              inventoryArray={inventoryArray}
+              setTicketsArray={setTicketsArray}
+              employeeArray={employeeArray}
+              setEmployeeArray={setEmployeeArray}
+            />
           </div>
         </Route>
         <Route exact path="/employee_email">

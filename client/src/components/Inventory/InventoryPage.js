@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import ItemDetail from "./ItemDetail";
 
-function InventoryPage({ inventoryArray, setInventoryArray }) {
+function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
   const [moreDetailItem, setMoreDetailItem] = useState({});
   const [showDetails, setShowDetails] = useState(false);
+  const [itemOwner, setItemOwner] = useState({});
 
   function handleMoreDetails(id) {
     const selectedInventoryItem = inventoryArray.find((item) => item.id === id);
+    const relatedOwner = employeeArray.find(
+      (employee) => employee.id === selectedInventoryItem.rentals[0].employee_id
+    );
+    setItemOwner(relatedOwner);
     setMoreDetailItem(selectedInventoryItem);
     setShowDetails(true);
   }
@@ -16,7 +21,7 @@ function InventoryPage({ inventoryArray, setInventoryArray }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 320 512"
-      className="edit-svg"
+      className="edit-svg down-caret"
     >
       <path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z" />
     </svg>
@@ -44,8 +49,9 @@ function InventoryPage({ inventoryArray, setInventoryArray }) {
             Serial Number
             {downCaretSvg}
           </th>
-          <th className="table-head">Product {downCaretSvg}</th>
-          <th className="table-head">Rent {downCaretSvg}</th>
+
+          <th className="table-head">Product</th>
+          <th className="table-head">Rent</th>
           <th className="table-head">Details</th>
         </tr>
       </thead>
@@ -58,6 +64,7 @@ function InventoryPage({ inventoryArray, setInventoryArray }) {
       {showDetails ? (
         <ItemDetail
           {...moreDetailItem}
+          itemOwner={itemOwner}
           inventoryArray={inventoryArray}
           setInventoryArray={setInventoryArray}
           setMoreDetailItem={setMoreDetailItem}
