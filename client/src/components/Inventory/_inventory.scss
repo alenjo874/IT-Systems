@@ -8,8 +8,18 @@
   width: 100%;
 }
 
+.tables-container {
+  padding: $element-padding;
+}
+
+.admin-tables {
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+}
+
 .inventory-table {
   // margin-left: $navbar-width;
+
   display: grid;
   border-collapse: collapse;
   min-width: 100%;
@@ -211,6 +221,17 @@
   align-items: center;
   width: $svg-width;
   margin-right: $element-margin;
+  transition: 0.2s;
+  &:hover {
+    cursor: pointer;
+    fill: $primary-color;
+    transition: 0.2s;
+  }
+
+  &:active {
+    fill: $active-color;
+    transition: 0.2s;
+  }
 }
 
 .more-detail {
@@ -232,7 +253,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $element-padding;
+  margin-top: 15px;
+  padding: 5px 20px;
   margin-bottom: $element-margin * 5;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 

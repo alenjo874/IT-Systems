@@ -300,13 +300,15 @@ function ItemDetail({
 
   return (
     <div className="item-detail-container">
-      <div className="item-details">
+      <div className="inventory-filter-container">
+        <span className="filter-caret" onClick={() => setShowDetails(false)}>
+          {backArrowIcon}
+          <p>Back</p>
+        </span>
+      </div>
+      <div className="item-details admin-tables">
         <div className="item-detail-head">
-          <div
-            className="icon-action-container"
-            onClick={() => setShowDetails(false)}
-          >
-            {backArrowIcon}
+          <div className="icon-action-container">
             <p>Item Details</p>
           </div>
           <div className="icon-action-container" onClick={handleEditItem}>
@@ -314,7 +316,7 @@ function ItemDetail({
             {editPencilIcon}
           </div>
         </div>
-        <table className="item-detail-table">
+        <table className="item-detail-table ">
           <tbody>
             <tr>
               <td>Name</td>

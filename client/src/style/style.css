@@ -629,6 +629,16 @@
   width: 100%;
 }
 
+.tables-container {
+  padding: 2.5%;
+}
+
+.admin-tables {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+}
+
 .inventory-table {
   display: -ms-grid;
   display: grid;
@@ -863,6 +873,21 @@
           align-items: center;
   width: 15px;
   margin-right: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.back-svg:hover {
+  cursor: pointer;
+  fill: #f8a145;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.back-svg:active {
+  fill: #cecece;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .more-detail {
@@ -899,7 +924,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.5%;
+  margin-top: 15px;
+  padding: 5px 20px;
   margin-bottom: 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }

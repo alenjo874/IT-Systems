@@ -42,21 +42,7 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
   });
 
   const displayInventoryTable = (
-    <table className="inventory-table">
-      <thead>
-        <tr>
-          <th className="table-head">Serial Number</th>
-          <th className="table-head">Product</th>
-          <th className="table-head">Rent</th>
-          <th className="table-head">Details</th>
-        </tr>
-      </thead>
-      <tbody>{displayInventory}</tbody>
-    </table>
-  );
-
-  return (
-    <div className="inventory-page-container">
+    <div>
       <div className="inventory-filter-container">
         <h4>All Items</h4>
         <span className="filter-caret">
@@ -64,20 +50,38 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
           {downCaretSvg}
         </span>
       </div>
+      <table className="inventory-table admin-tables">
+        <thead>
+          <tr>
+            <th className="table-head">Serial Number</th>
+            <th className="table-head">Product</th>
+            <th className="table-head">Rent</th>
+            <th className="table-head">Details</th>
+          </tr>
+        </thead>
+        <tbody>{displayInventory}</tbody>
+      </table>
+    </div>
+  );
 
-      {showDetails ? (
-        <ItemDetail
-          {...moreDetailItem}
-          itemOwner={itemOwner}
-          inventoryArray={inventoryArray}
-          setInventoryArray={setInventoryArray}
-          setMoreDetailItem={setMoreDetailItem}
-          setItemOwner={setItemOwner}
-          setShowDetails={setShowDetails}
-        />
-      ) : (
-        displayInventoryTable
-      )}
+  return (
+    <div className="inventory-page-container">
+      <div className="tables-container">
+        {showDetails ? (
+          <ItemDetail
+            {...moreDetailItem}
+            itemOwner={itemOwner}
+            inventoryArray={inventoryArray}
+            setInventoryArray={setInventoryArray}
+            setMoreDetailItem={setMoreDetailItem}
+            setItemOwner={setItemOwner}
+            setShowDetails={setShowDetails}
+          
+          />
+        ) : (
+          displayInventoryTable
+        )}
+      </div>
     </div>
   );
 }
