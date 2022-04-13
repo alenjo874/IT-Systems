@@ -230,6 +230,22 @@
   transform-box: fill-box;
 }
 
+#paperone {
+  -webkit-animation: head 1.8s ease-in-out infinite alternate;
+          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+#papertwo {
+  -webkit-animation: head 1.8s ease-in-out infinite alternate;
+          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
 @-webkit-keyframes head {
   from {
     -webkit-transform: translateY(0);

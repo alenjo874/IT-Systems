@@ -197,6 +197,18 @@
   transform-box: fill-box;
 }
 
+#paperone {
+  animation: head 1.8s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#papertwo {
+  animation: head 1.8s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
 @keyframes head {
   from {
     transform: translateY(0);
