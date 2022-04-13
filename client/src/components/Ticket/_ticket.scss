@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  // border: 2px solid red;
   width: 100%;
 }
 
@@ -110,17 +109,32 @@
 
 .green {
   color: $pastel-green;
+  max-width: fit-content;
+  border-radius: $border-radius;
+  background-color: rgba(119, 221, 119, 0.15);
+  padding: 2px 5px;
 }
 .yellow {
   color: $pastel-orange;
+  border-radius: $border-radius;
+  background-color: rgba(255, 179, 71, 0.15);
+  padding: 2px 5px;
+  max-width: fit-content;
 }
 
 .red {
   color: $pastel-red;
+  max-width: fit-content;
+  border-radius: $border-radius;
+  background-color: rgba(251, 105, 98, 0.15);
+  padding: 2px 5px;
 }
 
-.ticket-resolve-container {
+// $pastel-green: #77dd77;
+// $pastel-orange: #ffb347;
+// $pastel-red: #fb6962;
 
+.ticket-resolve-container {
   form {
     display: flex;
     flex-direction: column;
@@ -272,4 +286,3 @@
     transition: 0.2s;
   }
 }
-

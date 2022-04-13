@@ -330,14 +330,32 @@
 
 .green {
   color: #77dd77;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 5px;
+  background-color: rgba(119, 221, 119, 0.15);
+  padding: 2px 5px;
 }
 
 .yellow {
   color: #ffb347;
+  border-radius: 5px;
+  background-color: rgba(255, 179, 71, 0.15);
+  padding: 2px 5px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .red {
   color: #fb6962;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 5px;
+  background-color: rgba(251, 105, 98, 0.15);
+  padding: 2px 5px;
 }
 
 .ticket-resolve-container form {
