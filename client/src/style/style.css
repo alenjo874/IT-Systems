@@ -174,8 +174,16 @@
 }
 
 #computer-head {
-  -webkit-animation: head 1s ease-in-out infinite alternate;
-          animation: head 1s ease-in-out infinite alternate;
+  -webkit-animation: head 1.5s ease-in-out infinite alternate;
+          animation: head 1.5s ease-in-out infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+#computer-mug {
+  -webkit-animation: mug 2s ease-in-out infinite alternate;
+          animation: mug 2s ease-in-out infinite alternate;
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -200,6 +208,28 @@
   to {
     -webkit-transform: translateY(5%);
             transform: translateY(5%);
+  }
+}
+
+@-webkit-keyframes mug {
+  from {
+    -webkit-transform: rotateZ(0deg) translateY(0);
+            transform: rotateZ(0deg) translateY(0);
+  }
+  to {
+    -webkit-transform: rotateZ(20deg) translateY(-10%);
+            transform: rotateZ(20deg) translateY(-10%);
+  }
+}
+
+@keyframes mug {
+  from {
+    -webkit-transform: rotateZ(0deg) translateY(0);
+            transform: rotateZ(0deg) translateY(0);
+  }
+  to {
+    -webkit-transform: rotateZ(20deg) translateY(-10%);
+            transform: rotateZ(20deg) translateY(-10%);
   }
 }
 
