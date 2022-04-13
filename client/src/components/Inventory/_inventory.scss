@@ -39,7 +39,7 @@
 
   th,
   td {
-    padding: 15px;
+    padding: 10px 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -92,7 +92,7 @@
 
   th,
   td {
-    padding: 15px;
+    padding: 10px 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -147,7 +147,7 @@
 
   th,
   td {
-    padding: 15px;
+    padding: 10px 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -183,9 +183,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 15px;
+  padding: 10px 15px;
   background-color: $primary-color;
   margin: 0;
+  p {
+    margin: 0 $element-margin;
+  }
 }
 .edit-svg {
   width: $svg-width;
@@ -201,7 +204,6 @@
   p {
     margin: 0 $element-margin;
   }
-
   &:hover {
     cursor: pointer;
     color: $accent-color;

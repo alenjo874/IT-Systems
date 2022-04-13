@@ -61,7 +61,6 @@ function EmployeeEmail() {
             }
           >
             {user ? <Chat /> : <ChatSignIn />}
-            <ChatSignOut />
           </div>
         </div>
       </div>

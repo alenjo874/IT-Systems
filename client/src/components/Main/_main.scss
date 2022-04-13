@@ -153,3 +153,18 @@
   // background-image: linear-gradient(to right, #434343 0%, black 100%);
   background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
 }
+
+#computer-head {
+  animation: head 1s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes head {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(5%);
+  }
+}

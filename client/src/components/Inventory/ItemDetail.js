@@ -308,9 +308,8 @@ function ItemDetail({
       </div>
       <div className="item-details admin-tables">
         <div className="item-detail-head">
-          <div className="icon-action-container">
-            <p>Item Details</p>
-          </div>
+          <p>Item Details</p>
+
           <div className="icon-action-container" onClick={handleEditItem}>
             <p>Edit</p>
             {editPencilIcon}
@@ -346,9 +345,8 @@ function ItemDetail({
           </tbody>
         </table>
         <div className="item-detail-head">
-          <div className="icon-action-container">
-            <p>Current Owner</p>
-          </div>
+          <p>Current Owner</p>
+
           <div className="icon-action-container" onClick={handleEditOwner}>
             <p>Edit</p>
             {editPencilIcon}
