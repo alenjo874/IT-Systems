@@ -69,6 +69,8 @@ function ItemDetail({
     setEditItem(false);
   }
 
+
+
   const editInventoryItem = (
     <div className="update-pro-popup">
       <motion.div
@@ -195,6 +197,7 @@ function ItemDetail({
             </tr>
             <tr>
               <td>Serial Number</td>
+
               <td>{serial_number}</td>
             </tr>
             <tr>

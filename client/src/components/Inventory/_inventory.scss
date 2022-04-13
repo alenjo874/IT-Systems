@@ -221,3 +221,9 @@
     transition: 0.2s;
   }
 }
+
+.table-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
