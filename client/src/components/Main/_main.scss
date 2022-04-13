@@ -125,7 +125,6 @@
   max-width: 400px;
   // border: 2px solid red;
 
-  z-index: 5;
   svg {
     width: 100%;
     height: 100%;
@@ -175,6 +174,24 @@
 }
 
 #pie-chart {
+  animation: head 1.8s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#checkarm {
+  animation: mug 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#checkcardone {
+  animation: head 1.8s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#checkcardtwo {
   animation: head 1.8s ease-in-out infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
