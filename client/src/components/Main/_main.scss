@@ -209,6 +209,24 @@
   transform-box: fill-box;
 }
 
+#inv-armcheck {
+  animation: check 3s ease-in-out infinite alternate;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+#inventoryboxone {
+  animation: head 1.8s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#inventoryboxtwo {
+  animation: head 1.8s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
 @keyframes head {
   from {
     transform: translateY(0);
@@ -219,6 +237,15 @@
 }
 
 @keyframes mug {
+  from {
+    transform: rotateZ(0deg) translateY(0);
+  }
+  to {
+    transform: rotateZ(20deg) translateY(-10%);
+  }
+}
+
+@keyframes check {
   from {
     transform: rotateZ(0deg) translateY(0);
   }

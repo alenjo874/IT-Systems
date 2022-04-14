@@ -245,6 +245,30 @@
   transform-box: fill-box;
 }
 
+#inv-armcheck {
+  -webkit-animation: check 3s ease-in-out infinite alternate;
+          animation: check 3s ease-in-out infinite alternate;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  transform-box: fill-box;
+}
+
+#inventoryboxone {
+  -webkit-animation: head 1.8s ease-in-out infinite alternate;
+          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+#inventoryboxtwo {
+  -webkit-animation: head 1.8s ease-in-out infinite alternate;
+          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
 @-webkit-keyframes head {
   from {
     -webkit-transform: translateY(0);
@@ -279,6 +303,28 @@
 }
 
 @keyframes mug {
+  from {
+    -webkit-transform: rotateZ(0deg) translateY(0);
+            transform: rotateZ(0deg) translateY(0);
+  }
+  to {
+    -webkit-transform: rotateZ(20deg) translateY(-10%);
+            transform: rotateZ(20deg) translateY(-10%);
+  }
+}
+
+@-webkit-keyframes check {
+  from {
+    -webkit-transform: rotateZ(0deg) translateY(0);
+            transform: rotateZ(0deg) translateY(0);
+  }
+  to {
+    -webkit-transform: rotateZ(20deg) translateY(-10%);
+            transform: rotateZ(20deg) translateY(-10%);
+  }
+}
+
+@keyframes check {
   from {
     -webkit-transform: rotateZ(0deg) translateY(0);
             transform: rotateZ(0deg) translateY(0);
