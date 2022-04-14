@@ -222,8 +222,8 @@
 }
 
 #checkcardtwo {
-  -webkit-animation: head 1.8s ease-in-out infinite alternate;
-          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-animation: head 1.5s ease-in-out infinite alternate;
+          animation: head 1.5s ease-in-out infinite alternate;
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -238,8 +238,8 @@
 }
 
 #papertwo {
-  -webkit-animation: head 1.8s ease-in-out infinite alternate;
-          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-animation: head 1.5s ease-in-out infinite alternate;
+          animation: head 1.5s ease-in-out infinite alternate;
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -254,16 +254,16 @@
 }
 
 #inventoryboxone {
-  -webkit-animation: head 1.8s ease-in-out infinite alternate;
-          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-animation: box 1.8s ease-in-out infinite alternate;
+          animation: box 1.8s ease-in-out infinite alternate;
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
 }
 
 #inventoryboxtwo {
-  -webkit-animation: head 1.8s ease-in-out infinite alternate;
-          animation: head 1.8s ease-in-out infinite alternate;
+  -webkit-animation: box 1.5s ease-in-out infinite alternate;
+          animation: box 1.5s ease-in-out infinite alternate;
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -332,6 +332,28 @@
   to {
     -webkit-transform: rotateZ(20deg) translateY(-10%);
             transform: rotateZ(20deg) translateY(-10%);
+  }
+}
+
+@-webkit-keyframes box {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(8%);
+            transform: translateY(8%);
+  }
+}
+
+@keyframes box {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(8%);
+            transform: translateY(8%);
   }
 }
 

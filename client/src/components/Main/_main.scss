@@ -192,7 +192,7 @@
 }
 
 #checkcardtwo {
-  animation: head 1.8s ease-in-out infinite alternate;
+  animation: head 1.5s ease-in-out infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -204,7 +204,7 @@
 }
 
 #papertwo {
-  animation: head 1.8s ease-in-out infinite alternate;
+  animation: head 1.5s ease-in-out infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -216,13 +216,13 @@
 }
 
 #inventoryboxone {
-  animation: head 1.8s ease-in-out infinite alternate;
+  animation: box 1.8s ease-in-out infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
 
 #inventoryboxtwo {
-  animation: head 1.8s ease-in-out infinite alternate;
+  animation: box 1.5s ease-in-out infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -251,5 +251,14 @@
   }
   to {
     transform: rotateZ(20deg) translateY(-10%);
+  }
+}
+
+@keyframes box {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(8%);
   }
 }
