@@ -8,7 +8,7 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
   const [itemOwner, setItemOwner] = useState({});
   const [showFilter, setShowFilter] = useState(false);
   const [searchSerial, setSearchSerial] = useState("");
-  const [searchItem, setSearchItem] = useState("");
+  const [serialFilt, setSerialFilt] = useState("");
 
   function handleMoreDetails(id) {
     const selectedInventoryItem = inventoryArray.find((item) => item.id === id);
@@ -29,16 +29,22 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
       <path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z" />
     </svg>
   );
+  function handleSerialFilter(e) {
+    const filterSerialAsc = searchInventoryArray.sort(
+      (a, b) => a.serial_number - b.serial_number
+    );
+    if (e.target.value === "asc") {
+      setInventoryArray(filterSerialAsc);
+    }
+  }
 
-  const searchSerialArray = inventoryArray.filter((item) => {
-    item.serial_number.toString().includes(searchSerial.toString());
-  });
-
-  const searchItemArray = inventoryArray.filter((item) =>
-    item.name.includes(searchItem)
+  const searchInventoryArray = inventoryArray.filter(
+    (item) =>
+      item.serial_number.toString().includes(searchSerial.toString()) ||
+      item.name.toLowerCase().includes(searchSerial.toLowerCase())
   );
 
-  const displayInventory = inventoryArray.map((item) => {
+  const displayInventory = searchInventoryArray.map((item) => {
     return (
       <tr key={uuidv4()}>
         <td>{item.serial_number}</td>
@@ -67,13 +73,15 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
         <div className="filter-form">
           <form>
             <span className="filter-elem">
-              <label>Serial Number:</label>
+              <label>Search:</label>
               <input
                 value={searchSerial}
                 onChange={(e) => setSearchSerial(e.target.value)}
               ></input>
-
-              <select>
+            </span>
+            <span className="filter-elem">
+              <label>Serial Number:</label>
+              <select onChange={handleSerialFilter}>
                 <option value="none">select</option>
                 <option value="asc">asc</option>
                 <option value="desc">desc</option>
@@ -83,11 +91,6 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
             </span>
             <span className="filter-elem">
               <label>Product:</label>
-              <input
-                value={searchItem}
-                onChange={(e) => setSearchItem(e.target.value)}
-              ></input>
-
               <select>
                 <option value="none">select</option>
                 <option value="asc">a-z</option>
