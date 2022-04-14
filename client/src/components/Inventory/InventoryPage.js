@@ -30,13 +30,13 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
     </svg>
   );
 
-  function handleSerialSearch(e) {
-    e.preventDefault();
-    const searchSerialArray = inventoryArray.filter((item) =>
-       item.serial_number.toString().includes(searchSerial.toString())
-    );
-    console.log(searchSerialArray);
-  }
+  const searchSerialArray = inventoryArray.filter((item) => {
+    item.serial_number.toString().includes(searchSerial.toString());
+  });
+
+  const searchItemArray = inventoryArray.filter((item) =>
+    item.name.includes(searchItem)
+  );
 
   const displayInventory = inventoryArray.map((item) => {
     return (
@@ -72,7 +72,7 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
                 value={searchSerial}
                 onChange={(e) => setSearchSerial(e.target.value)}
               ></input>
-              <button onClick={handleSerialSearch}></button>
+
               <select>
                 <option value="none">select</option>
                 <option value="asc">asc</option>
@@ -87,7 +87,7 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
                 value={searchItem}
                 onChange={(e) => setSearchItem(e.target.value)}
               ></input>
-              <button></button>
+
               <select>
                 <option value="none">select</option>
                 <option value="asc">a-z</option>
