@@ -54,7 +54,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <NavBar /> */}
       <Switch>
         <Route exact path="/">
           <div className="sidebar-container">
@@ -110,7 +109,7 @@ function App() {
         <Route exact path="/employee_email">
           <div className="sidebar-container">
             <EmployeeNavBar />
-            <EmployeeEmail />
+            <EmployeeEmail allTicketsArray={allTicketsArray} />
           </div>
         </Route>
       </Switch>

@@ -1,6 +1,14 @@
 import React from "react";
 
-function TicketCard({ id, subject, level, case_number, handleTicketDelete }) {
+function TicketCard({
+  id,
+  subject,
+  level,
+  case_number,
+  handleTicketDelete,
+  employeeSide,
+  complete,
+}) {
   const svgTrash = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,11 +20,33 @@ function TicketCard({ id, subject, level, case_number, handleTicketDelete }) {
     </svg>
   );
 
+  const caseStatusEmployee = (
+    <div>
+      <p className="detail-label">Current Status</p>
+      <p className={complete ? "green" : "red"}>
+        {complete ? "Completed" : "Pending"}
+      </p>
+    </div>
+  );
+
+  const casePriority = (
+    <div>
+      <p className="detail-label">Case Priority</p>
+      <p
+        className={
+          level === "Low" ? "green" : level === "Moderate" ? "yellow" : "red"
+        }
+      >
+        {level}
+      </p>
+    </div>
+  );
+
   return (
     <div className="ticket-card">
       <div className="ticket-head">
         <p>Case: {case_number}</p>
-        {svgTrash}
+        {employeeSide ? null : svgTrash}
       </div>
       <div className="shared-subsection">
         <div className="ticket-subsections two-col">
@@ -26,20 +56,7 @@ function TicketCard({ id, subject, level, case_number, handleTicketDelete }) {
           </div>
         </div>
         <div className="ticket-subsections two-col">
-          <div>
-            <p className="detail-label">Case Priority</p>
-            <p
-              className={
-                level === "Low"
-                  ? "green"
-                  : level === "Moderate"
-                  ? "yellow"
-                  : "red"
-              }
-            >
-              {level}
-            </p>
-          </div>
+          {employeeSide ? caseStatusEmployee : casePriority}
         </div>
       </div>
     </div>

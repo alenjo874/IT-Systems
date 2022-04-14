@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-function EmployeePage({ inventoryArray, setTicketsArray, setEmployeeArray, employeeArray }) {
+function EmployeePage({
+  inventoryArray,
+  setTicketsArray,
+  employeeArray,
+}) {
   const [adminArray, setAdminArray] = useState([]);
   const [subject, setSubject] = useState("");
   const [serialNumber, setSerialNumber] = useState("");
@@ -14,7 +18,6 @@ function EmployeePage({ inventoryArray, setTicketsArray, setEmployeeArray, emplo
       .then((res) => res.json())
       .then(setAdminArray);
   }, []);
-
 
   const displaySerialOptions = inventoryArray.map((item) => {
     return (

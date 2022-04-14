@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Chat from "../Chat/Chat";
 import { auth } from "../Chat/firebase";
-import ChatSignOut from "../Chat/ChatSignOut";
 import { useAuthState } from "react-firebase-hooks/auth";
 import ChatSignIn from "../Chat/ChatSignIn";
 import ContactDetails from "./ContactDetails";
@@ -224,8 +223,7 @@ function TicketPage({
             }
           >
             <div className="display-ticket card ticket-overflow">
-              {" "}
-              {displayTickets}{" "}
+              {displayTickets}
             </div>
           </div>
 
