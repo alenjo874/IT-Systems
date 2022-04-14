@@ -30,11 +30,27 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
     </svg>
   );
   function handleSerialFilter(e) {
-    const filterSerialAsc = searchInventoryArray.sort(
-      (a, b) => a.serial_number - b.serial_number
-    );
     if (e.target.value === "asc") {
+      const filterSerialAsc = searchInventoryArray.sort(
+        (a, b) => a.serial_number - b.serial_number
+      );
       setInventoryArray(filterSerialAsc);
+    } else if (e.target.value === "desc") {
+      const filterSerialDesc = searchInventoryArray.sort(
+        (c, d) => d.serial_number - c.serial_number
+      );
+      setInventoryArray(filterSerialDesc);
+    }
+  }
+
+  function handleProductFilter(e) {
+    e.preventDefault();
+    if (e.target.value === "alpha") {
+      const filterProductAlpha = searchInventoryArray.sort((itemA, itemB) =>
+        itemA.name > itemB.name ? 1 : -1
+      );
+      console.log(filterProductAlpha);
+      setInventoryArray(filterProductAlpha);
     }
   }
 
@@ -91,9 +107,9 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
             </span>
             <span className="filter-elem">
               <label>Product:</label>
-              <select>
+              <select onChange={handleProductFilter}>
                 <option value="none">select</option>
-                <option value="asc">a-z</option>
+                <option value="alpha">a-z</option>
               </select>
             </span>
           </form>

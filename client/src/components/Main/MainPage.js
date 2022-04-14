@@ -1,8 +1,4 @@
 import React from "react";
-import computer from "../../style/images/computer.svg";
-import ticket from "../../style/images/ticket.svg";
-import inventory from "../../style/images/inventory.svg";
-import dashboard from "../../style/images/dashboard.svg";
 import {
   computerSvg,
   ticketSvg,
