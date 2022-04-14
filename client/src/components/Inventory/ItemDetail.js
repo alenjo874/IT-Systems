@@ -30,6 +30,7 @@ function ItemDetail({
   const [ownerEmail, setOwnerEmail] = useState(itemOwner.email);
   const [ownerExt, setOwnerExt] = useState(itemOwner.extension);
 
+
   const displyInventoryTickets = tickets.map((ticket) => {
     return (
       <tr key={uuidv4()}>

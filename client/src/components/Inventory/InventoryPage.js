@@ -6,6 +6,9 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
   const [moreDetailItem, setMoreDetailItem] = useState({});
   const [showDetails, setShowDetails] = useState(false);
   const [itemOwner, setItemOwner] = useState({});
+  const [showFilter, setShowFilter] = useState(false);
+  const [searchSerial, setSearchSerial] = useState("");
+  const [searchItem, setSearchItem] = useState("");
 
   function handleMoreDetails(id) {
     const selectedInventoryItem = inventoryArray.find((item) => item.id === id);
@@ -27,6 +30,14 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
     </svg>
   );
 
+  function handleSerialSearch(e) {
+    e.preventDefault();
+    const searchSerialArray = inventoryArray.filter((item) =>
+       item.serial_number.toString().includes(searchSerial.toString())
+    );
+    console.log(searchSerialArray);
+  }
+
   const displayInventory = inventoryArray.map((item) => {
     return (
       <tr key={uuidv4()}>
@@ -34,7 +45,6 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
         <td>{item.name}</td>
         <td> {item.rent ? "Not Available" : "Available"}</td>
         <td onClick={() => handleMoreDetails(item.id)} className="more-detail">
-          {/* <Link to="/inventory_item">More Detail</Link> */}
           More Detail
         </td>
       </tr>
@@ -45,11 +55,47 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
     <div>
       <div className="inventory-filter-container">
         <h4>All Items</h4>
-        <span className="filter-caret">
+        <span
+          className="filter-caret"
+          onClick={() => setShowFilter((prev) => !prev)}
+        >
           <p>Show Filters </p>
           {downCaretSvg}
         </span>
       </div>
+      {showFilter ? (
+        <div className="filter-form">
+          <form>
+            <span className="filter-elem">
+              <label>Serial Number:</label>
+              <input
+                value={searchSerial}
+                onChange={(e) => setSearchSerial(e.target.value)}
+              ></input>
+              <button onClick={handleSerialSearch}></button>
+              <select>
+                <option value="none">select</option>
+                <option value="asc">asc</option>
+                <option value="desc">desc</option>
+                <option value="oldest">oldest</option>
+                <option value="newest">newest</option>
+              </select>
+            </span>
+            <span className="filter-elem">
+              <label>Product:</label>
+              <input
+                value={searchItem}
+                onChange={(e) => setSearchItem(e.target.value)}
+              ></input>
+              <button></button>
+              <select>
+                <option value="none">select</option>
+                <option value="asc">a-z</option>
+              </select>
+            </span>
+          </form>
+        </div>
+      ) : null}
       <table className="inventory-table admin-tables">
         <thead>
           <tr>
@@ -76,7 +122,6 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
             setMoreDetailItem={setMoreDetailItem}
             setItemOwner={setItemOwner}
             setShowDetails={setShowDetails}
-          
           />
         ) : (
           displayInventoryTable
