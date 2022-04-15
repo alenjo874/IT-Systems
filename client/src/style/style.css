@@ -964,8 +964,8 @@
   display: grid;
   border-collapse: collapse;
   width: 100%;
-  -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
-      grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+  -ms-grid-columns: 1.67fr 1.67fr 1.67fr 1.67fr;
+      grid-template-columns: 1.67fr 1.67fr 1.67fr 1.67fr;
 }
 
 .contact-table a,
@@ -1031,8 +1031,8 @@
   display: grid;
   border-collapse: collapse;
   width: 100%;
-  -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
-      grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+  -ms-grid-columns: 1.67fr 1.67fr 1.67fr 1.67fr;
+      grid-template-columns: 1.67fr 1.67fr 1.67fr 1.67fr;
 }
 
 .incident-table a {

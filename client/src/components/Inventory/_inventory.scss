@@ -72,10 +72,10 @@
   border-collapse: collapse;
   width: 100%;
   grid-template-columns:
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr);
+    max(1.67fr)
+    max(1.67fr)
+    max(1.67fr)
+    max(1.67fr);
   a {
     color: #808080;
   }
@@ -127,10 +127,10 @@
   border-collapse: collapse;
   width: 100%;
   grid-template-columns:
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr);
+    max(1.67fr)
+    max(1.67fr)
+    max(1.67fr)
+    max(1.67fr);
   a {
     color: #808080;
   }
