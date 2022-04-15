@@ -68,6 +68,18 @@ function Email() {
     </div>
   );
 
+  function SubmitEmail() {
+    if (toSend.from_name && toSend.reply_to && toSend.message) {
+      return (
+        <button type="submit" className="view-work-btn">
+          Submit
+        </button>
+      );
+    } else {
+      return null;
+    }
+  }
+
   return (
     <div className="emails-container">
       <div className="email-tab-head">
@@ -108,9 +120,7 @@ function Email() {
           onChange={handleChange}
         />
         <div className="edit-btns">
-          <button type="submit" className="view-work-btn">
-            Submit
-          </button>
+          <SubmitEmail />
         </div>
       </form>
       <AnimatePresence>

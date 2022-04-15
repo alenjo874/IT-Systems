@@ -89,7 +89,9 @@ function TicketPage({
         </div>
         <div>
           <p className="detail-label">Reopen Ticket</p>
-          <button onClick={() => handleReactivate(ticket.id)}>Submit</button>
+          <button id="reopen-btn" onClick={() => handleReactivate(ticket.id)}>
+            Submit
+          </button>
         </div>
       </div>
     );
