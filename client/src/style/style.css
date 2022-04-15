@@ -357,6 +357,28 @@
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .main-text-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    width: 100%;
+    height: 80%;
+  }
+  .white-banner {
+    height: 100vh;
+  }
+  .main-blurb {
+    width: 100%;
+  }
+  .main-titles h2 {
+    margin: 0;
+  }
+}
+
 .ticket-page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1262,6 +1284,7 @@
   min-height: 100vh;
   height: 100%;
   width: 100%;
+  margin-left: 60px;
 }
 
 .employee-container form {
@@ -1499,11 +1522,14 @@
 }
 
 @media only screen and (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
   .navbar {
     bottom: 0;
     width: 100vw;
     min-height: 60px;
-    height: 80px;
+    height: 60px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 0;
@@ -1512,6 +1538,9 @@
     width: 100vw;
     -webkit-transition: 0.2s;
     transition: 0.2s;
+  }
+  .nav-item:last-child {
+    margin-top: 0;
   }
   .navbar:hover .link-text {
     display: none;
@@ -1526,6 +1555,30 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .dashboard-container {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .inventory-page-container {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .ticket-page-container {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .main-page-container {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .emp-email-container {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .employee-container {
+    margin: 0;
+    margin-bottom: 60px;
   }
 }
 

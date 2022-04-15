@@ -11,13 +11,7 @@
   color: $accent-color;
   background-color: $primary-color;
   height: 100vh;
-  // max-height: 600px;
   width: 100%;
-  //   -webkit-transform: skewY(2deg);
-  //   -moz-transform: skewY(2deg);
-  //   -ms-transform: skewY(2deg);
-  //   -o-transform: skewY(2deg);
-  //   transform: skewY(2deg);
 
   button {
     background-color: white;
@@ -102,7 +96,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // border: 2px solid green;
+
   width: 60%;
   h2 {
     font-size: 5rem;
@@ -260,5 +254,28 @@
   }
   to {
     transform: translateY(8%);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-text-cards {
+    flex-direction: column;
+    align-content: space-between;
+    width: 100%;
+    height: 80%;
+  }
+
+  .white-banner {
+    height: 100vh;
+  }
+
+  .main-blurb {
+    width: 100%;
+  }
+
+  .main-titles {
+    h2 {
+      margin: 0;
+    }
   }
 }
