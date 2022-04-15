@@ -99,17 +99,15 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
               <label>Serial Number:</label>
               <select onChange={handleSerialFilter}>
                 <option value="none">select</option>
-                <option value="asc">asc</option>
-                <option value="desc">desc</option>
-                <option value="oldest">oldest</option>
-                <option value="newest">newest</option>
+                <option value="asc">Low to High</option>
+                <option value="desc">High to Low</option>
               </select>
             </span>
             <span className="filter-elem">
               <label>Product:</label>
               <select onChange={handleProductFilter}>
                 <option value="none">select</option>
-                <option value="alpha">a-z</option>
+                <option value="alpha">A-Z</option>
               </select>
             </span>
           </form>

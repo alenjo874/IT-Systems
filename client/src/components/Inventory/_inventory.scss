@@ -299,7 +299,23 @@
     flex-direction: column;
 
     input {
+      top: 0;
+      left: 0;
+      width: 20%;
+      border: 2px solid $clr-gray;
+      border-radius: $border-radius;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 8px 0;
       text-indent: 15px;
+
+      &:hover {
+        border-color: $primary-light;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+      }
     }
 
     span {
@@ -313,6 +329,8 @@
 }
 
 .filter-elem {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin: $element-margin 0;
 }
@@ -321,6 +339,3 @@
   border: 2px solid red;
   width: 150px;
 }
-
-
-

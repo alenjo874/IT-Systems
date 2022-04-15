@@ -1198,7 +1198,23 @@
 }
 
 .filter-form form input {
+  top: 0;
+  left: 0;
+  width: 20%;
+  border: 2px solid #c5cad3;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 8px 0;
   text-indent: 15px;
+}
+
+.filter-form form input:hover {
+  border-color: #ffdab2;
+}
+
+.filter-form form input:focus {
+  border-color: #f8a145;
 }
 
 .filter-form form span {
@@ -1214,6 +1230,12 @@
 }
 
 .filter-elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin: 5px 0;
 }
