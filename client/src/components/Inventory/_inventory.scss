@@ -1,7 +1,6 @@
 .inventory-page-container {
   width: 100%;
   margin-left: $navbar-width;
-  // border: 2px solid red;
 }
 
 .item-detail-container {
@@ -18,16 +17,14 @@
 }
 
 .inventory-table {
-  // margin-left: $navbar-width;
-
   display: grid;
   border-collapse: collapse;
-  min-width: 100%;
+  width: 100%;
   grid-template-columns:
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr);
+    max(1.67fr)
+    max(1.67fr)
+    max(1.67fr)
+    max(1.67fr);
   a {
     color: #808080;
   }
@@ -52,7 +49,6 @@
     text-align: left;
     font-weight: normal;
     font-size: 1.1rem;
-    // color: $accent-color;
     box-shadow: $shadow-head;
   }
 
@@ -63,7 +59,6 @@
   td {
     padding-top: 10px;
     padding-bottom: 10px;
-    // color: #808080;
   }
 
   tr:nth-child(even) td {
@@ -75,7 +70,7 @@
 .item-detail-table {
   display: grid;
   border-collapse: collapse;
-  min-width: 100%;
+  width: 100%;
   grid-template-columns:
     minmax(150px, 1.67fr)
     minmax(150px, 1.67fr)
@@ -130,7 +125,7 @@
 .incident-table {
   display: grid;
   border-collapse: collapse;
-  min-width: 100%;
+  width: 100%;
   grid-template-columns:
     minmax(150px, 1.67fr)
     minmax(150px, 1.67fr)

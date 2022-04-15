@@ -910,9 +910,9 @@
   display: -ms-grid;
   display: grid;
   border-collapse: collapse;
-  min-width: 100%;
-  -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
-      grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
+  width: 100%;
+  -ms-grid-columns: 1.67fr 1.67fr 1.67fr 1.67fr;
+      grid-template-columns: 1.67fr 1.67fr 1.67fr 1.67fr;
 }
 
 .inventory-table a {
@@ -963,7 +963,7 @@
   display: -ms-grid;
   display: grid;
   border-collapse: collapse;
-  min-width: 100%;
+  width: 100%;
   -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
       grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
 }
@@ -1030,7 +1030,7 @@
   display: -ms-grid;
   display: grid;
   border-collapse: collapse;
-  min-width: 100%;
+  width: 100%;
   -ms-grid-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
       grid-template-columns: minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr) minmax(150px, 1.67fr);
 }
