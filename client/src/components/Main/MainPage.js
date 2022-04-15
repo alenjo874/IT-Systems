@@ -49,9 +49,9 @@ function MainPage() {
             </span>
             <div className="gradient-block orange-gradient"></div>
             <p className="main-blurb">
-              A ticketing system is a software program that a customer support
+              A ticketing system is a software program that the IT support
               team uses to create, manage, and maintain a list (or lists) of
-              customer problems.
+              internal problems.
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ function MainPage() {
             </span>
             <div className="gradient-block black-gradient"></div>
             <p className="main-blurb">
-              Inventory management helps identify which. It tracks tickets
+              Inventory management helps identify which products are being maintained. It tracks tickets
               related to products to ensure excellent and consistent service.
             </p>
           </div>

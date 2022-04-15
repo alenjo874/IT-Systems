@@ -15,8 +15,6 @@ function EmployeeEmail({ allTicketsArray }) {
     setToggleState(index);
   };
 
-  console.log(allTicketsArray);
-
   const displayTickets = allTicketsArray.map((ticket) => {
     return <TicketCard key={uuidv4()} {...ticket} employeeSide={true} />;
   });

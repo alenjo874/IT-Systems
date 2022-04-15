@@ -48,7 +48,6 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
       const filterProductAlpha = searchInventoryArray.sort((itemA, itemB) =>
         itemA.name > itemB.name ? 1 : -1
       );
-      console.log(filterProductAlpha);
       setInventoryArray(filterProductAlpha);
     }
   }
