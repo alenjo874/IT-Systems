@@ -103,6 +103,7 @@ function App() {
               setTicketsArray={setTicketsArray}
               employeeArray={employeeArray}
               setEmployeeArray={setEmployeeArray}
+              setAllTicketsArray={setAllTicketsArray}
             />
           </div>
         </Route>

@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
-function EmployeePage({ inventoryArray, setTicketsArray, employeeArray }) {
+function EmployeePage({
+  inventoryArray,
+  setTicketsArray,
+  employeeArray,
+  setAllTicketsArray,
+}) {
   const [adminArray, setAdminArray] = useState([]);
   const [subject, setSubject] = useState("");
   const [serialNumber, setSerialNumber] = useState("");
@@ -16,6 +21,14 @@ function EmployeePage({ inventoryArray, setTicketsArray, employeeArray }) {
       .then((res) => res.json())
       .then(setAdminArray);
   }, []);
+
+  function SubmitTicket() {
+    if (subject && serialNumber && level && issue && caseCategory) {
+      return <button onClick={handleSubmitTicket}>Submit Ticket</button>;
+    } else {
+      return null;
+    }
+  }
 
   const displaySerialOptions = inventoryArray.map((item) => {
     return (
@@ -41,31 +54,32 @@ function EmployeePage({ inventoryArray, setTicketsArray, employeeArray }) {
       severity_level = 3;
     }
 
-    // const newTicketObj = {
-    //   admin_id: adminArray[0].id,
-    //   employee_id: employeeArray[0].id,
-    //   subject: subject,
-    //   rental_id: inventoryItemObj.rentals[0].id,
-    //   level: level,
-    //   severity_level: severity_level,
-    //   issue: issue,
-    //   solution: "",
-    //   complete: false,
-    //   case_number: Math.floor(Math.random() * 1000000000),
-    //   case_category: caseCategory,
-    // };
+    const newTicketObj = {
+      admin_id: adminArray[0].id,
+      employee_id: employeeArray[0].id,
+      subject: subject,
+      rental_id: inventoryItemObj.rentals[0].id,
+      level: level,
+      severity_level: severity_level,
+      issue: issue,
+      solution: "",
+      complete: false,
+      case_number: Math.floor(Math.random() * 1000000000),
+      case_category: caseCategory,
+    };
 
-    // fetch("/tickets", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(newTicketObj),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     setTicketsArray((prev) => [...prev, data]);
-    //   });
+    fetch("/tickets", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newTicketObj),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setTicketsArray((prev) => [...prev, data]);
+        setAllTicketsArray((prev) => [...prev, data]);
+      });
 
     setSubject("");
     setSerialNumber("");
@@ -98,7 +112,6 @@ function EmployeePage({ inventoryArray, setTicketsArray, employeeArray }) {
         }}
       >
         <div className="cancel-container">
-          {/* <button onClick={handleTicketDetailEdit}>Cancel</button> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
@@ -165,7 +178,7 @@ function EmployeePage({ inventoryArray, setTicketsArray, employeeArray }) {
           onChange={(e) => setIssue(e.target.value)}
         ></textarea>
         <div className="edit-btns">
-          <button onClick={handleSubmitTicket}>Submit Ticket</button>
+          <SubmitTicket />
         </div>
       </form>
       <AnimatePresence>
