@@ -1,47 +1,5 @@
 @import "../../style/variables";
 
-// .nav-container {
-//   // position: absolute;
-//   display: flex;
-//   justify-content: flex-start;
-//   justify-content: cente;
-//   align-items: center;
-//   flex-direction: column;
-//   background-color: #28282b;
-//   min-height: 100vh;
-//   height: 100%;
-//   // width: 5%;
-//   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
-//   color: #ffffff;
-
-//   a {
-//     font-size: 1.15rem;
-//     transition: 0.2s;
-//     font-weight: 600;
-//     color: $accent-color;
-//   }
-
-//   a:hover {
-//     transition: 0.2s;
-//     color: $primary-color;
-//     transform: scale(1.1);
-//   }
-//   a:active {
-//     transition: 0.2s;
-//     color: lightgray;
-//     transform: scale(1);
-//   }
-// }
-
-// .nav-elem {
-//   color: black;
-// }
-
-// .sidebar-nav-container {
-//   display: flex;
-//   flex-direction: column;
-// }
-
 .navbar {
   position: fixed;
   display: flex;
@@ -107,6 +65,7 @@
   min-width: 2rem;
   margin: $element-margin * 3;
   fill: $primary-color;
+  max-width: 2rem;
 }
 
 .nav-link:hover {
@@ -124,4 +83,33 @@
 
 .nav-item:last-child {
   margin-top: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    min-height: $navbar-width;
+    height: 80px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: 0;
+  }
+
+  .navbar:hover {
+    width: 100vw;
+    transition: 0.2s;
+  }
+
+  .navbar:hover .link-text {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
 }

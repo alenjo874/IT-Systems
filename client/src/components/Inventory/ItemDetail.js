@@ -44,7 +44,10 @@ function ItemDetail({
   const displyInventoryTickets = tickets.map((ticket) => {
     return (
       <tr key={uuidv4()}>
-        <td onClick={() => handleShowIncident(ticket.id)}>
+        <td
+          className="more-detail"
+          onClick={() => handleShowIncident(ticket.id)}
+        >
           {ticket.case_number}
         </td>
         <td>{ticket.subject}</td>
@@ -342,7 +345,6 @@ function ItemDetail({
           </svg>
         </div>
         <TicketDetails {...relatedIncident} />
-    
       </motion.div>
     </div>
   );

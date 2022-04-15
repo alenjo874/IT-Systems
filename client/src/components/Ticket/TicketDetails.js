@@ -15,6 +15,7 @@ function TicketDetails({
   submitNewTicketDetails,
   handleTicketDelete,
 }) {
+
   const [newSubject, setNewSubject] = useState("");
   const [newIssue, setNewIssue] = useState("");
   const newTicketObj = {
@@ -120,7 +121,7 @@ function TicketDetails({
         <div className="ticket-subsections two-col">
           <div>
             <p className="detail-label">Case Status</p>
-            <p> {!complete ? "New" : null} </p>
+            <p> {!complete ? "New" : "Complete"} </p>
           </div>
         </div>
       </div>

@@ -1477,6 +1477,7 @@
   min-width: 2rem;
   margin: 15px;
   fill: #f8a145;
+  max-width: 2rem;
 }
 
 .nav-link:hover {
@@ -1495,6 +1496,37 @@
 
 .nav-item:last-child {
   margin-top: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    min-height: 60px;
+    height: 80px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 0;
+  }
+  .navbar:hover {
+    width: 100vw;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .navbar:hover .link-text {
+    display: none;
+  }
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .chat-container {
