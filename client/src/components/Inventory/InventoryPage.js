@@ -8,7 +8,6 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
   const [itemOwner, setItemOwner] = useState({});
   const [showFilter, setShowFilter] = useState(false);
   const [searchSerial, setSearchSerial] = useState("");
-  const [serialFilt, setSerialFilt] = useState("");
 
   function handleMoreDetails(id) {
     const selectedInventoryItem = inventoryArray.find((item) => item.id === id);

@@ -6,6 +6,7 @@ import { Pie } from "react-chartjs-2";
 import { Line } from "react-chartjs-2";
 
 function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
+
   const complete = completedTickets.length;
   const incomplete = ticketsArray.length;
 
