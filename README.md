@@ -19,10 +19,31 @@ In this project you can:
         - Email IT admin
         - Chat with IT admin
 
-    
+    IT Admin
+        - Resolve Tickets
+        - Chat with Employee
 
-Ticket critical will take precedent over any other ticket
 
-React EmailJS
-Firebase
-React Charts
+    Dashboard
+        - React Charts used for visualizations
+        - Analytics based on ticket data
+
+    Ticket
+        - Ordered by case priority
+        - Case
+
+    Inventory 
+        - Ticket cases related to item can be viewed
+        - edit details of item
+
+    Chat
+        - Firebase used for chat system 
+
+    Email
+        - React EmailJS 
+
+    SVG Animation
+        - SVG uploaded to Figma
+            - Group SVG path
+        - CSS to animate SVG path
+
