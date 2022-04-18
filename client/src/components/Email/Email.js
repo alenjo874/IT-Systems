@@ -62,7 +62,7 @@ function Email() {
         </div>
 
         <div className="edit-btns">
-          <p>Ticket Submitted</p>
+          <p>Email Submitted</p>
         </div>
       </motion.div>
     </div>
@@ -97,6 +97,7 @@ function Email() {
             value={toSend.from_name}
             onChange={handleChange}
             placeholder=" "
+            autocomplete="off"
           />
           <label className="form__label edit-placeholder">Your Name</label>
         </div>
@@ -107,6 +108,7 @@ function Email() {
             type="text"
             name="reply_to"
             placeholder=" "
+            autocomplete="off"
             value={toSend.reply_to}
             onChange={handleChange}
           />
