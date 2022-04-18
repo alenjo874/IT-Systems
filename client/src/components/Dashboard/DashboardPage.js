@@ -6,7 +6,6 @@ import { Pie } from "react-chartjs-2";
 import { Line } from "react-chartjs-2";
 
 function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
-
   const complete = completedTickets.length;
   const incomplete = ticketsArray.length;
 
@@ -39,15 +38,15 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
     <div className="dashboard-container">
       <div className="top-data">
         <div className="user-data">
-          <p className="p-num">5</p>
+          <p className="p-num">{complete + incomplete}</p>
           <p>Total Tickets</p>
         </div>
         <div className="user-data">
-          <p className="p-num">5</p>
+          <p className="p-num">{incomplete}</p>
           <p>Open Tickets</p>
         </div>
         <div className="user-data">
-          <p className="p-num">5</p>
+          <p className="p-num">{complete}</p>
           <p>Completed Tickets</p>
         </div>
       </div>
@@ -142,14 +141,7 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
       <div className="bar-graph">
         <Bar
           data={{
-            labels: [
-              "Hardware",
-              "Software",
-              "Account",
-              "Other",
-              "Purple",
-              "Orange",
-            ],
+            labels: ["Hardware", "Software", "Account", "Other"],
             datasets: [
               {
                 label: "Case Category",
@@ -158,24 +150,18 @@ function DashboardPage({ completedTickets, ticketsArray, allTicketsArray }) {
                   categoryRatio["software"],
                   categoryRatio["account"],
                   categoryRatio["other"],
-                  2,
-                  3,
                 ],
                 backgroundColor: [
                   "rgba(255, 99, 132, 0.2)",
                   "rgba(54, 162, 235, 0.2)",
                   "rgba(255, 206, 86, 0.2)",
                   "rgba(75, 192, 192, 0.2)",
-                  "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)",
                 ],
                 borderColor: [
                   "rgba(255, 99, 132, 1)",
                   "rgba(54, 162, 235, 1)",
                   "rgba(255, 206, 86, 1)",
                   "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)",
                 ],
                 borderWidth: 1,
               },
