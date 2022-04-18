@@ -1,9 +1,9 @@
 require 'faker'
-# Ticket.destroy_all
-# Rental.destroy_all
-# Admin.destroy_all
-# Employee.destroy_all
-# Inventory.destroy_all
+Ticket.destroy_all
+Rental.destroy_all
+Admin.destroy_all
+Employee.destroy_all
+Inventory.destroy_all
 
 Admin.create(name:"Alen Jo", manager: true)
 
@@ -36,7 +36,11 @@ Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, em
 Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id, subject: "HDMI cable ripped", level: "Low", issue:"I accidentally cut my HDMI cable now I can't use my second monitor",complete: false, solution: "", severity_level: 1, case_number: Faker::Number.number(digits: 10), case_category: "Hardware")
 
 
-# 50.times do 
-# Rental.create(employee_id: Employee.all.sample.id, inventory_id: Inventory.all.sample.id)
-# end
+ticket_create = 0
+sev_level = ["Critical", "Moderate", "Low"]
+case_cat = ["Hardware", "Software", "Account", "Other"]
 
+while ticket_create < Inventory.all.length do
+    Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id, subject: Faker::Lorem.sentence(word_count: 3), level: sev_level.sample, issue:Faker::Lorem.paragraph(sentence_count: 1),complete: false, solution: "", severity_level:rand(1..3) , case_number: Faker::Number.number(digits: 10), case_category: case_cat.sample)
+    ticket_create = 1 + ticket_create
+end
