@@ -1339,9 +1339,25 @@
   margin: 5px 0;
 }
 
+.filter-elem input {
+  min-width: 100px;
+}
+
 .filter-input {
   border: 2px solid red;
   width: 150px;
+}
+
+@media only screen and (max-width: 450px) {
+  .filter-elem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .filter-elem label {
+    margin-bottom: 5px;
+  }
 }
 
 .employee-container {
