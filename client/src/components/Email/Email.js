@@ -22,9 +22,9 @@ function Email() {
       reply_to: "",
     });
     setConfirmEmailSent(true);
-    // setTimeout(() => {
-    //   setConfirmEmailSent(false);
-    // }, 2500);
+    setTimeout(() => {
+      setConfirmEmailSent(false);
+    }, 2500);
   };
 
   const handleChange = (e) => {
