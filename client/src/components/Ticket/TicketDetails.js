@@ -14,10 +14,11 @@ function TicketDetails({
   handleTicketDetailEdit,
   submitNewTicketDetails,
   handleTicketDelete,
+  setNewSubject,
+  newSubject,
+  newIssue,
+  setNewIssue,
 }) {
-
-  const [newSubject, setNewSubject] = useState("");
-  const [newIssue, setNewIssue] = useState("");
   const newTicketObj = {
     subject: newSubject ? newSubject : subject,
     issue: newIssue ? newIssue : issue,

@@ -18,6 +18,8 @@ function TicketPage({
 }) {
   const [toggleState, setToggleState] = useState(1);
   const [editTicketPopUp, setEditTickPopUp] = useState(false);
+  const [newSubject, setNewSubject] = useState("");
+  const [newIssue, setNewIssue] = useState("");
   const nextTicket = ticketsArray[1];
   const currentTicket = ticketsArray[0];
   const [user] = useAuthState(auth);
@@ -148,6 +150,8 @@ function TicketPage({
 
     setTicketsArray(updatedTicketsArray);
     setEditTickPopUp(false);
+    setNewSubject("");
+    setNewIssue("");
   }
 
   return (
@@ -168,6 +172,10 @@ function TicketPage({
             </div>
             <TicketDetails
               {...currentTicket}
+              setNewSubject={setNewSubject}
+              newSubject={newSubject}
+              newIssue={newIssue}
+              setNewIssue={setNewIssue}
               editTicketPopUp={editTicketPopUp}
               handleTicketDetailEdit={handleTicketDetailEdit}
               submitNewTicketDetails={submitNewTicketDetails}
