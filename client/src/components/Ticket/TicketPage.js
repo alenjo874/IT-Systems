@@ -38,7 +38,9 @@ function TicketPage({
       headers: {
         "Content-type": "application/json",
       },
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => setTicketsArray((prev) => [...prev, data]));
 
     const completeTicketArr = completedTickets.filter(
       (ticket) => ticket.id !== tickID
