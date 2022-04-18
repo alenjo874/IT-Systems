@@ -18,9 +18,10 @@ function MainPage() {
             </span>
             <div className="gradient-block black-gradient"></div>
             <p className="main-blurb">
-              An effective systems management plan facilitates the delivery of
-              IT as a service and allows an organization's employees to respond
-              quickly to changing business requirements and system activity.
+              An <b>effective</b> systems management plan facilitates the
+              delivery of IT as a service and allows an organization's employees
+              to respond <b>quickly</b> to changing business requirements and
+              system activity.
             </p>
           </div>
           <div className="main-illustrations">{computerSvg}</div>
@@ -49,9 +50,9 @@ function MainPage() {
             </span>
             <div className="gradient-block orange-gradient"></div>
             <p className="main-blurb">
-              A ticketing system is a software program that the IT support
-              team uses to create, manage, and maintain a list (or lists) of
-              internal problems.
+              A ticketing system is a software program that the{" "}
+              <b>IT support team</b> uses to create, manage, and maintain a list
+              (or lists) of <b>internal problems</b>.
             </p>
           </div>
         </div>
@@ -78,8 +79,9 @@ function MainPage() {
             </span>
             <div className="gradient-block black-gradient"></div>
             <p className="main-blurb">
-              Inventory management helps identify which products are being maintained. It tracks tickets
-              related to products to ensure excellent and consistent service.
+              Inventory management helps <b>identify</b> which products are
+              being maintained. It tracks tickets related to products to ensure
+              <b>excellent</b> and <b>consistent</b> service.
             </p>
           </div>
           <div className="main-illustrations">{inventorySvg}</div>
@@ -108,8 +110,9 @@ function MainPage() {
             </span>
             <div className="gradient-block orange-gradient"></div>
             <p className="main-blurb">
-              A dashboard is a data visualization tool that tracks, analyzes,
-              and, displays key metrics and critical data points.
+              A dashboard is a data <b>visualization</b> tool that tracks,
+              analyzes, and, displays <b>key metrics</b> and critical data
+              points.
             </p>
           </div>
         </div>
