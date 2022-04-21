@@ -36,11 +36,26 @@ require 'faker'
 # Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id, subject: "HDMI cable ripped", level: "Low", issue:"I accidentally cut my HDMI cable now I can't use my second monitor",complete: false, solution: "", severity_level: 1, case_number: Faker::Number.number(digits: 10), case_category: "Hardware")
 
 
-ticket_create = 0
-sev_level = ["Critical", "Moderate", "Low"]
-case_cat = ["Hardware", "Software", "Account", "Other"]
+# ticket_create = 0
+# sev_level = ["Critical", "Moderate", "Low"]
+# case_cat = ["Hardware", "Software", "Account", "Other"]
 
-while ticket_create < Inventory.all.length do
-    Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id, subject: Faker::Lorem.sentence(word_count: 3), level: sev_level.sample, issue:Faker::Lorem.paragraph(sentence_count: 1),complete: false, solution: "", severity_level:rand(1..3) , case_number: Faker::Number.number(digits: 10), case_category: case_cat.sample)
-    ticket_create = 1 + ticket_create
+# while ticket_create < Inventory.all.length do
+#     Ticket.create(admin_id: Admin.all.sample.id, rental_id: Rental.all.sample.id, employee_id: Employee.all.sample.id, subject: Faker::Lorem.sentence(word_count: 3), level: sev_level.sample, issue:Faker::Lorem.paragraph(sentence_count: 1),complete: false, solution: "", case_number: Faker::Number.number(digits: 10), case_category: case_cat.sample)
+#     ticket_create = 1 + ticket_create
+# end
+
+ticket_update_sev = 0
+
+while ticket_update_sev < Ticket.all.length do
+   
+    if Ticket.all[ticket_update_sev].level === "Low"
+        Ticket.all[ticket_update_sev].update(severity_level: 1)
+    elsif Ticket.all[ticket_update_sev].level === "Moderate"
+        Ticket.all[ticket_update_sev].update(severity_level: 2)
+    elsif Ticket.all[ticket_update_sev].level === "Critical"
+        Ticket.all[ticket_update_sev].update(severity_level: 3)
+    end
+
+    ticket_update_sev += 1
 end
