@@ -5,13 +5,38 @@ import {
   inventorySvg,
   dashboardSvg,
 } from "./mainSvgSource";
+import { motion } from "framer-motion/dist/framer-motion";
 
 function MainPage() {
+  const scrollRightAnimation = {
+    initial: "hidden",
+    whileInView: "visible",
+    viewport: { once: true },
+    transition: { delay: 0.24, duration: 0.6 },
+    variants: {
+      hidden: { opacity: 0, x: -20 },
+      visible: { opacity: 1, x: 0 },
+      ease: "easeIn",
+    },
+  };
+
+  const scrollLeftAnimation = {
+    initial: "hidden",
+    whileInView: "visible",
+    viewport: { once: true },
+    transition: { delay: 0.24, duration: 0.6 },
+    variants: {
+      hidden: { opacity: 0, x: 20 },
+      visible: { opacity: 1, x: 0 },
+      ease: "easeIn",
+    },
+  };
+
   return (
     <div className="main-page-container">
       <div className="orange-banner">
         <div className="main-text-cards">
-          <div className="main-titles">
+          <motion.div className="main-titles" {...scrollRightAnimation}>
             <span>
               <h2>IT System Management</h2>
               <p>Time to Get Organized</p>
@@ -23,8 +48,10 @@ function MainPage() {
               to respond <b>quickly</b> to changing business requirements and
               system activity.
             </p>
-          </div>
-          <div className="main-illustrations">{computerSvg}</div>
+          </motion.div>
+          <motion.div className="main-illustrations" {...scrollLeftAnimation}>
+            {computerSvg}
+          </motion.div>
         </div>
       </div>
       <div className="curve-one">
@@ -42,8 +69,10 @@ function MainPage() {
       </div>
       <div className="white-banner">
         <div className="main-text-cards">
-          <div className="main-illustrations">{ticketSvg}</div>
-          <div className="main-titles">
+          <motion.div className="main-illustrations" {...scrollRightAnimation}>
+            {ticketSvg}
+          </motion.div>
+          <motion.div className="main-titles" {...scrollLeftAnimation}>
             <span>
               <h2>Ticket System</h2>
               <p>Manage Case Inflow</p>
@@ -54,7 +83,7 @@ function MainPage() {
               <b>IT support team</b> uses to create, manage, and maintain a list
               (or lists) of <b>internal problems</b>.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="curve-two">
@@ -72,7 +101,7 @@ function MainPage() {
       </div>
       <div className="orange-banner">
         <div className="main-text-cards">
-          <div className="main-titles">
+          <motion.div className="main-titles" {...scrollRightAnimation}>
             <span>
               <h2>Inventory</h2>
               <p>Data Management</p>
@@ -83,8 +112,10 @@ function MainPage() {
               being maintained. It tracks tickets related to products to ensure
               <b>excellent</b> and <b>consistent</b> service.
             </p>
-          </div>
-          <div className="main-illustrations">{inventorySvg}</div>
+          </motion.div>
+          <motion.div className="main-illustrations" {...scrollLeftAnimation}>
+            {inventorySvg}
+          </motion.div>
         </div>
       </div>
       <div className="curve-three">
@@ -102,8 +133,10 @@ function MainPage() {
       </div>
       <div className="white-banner">
         <div className="main-text-cards">
-          <div className="main-illustrations">{dashboardSvg}</div>
-          <div className="main-titles">
+          <motion.div className="main-illustrations" {...scrollRightAnimation}>
+            {dashboardSvg}
+          </motion.div>
+          <motion.div className="main-titles" {...scrollLeftAnimation}>
             <span>
               <h2>Dashboard</h2>
               <p>View metrics and data</p>
@@ -114,7 +147,7 @@ function MainPage() {
               analyzes, and, displays <b>key metrics</b> and critical data
               points.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
