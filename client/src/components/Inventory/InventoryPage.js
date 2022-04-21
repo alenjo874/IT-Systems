@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import ItemDetail from "./ItemDetail";
+import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
 
 function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
   const [moreDetailItem, setMoreDetailItem] = useState({});
@@ -83,34 +84,53 @@ function InventoryPage({ inventoryArray, setInventoryArray, employeeArray }) {
           {downCaretSvg}
         </span>
       </div>
-      {showFilter ? (
-        <div className="filter-form">
-          <form>
-            <span className="filter-elem">
-              <label>Search:</label>
-              <input
-                value={searchSerial}
-                onChange={(e) => setSearchSerial(e.target.value)}
-              ></input>
-            </span>
-            <span className="filter-elem">
-              <label>Serial Number:</label>
-              <select onChange={handleSerialFilter}>
-                <option value="none">select</option>
-                <option value="asc">Low to High</option>
-                <option value="desc">High to Low</option>
-              </select>
-            </span>
-            <span className="filter-elem">
-              <label>Product:</label>
-              <select onChange={handleProductFilter}>
-                <option value="none">select</option>
-                <option value="alpha">A-Z</option>
-              </select>
-            </span>
-          </form>
-        </div>
-      ) : null}
+      <AnimatePresence>
+        {showFilter ? (
+          <motion.div
+            className="filter-form"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.25,
+                type: "show",
+                ease: "easeIn",
+              },
+            }}
+            exit={{
+              y: "-10%",
+              opacity: 0,
+              transition: { duration: 0.25, ease: "easeOut" },
+            }}
+          >
+            <form>
+              <span className="filter-elem">
+                <label>Search:</label>
+                <input
+                  value={searchSerial}
+                  onChange={(e) => setSearchSerial(e.target.value)}
+                ></input>
+              </span>
+              <span className="filter-elem">
+                <label>Serial Number:</label>
+                <select onChange={handleSerialFilter}>
+                  <option value="none">select</option>
+                  <option value="asc">Low to High</option>
+                  <option value="desc">High to Low</option>
+                </select>
+              </span>
+              <span className="filter-elem">
+                <label>Product:</label>
+                <select onChange={handleProductFilter}>
+                  <option value="none">select</option>
+                  <option value="alpha">A-Z</option>
+                </select>
+              </span>
+            </form>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
       <table className="inventory-table admin-tables">
         <thead>
           <tr>
